@@ -42,8 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> C
+S -> C S C
+C -> r
+C -> g
+C -> b
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +56,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(1), because the amount of memory used at any given operation is simply checking if 2 points are the same, so scaling the sentence does not increase the amount of things to check for each operation, therefore memory is constant.
 
 
 # Q2
@@ -82,7 +85,23 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence>    ::= "the" <description> <noun> <verb> <adverb>
+               |  "the" <description> <noun> <verb>
+
+<description> ::= @
+               |  <adjective> <description>
+
+<adjective>   ::= "lazy"
+               |  "smelly"
+
+<noun>        ::= "dog"
+               |  "cat"
+
+<verb>        ::= "ate"
+               |  "ran"
+
+<adverb>      ::= "slowly"
+               |  "noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,7 +110,19 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence>    ::= "the" <adjective>* <noun> <verb> [ <adverb> ]
+
+<adjective>   ::= "lazy"
+               |  "smelly"
+
+<noun>        ::= "dog"
+               |  "cat"
+
+<verb>        ::= "ate"
+               |  "ran"
+
+<adverb>      ::= "slowly"
+               |  "noisily"
 
 
 ## Q2.3 (6 points)
