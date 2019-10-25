@@ -42,7 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> C
+S -> C S C
+C -> "r"
+C -> "g"
+C -> "b"
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +57,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+The memory requirement for the parser would be O(1) because at any given time, the parser is comparing just the first and last elements of the path, not the whole path itself (n). 
+
 
 
 # Q2
@@ -82,7 +87,12 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <description> <noun> <verb> <adverb> | "the" <description> <noun> <verb> | "the" <noun> <verb> <adverb> | "the" <noun> <verb>
+<description> ::= <adjective> <description> | <adjective>
+<adjective> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,7 +101,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" <adjective>* <noun> <verb> [<adverb>]
+<adjective> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
