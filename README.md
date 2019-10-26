@@ -42,7 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> T
+S -> T S T
+T -> 'r'
+T -> 'g'
+T -> 'b'
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,8 +57,9 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+The memory requirement of a parser that can validate this path configuration is on the order of O(n).
+For a parser to validate a pattern it would need to store the first half of the sequence in memory to match with the second half
+(excluding the exact middle element, n/2 since integer division will round down)
 
 # Q2
 
@@ -82,7 +87,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<simple-sentence> ::= <the> <opt-adjective> <noun> <verb> <opt-adverb>
+
+<the> ::= "The"
+<opt-adjective> ::= "lazy" | "smelly" | ""
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<opt-adverb> ::= "slowly" | "noisily" | ""
 
 
 ## Q2.2 (5 points)
