@@ -196,7 +196,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Since there can be arbitrarily many adjectives, there are an infinite amount of sentences in this language
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
