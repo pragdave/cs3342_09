@@ -198,14 +198,11 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Because the number of adjectives is not limited and there is no rule against duplicate adjectives, there are infinitely many sentences here.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
-Which is the simplest Chomsky grammar level for this language? In one sentence,
-explain why.
+
 
 ## A2.7
-
-«replace this with your answer»

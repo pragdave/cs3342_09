@@ -97,6 +97,5 @@ class Parser {
                 eoi = true;
             this.transitions = transitions;
         }
-
     }
 }
