@@ -42,7 +42,7 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> 
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
