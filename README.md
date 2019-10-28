@@ -40,9 +40,16 @@ Write a Chomsky type 2 grammar that describes any valid path containing at
 least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
 represent the tiles.
 
+
+
 ## A1.1
 
-«replace this with your answer»
+S -> "" | A 
+color -> R | G | B
+A -> color | R A R | G A G | B A B
+R -> 'r'
+G -> 'g'
+B -> 'b'
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +60,9 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+I believe it would be O(n) because the parser could have one variable pointing to the head 
+and one to the tail, compare them, then move inward 1 index for each if they were the same,
+and fail if they were not.
 
 
 # Q2
@@ -82,7 +91,26 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <adjs> <noun> <verb> <adv> 
+
+<adjs> ::=  ""                |
+            <adjective>       |
+            <adjs> <adjective>
+
+<adjective> ::= "lazy" |
+                "smelly"
+
+<noun> ::=  "dog" | 
+            "cat"
+
+<verb> ::=  "ate" |
+            "ran"
+
+<adv> ::= ""       | 
+          <adverb>
+  
+<adverb> ::=  "slowly" |
+              "noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,7 +119,19 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" <adjective>* <noun> <verb> <adverb>?
+
+<adjective> ::= "lazy" |
+                "smelly"
+
+<noun> ::=  "dog" | 
+            "cat"
+
+<verb> ::=  "ate" |
+            "ran"
+  
+<adverb> ::=  "slowly" |
+              "noisily"
 
 
 ## Q2.3 (6 points)
@@ -109,8 +149,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+FSM.jpg
 
 ## Q2.4 (6 points)
 
