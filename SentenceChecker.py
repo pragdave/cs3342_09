@@ -14,11 +14,13 @@ def checkSentence(wordsArr):
     state = 'S0'
     nextW = 0;
     
+    #S0, check for 'the'
     if words[nextW] == 'the':
         state = 'S1'
     else:
         return False
     
+    #S1/S2, check for adjectives until there is a noun
     while (state == 'S1' or state == 'S2'):
         nextW = nextW + 1
         if (nextW == len(words)):
@@ -30,7 +32,7 @@ def checkSentence(wordsArr):
         else:
             return False
     
-        
+    #S3, check for a verb
     nextW = nextW+1
     if (nextW == len(words)):
         return False
@@ -39,6 +41,7 @@ def checkSentence(wordsArr):
     else:
         return False
     
+    #S4/S5 check for an adverb or a end of input
     nextW = nextW+1
     if (nextW == len(words)):
         return False
@@ -50,7 +53,7 @@ def checkSentence(wordsArr):
     else:
         return False
         
-    
+    #s5 check for end of input
     nextW = nextW+1
     if (nextW == len(words)):
         return False
@@ -66,7 +69,7 @@ def checkSentence(wordsArr):
 
 #main function
 if __name__=='__main__':  
-    #should all be true
+    #should all be true to pass
     s = [['the', 'lazy', 'dog', 'ate', 'noisily', 'EOI'],
          ['the', 'smelly', 'cat', 'ran', 'slowly', 'EOI'],
          ['the', 'smelly', 'lazy', 'cat', 'ran', 'EOI'],
@@ -75,6 +78,7 @@ if __name__=='__main__':
          ['the', 'cat', 'ran', 'slowly', 'EOI']]
     
     for i, sentence in enumerate(s):
+        # if it is valid, pass
         if (checkSentence(sentence)):
             print('Validation test ' + str(i+1) + ' passed')
         else:
@@ -85,7 +89,7 @@ if __name__=='__main__':
             print(word, end = " ")
         print('\n')
             
-    #should all be false
+    #should all be false to pass
     s = [['the', 'dog', 'ate'],
          ['dog', 'ate', 'EOI'],
          ['the', 'lazy' , 'ran', 'EOI'],
@@ -97,6 +101,7 @@ if __name__=='__main__':
          ['the', 'lazy', 'dog', 'ate', 'smelly', 'EOI']]
     
     for i, sentence in enumerate(s):
+        #if it is valid, fail
         if (checkSentence(sentence)):
             print('Invalidation test ' + str(i+1) + ' failed')
         else:
