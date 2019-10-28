@@ -201,8 +201,8 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+run (with python installed):
+python SentenceChecker.py
 
 ## Q2.6 (3 points)
 
@@ -210,8 +210,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+An infinite amount since there can be as many adjectives as one wants.
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -220,4 +219,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language would be a type-2 (context-free) laguage. This is because every nonterminal can be expressed as a list of terminals and nonterminals without needing context for that nonterminal.
