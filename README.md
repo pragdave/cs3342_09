@@ -42,7 +42,9 @@ represent the tiles.
 
 ## A1.1
 
-S -> 
+S -> ASA
+S -> A
+A -> rgb
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +55,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+I believe this would be O((n/2)+1). This is because it would go through the list of values by pairing the ends together and moving inward, which is where the n/2 comes from, and then it would have to check the middle variable, thus the +1.
 
 
 # Q2
@@ -82,7 +84,14 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= <start> <adj> <noun> <verb> <adv>
+<start> ::= the
+<adjective> ::= lazy | smelly
+<adj> ::= <adjective> | <adj> <adjective>
+<noun> ::= dog | cat
+<verb> ::= ate | ran
+<adverb> ::= slowly | noisily
+<adv> ::= <adverb> | <adv> <adverb>
 
 
 ## Q2.2 (5 points)
@@ -91,7 +100,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= <start> <adjective> { <adjective> } <noun> <verb> <adverb> { <adverb> }
+<start> ::= the
+<adjective> ::= lazy | smelly
+<noun> ::= dog | cat
+<verb> ::= ate | ran
+<adverb> ::= slowly | noisily
 
 
 ## Q2.3 (6 points)
@@ -109,8 +123,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+finiteStateMachine.png
 
 ## Q2.4 (6 points)
 
@@ -125,7 +138,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        | adjective |     S2
+    S1        |   noun    |     S3
+    S2        | adjective |     S2
+    S2        |   noun    |     S3
+    S3        |   verb    |     S4
+    S4        |  adverb   |     S5
+    S4        |   EOI     |     S6
+    S5        |  adverb   |     S5
+    S5        |   EOI     |     S6
+
 
 
 ## Q2.5 (12 points)
@@ -154,7 +179,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+80
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
