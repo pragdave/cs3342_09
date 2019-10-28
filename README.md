@@ -42,15 +42,15 @@ represent the tiles.
 
 ## A1.1
 
-S -> A B A '\n'
-A -> <<empty>>
-A -> "r"
-A -> "g"
-A -> "b"
-B -> S
-B -> "r"
-B -> "g"
-B -> "b"
+S -> A B A  
+A -> <<empty>>  
+A -> "r"  
+A -> "g"  
+A -> "b"  
+B -> S  
+B -> "r"  
+B -> "g"  
+B -> "b"  
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
