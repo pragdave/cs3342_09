@@ -42,8 +42,15 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> R
+S -> B
+S -> G
+S -> R S R
+S -> G S G
+S -> B S B
+R -> "r"
+G -> "g"
+B -> "b"
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +60,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(1). The parser would only have to store the first and last letter of the inpu each time so only two spaces of memory would be needed.
 
 
 # Q2
@@ -82,7 +89,12 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <adjectives> <noun> <verb> <adverb>
+<adjectives> ::= <adjectives> | <adjective>
+<adjective> ::= "" | "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> = "ate" | "ran"
+<adverb> = "" | "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,7 +103,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
+<adjective> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> = "ate" | "ran"
+<adverb> = "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
@@ -125,7 +141,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+	S1        |           |     S2
+	S1        |    lazy   |     S1
+	S1        |   smelly  |     S1
+	S2        |    dog    |     S3
+	S2        |    cat    |     S3
+	S3        |    ate    |     S4
+	S3        |    ran    |     S4
+	S4        |           |     EOI
+	S4        |   slowly  |     EOI
+	S4        |  noisily  |     EOI
 
 
 ## Q2.5 (12 points)
