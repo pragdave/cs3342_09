@@ -136,7 +136,21 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |     S2
+    S1        |    smelly |     S2
+    S1        |    dog    |     S3
+    S1        |    cat    |     S3
+    S2        |    cat    |     S3
+    S2        |    dog    |     S3
+    S3        |    ran    |     S4
+    S3        |    ate    |     S4
+    S4        |    slowly |     S5
+    S4        |    noisily|     S5
+    S4        |    EOI    |     End
+    S5        |    EOI    |     End
 
 
 ## Q2.5 (12 points)
@@ -165,8 +179,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+36
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
