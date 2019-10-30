@@ -206,4 +206,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest chompsky grammar type is 3. The language is able to be represented by a finite state machine, and does not require a stack for backtracking
