@@ -44,7 +44,7 @@ represent the tiles.
 
 ## A1.1
 
-S -> "" | A 
+S -> A 
 color -> R | G | B
 A -> color | R A R | G A G | B A B
 R -> 'r'
@@ -219,4 +219,4 @@ explain why.
 
 ## A2.7
 
-The simplest Chomsky grammar level for this language would be a type-2 (context-free) laguage. This is because every nonterminal can be expressed as a list of terminals and nonterminals without needing context for that nonterminal.
+The simplest Chomsky grammar level for this language would be a type-2 (context-free) laguage. This is because every nonterminal can be expressed as a list of terminals and nonterminals without needing context for the LHS nonterminal.
