@@ -43,12 +43,19 @@ represent the tiles.
 ## A1.1
 
 S -> P
+
 S -> P A S
+
 A -> P
+
 A -> S
+
 P -> r
+
 P -> g
+
 P -> b
+
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -89,11 +96,17 @@ Write the BNF (not EBNF) description for this language.
 ## A2.1
 
 <sentence> ::= "the" <adjectives> <noun> <verb> | "the" <adjectives> <noun> <verb> <adverb>
+    
 <adjectives> ::= "" | <adjectives> <adjective>
+    
 <adjective> ::= "lazy" | "smelly"
+    
 <noun> ::= "dog" | "cat"
+    
 <verb> ::= "ate" | "ran"
+    
 <adverb> ::= "slowly" | "noisily"
+    
 
 ## Q2.2 (5 points)
 
@@ -102,9 +115,13 @@ Write this grammar using EBNF with common extensions
 ## A2.2
 
 <sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
+    
 <adjective> ::= "lazy" | "smelly"
+    
 <noun> ::= "dog" | "cat"
+    
 <verb> ::= "ate" | "ran"
+    
 <adverb> ::= "slowly" | "noisily"
 
 
