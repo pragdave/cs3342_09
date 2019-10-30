@@ -42,8 +42,13 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> P
+S -> P A S
+A -> P
+A -> S
+P -> r
+P -> g
+P -> b
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +58,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n)
+The memory requirement for a parser to validate this path is probably O(n) since it has to go through each element and ensure that it matches the element in the opposite side, like the example in class checking the elements through a stack-like method.
 
 
 # Q2
