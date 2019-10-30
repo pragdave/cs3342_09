@@ -88,7 +88,7 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<sentence> ::= "the" <adjectives> <noun> <verb> | "the" <adjectives> <noun> <verb> <adverb> |
+<sentence> ::= "the" <adjectives> <noun> <verb> | "the" <adjectives> <noun> <verb> <adverb>
 <adjectives> ::= "" | <adjectives> <adjective>
 <adjective> ::= "lazy" | "smelly"
 <noun> ::= "dog" | "cat"
@@ -140,22 +140,22 @@ Current state | Next word | Next state
 ## A2.4
 
 Current State | Next Word | Next State
---------------- | ------------ | -------------
-S0                  | "the"         | S1
-S1                  | "lazy"        | S2  
-S1                  | "smelly"    | S2
-S1                  | "dog"        | S3
-S1                  | "cat"         | S3
-S2                  | "smelly"    | S2
-S2                  | "lazy"        | S2
-S2                  | "dog"        | S3
-S2                  | "cat"         | S3
-S3                  | "ate"         | S4 
-S3                  | "ran"         | S4
-S4                  | "slowly"    | S5
-S4                  | "noisily"    | S5
-S4                  | EOI           | END
-S5                  | EOI           | END
+------------- | --------- | ----------
+S0            | "the"     | S1
+S1            | "lazy"    | S2  
+S1            | "smelly"  | S2
+S1            | "dog"     | S3
+S1            | "cat"     | S3
+S2            | "smelly"  | S2
+S2            | "lazy"    | S2
+S2            | "dog"     | S3
+S2            | "cat      | S3
+S3            | "ate      | S4 
+S3            | "ran"     | S4
+S4            | "slowly"  | S5
+S4            | "noisily" | S5
+S4            | EOI       | END
+S5            | EOI       | END
 
 
 ## Q2.5 (12 points)
@@ -175,7 +175,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+File name fsm.cpp
 
 
 ## Q2.6 (3 points)
@@ -184,7 +184,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Assuming you CAN repeat adjectives, there are in infinite number of valid sentences because you can infinitely repeat adjectives. Assumming you CANNOT repeat adjectives, there are 60 valid sentences.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -194,4 +194,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 is the simplest level for this language because it doesn't need to track any extra information besides the current state and the next word, and traversing to the next state is enough to prove that the sentence is valid as of that point.
