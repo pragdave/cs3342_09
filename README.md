@@ -42,15 +42,15 @@ represent the tiles.
 
 ## A1.1
 
-S -> R
-S -> G
-S -> B
-S -> R S R
-S -> G S G
-S -> B S B
-R -> "r"
-G -> "g"
-B -> "b"
+S -> R  
+S -> G  
+S -> B  
+S -> R S R  
+S -> G S G  
+S -> B S B  
+R -> "r"  
+G -> "g"  
+B -> "b"  
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -95,14 +95,14 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<noun> ::= "dog" | "cat"
-<verb> ::= "ate" | "ran"
-<adjective> ::= "" | "lazy" | "smelly"
-<adverb> ::= "" | "slowly" | "noisily"
+<noun> ::= "dog" | "cat"  
+<verb> ::= "ate" | "ran"  
+<adjective> ::= "" | "lazy" | "smelly"  
+<adverb> ::= "" | "slowly" | "noisily"  
 
-<adjlist> ::= ""
-<adjlist> ::= <adjlist> | <adjective>
-<sentence> ::= "the" <adjlist> <noun> <verb> <adverb>
+<adjlist> ::= ""  
+<adjlist> ::= <adjlist> | <adjective>  
+<sentence> ::= "the" <adjlist> <noun> <verb> <adverb>  
 
 
 ## Q2.2 (5 points)
@@ -111,12 +111,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<noun> ::= "dog" | "cat"
-<verb> ::= "ate" | "ran"
-<adjective> ::= "lazy" | "smelly"
-<adverb> ::= "slowly" | "noisily"
+<noun> ::= "dog" | "cat"  
+<verb> ::= "ate" | "ran"  
+<adjective> ::= "lazy" | "smelly"  
+<adverb> ::= "slowly" | "noisily"  
 
-<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>] 
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]  
 
 
 ## Q2.3 (6 points)
