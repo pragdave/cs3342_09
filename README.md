@@ -111,7 +111,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<noun> ::= "dog" | "cat"  
+"<noun>" ::= "dog" | "cat"  
 <verb> ::= "ate" | "ran"  
 <adjective> ::= "lazy" | "smelly"  
 <adverb> ::= "slowly" | "noisily"  
@@ -150,23 +150,23 @@ Current state | Next word | Next state
 
 ## A2.4
 
-Current state | Next word | Next state
---------------|-----------|-----------
-    S0        |    the    |     S1
-    S1        |    lazy   |     S2
-    S1        |   smelly  |     S2
-    S1        |    dog    |     S3
-    S1        |    cat    |     S3
-    *S2       |    lazy   |     S2
-    *S2       |   smelly  |     S2
-    S2        |    dog    |     S3
-    S2        |    cat    |     S3
-    S3        |    ate    |     S4
-    S3        |    ran    |     S4
-    S4        |   slowly  |     S5
-    S4        |  noisily  |     S5
-    S4        |    EOI    |     END
-    S1        |    EOI    |     END
+Current state   | Next word   | Next state
+:--------------:|:-----------:|:-----------:
+    S0          |      the    |     S1
+    S1          |      lazy   |     S2
+    S1          |     smelly  |     S2
+    S1          |      dog    |     S3
+    S1          |      cat    |     S3
+    *S2         |      lazy   |     S2
+    *S2         |     smelly  |     S2
+    S2          |      dog    |     S3
+    S2          |      cat    |     S3
+    S3          |      ate    |     S4
+    S3          |      ran    |     S4
+    S4          |     slowly  |     S5
+    S4          |    noisily  |     S5
+    S4          |      EOI    |     END
+    S1          |      EOI    |     END
 
 
 ## Q2.5 (12 points)
