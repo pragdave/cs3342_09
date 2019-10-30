@@ -95,14 +95,14 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<noun> ::= "dog" | "cat"  
-<verb> ::= "ate" | "ran"  
-<adjective> ::= "" | "lazy" | "smelly"  
-<adverb> ::= "" | "slowly" | "noisily"  
+&lt;noun&gt; ::= "dog" | "cat"  
+&lt;verb&gt; ::= "ate" | "ran"  
+&lt;adjective&gt; ::= "" | "lazy" | "smelly"  
+&lt;adverb&gt; ::= "" | "slowly" | "noisily"  
 
-<adjlist> ::= ""  
-<adjlist> ::= <adjlist> | <adjective>  
-<sentence> ::= "the" <adjlist> <noun> <verb> <adverb>  
+&lt;adjlist&gt; ::= ""  
+&lt;adjlist&gt; ::= &lt;adjlist&gt; | &lt;adjective&gt;  
+&lt;sentence&gt; ::= "the" &lt;adjlist&gt; &lt;noun&gt; &lt;verb&gt; &lt;adverb&gt;  
 
 
 ## Q2.2 (5 points)
@@ -111,12 +111,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-"<noun>" ::= "dog" | "cat"  
-<verb> ::= "ate" | "ran"  
-<adjective> ::= "lazy" | "smelly"  
-<adverb> ::= "slowly" | "noisily"  
+&lt;noun&gt; ::= "dog" | "cat"  
+&lt;verb&gt; ::= "ate" | "ran"  
+&lt;adjective&gt; ::= "lazy" | "smelly"  
+&lt;adverb&gt; ::= "slowly" | "noisily"  
 
-<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]  
+&lt;sentence&gt; ::= "the" {&lt;adjective&gt;} &lt;noun&gt; &lt;verb&gt; [&lt;adverb&gt;]  
 
 
 ## Q2.3 (6 points)
@@ -150,23 +150,23 @@ Current state | Next word | Next state
 
 ## A2.4
 
-Current state   | Next word   | Next state
-:--------------:|:-----------:|:-----------:
-    S0          |      the    |     S1
-    S1          |      lazy   |     S2
-    S1          |     smelly  |     S2
-    S1          |      dog    |     S3
-    S1          |      cat    |     S3
-    *S2         |      lazy   |     S2
-    *S2         |     smelly  |     S2
-    S2          |      dog    |     S3
-    S2          |      cat    |     S3
-    S3          |      ate    |     S4
-    S3          |      ran    |     S4
-    S4          |     slowly  |     S5
-    S4          |    noisily  |     S5
-    S4          |      EOI    |     END
-    S1          |      EOI    |     END
+| Current state   | Next word   | Next state |
+|:--------------:|:-----------:|:-----------:|
+|    S0          |      the    |     S1      |
+|    S1          |      lazy   |     S2      |
+|    S1          |     smelly  |     S2      |
+|    S1          |      dog    |     S3      |
+|    S1          |      cat    |     S3      |
+|    *S2         |      lazy   |     S2      |
+|    *S2         |     smelly  |     S2      |
+|    S2          |      dog    |     S3      |
+|    S2          |      cat    |     S3      |
+|    S3          |      ate    |     S4      |
+|    S3          |      ran    |     S4      |
+|    S4          |     slowly  |     S5      |
+|    S4          |    noisily  |     S5      |
+|    S4          |      EOI    |     END     |
+|    S1          |      EOI    |     END     |
 
 
 ## Q2.5 (12 points)
@@ -187,6 +187,7 @@ code, include a script or makefile that will do the job.
 ## A2.5
 
 «replace this with your answer»
+\<  \>
 
 
 ## Q2.6 (3 points)
