@@ -1,4 +1,4 @@
-# Grammars Assignment (50 points)
+﻿# Grammars Assignment (50 points)
 
 This file contains two questions. The first has 2 parts, the second has 7.
 
@@ -42,7 +42,15 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> R
+S -> G
+S -> B
+S -> R S R
+S -> G S G
+S -> B S B
+R -> "r"
+G -> "g"
+B -> "b"
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +61,12 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n/2) --> O(n)
+In order to check if a string is a palindrome (which is what we are creating with this
+syntax) we need to compare the first and last elements and move towards the middle until
+we are looking at the same position, which is n/2 comparisons which equates to O(n)
+(since Big O notation ignores the constant 1/2).
+
 
 
 # Q2
@@ -82,7 +95,14 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adjective> ::= "" | "lazy" | "smelly"
+<adverb> ::= "" | "slowly" | "noisily"
+
+<adjlist> ::= ""
+<adjlist> ::= <adjlist> | <adjective>
+<sentence> ::= "the" <adjlist> <noun> <verb> <adverb>
 
 
 ## Q2.2 (5 points)
@@ -91,7 +111,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adjective> ::= "lazy" | "smelly"
+<adverb> ::= "slowly" | "noisily"
+
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>] 
 
 
 ## Q2.3 (6 points)
@@ -109,7 +134,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+See StateMachineDiagram.png
 
 
 ## Q2.4 (6 points)
@@ -125,7 +150,23 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |     S2
+    S1        |   smelly  |     S2
+    S1        |    dog    |     S3
+    S1        |    cat    |     S3
+    *S2       |    lazy   |     S2
+    *S2       |   smelly  |     S2
+    S2        |    dog    |     S3
+    S2        |    cat    |     S3
+    S3        |    ate    |     S4
+    S3        |    ran    |     S4
+    S4        |   slowly  |     S5
+    S4        |  noisily  |     S5
+    S4        |    EOI    |     END
+    S1        |    EOI    |     END
 
 
 ## Q2.5 (12 points)
@@ -154,7 +195,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+48 sentences
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +205,5 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type-III Chomsky grammer;
+
