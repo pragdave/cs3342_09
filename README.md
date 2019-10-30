@@ -44,7 +44,9 @@ represent the tiles.
 
 S -> ASA
 S -> A
-A -> rgb
+A -> "r"
+A -> "g"
+A -> "b"
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -55,7 +57,9 @@ In one sentence, explain why.
 
 ## A1.2
 
-I believe this would be O((n/2)+1). This is because it would go through the list of values by pairing the ends together and moving inward, which is where the n/2 comes from, and then it would have to check the middle variable, thus the +1.
+I believe this would be O((n/2)+1). This is because it would go through the list
+of values by pairing the ends together and moving inward, which is where the n/2 
+comes from, and then it would have to check the middle variable, thus the +1.
 
 
 # Q2
@@ -170,7 +174,8 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+npm test
+This should run the code. The code is in the lang.js file within the test folder.
 
 
 ## Q2.6 (3 points)
@@ -189,4 +194,6 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+I believe this would need to be a type 2 Chomsky grammar because the state of 
+the machine is followed as well as what the sentence is, where the next symbol 
+may not be a terminal.
