@@ -89,7 +89,7 @@ Write the BNF (not EBNF) description for this language.
 
 ~~~ bnf
 <sentence> ::= "the" <adjectives> <noun> <verb> <adverb>
-<adjectives> ::= <adjectives> | <adjective>
+<adjectives> ::= <adjective> <adjectives> | <adjective>
 <adjective> ::= "" | "lazy" | "smelly"
 <noun> ::= "dog" | "cat"
 <verb> = "ate" | "ran"
@@ -125,7 +125,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSM.jpeg
 
 
 ## Q2.4 (6 points)
