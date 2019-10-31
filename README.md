@@ -86,10 +86,10 @@ Write the BNF (not EBNF) description for this language.
 ## A2.1
 
 sentence := "the" <adjective> <noun> <verb> <adverb>
-<adjective> := "lazy" <adjective> | "smelly" <adjective> | "lazy" | "smelly" | (empty)
-<noun> := "dog" | "cat"
-<verb> := "ate" | "ran"
-<adverb> := "slowly" | "noisily" | (empty)
+    <adjective> := "lazy" <adjective> | "smelly" <adjective> | "lazy" | "smelly" | (empty)
+        <noun> := "dog" | "cat"
+            <verb> := "ate" | "ran"
+                <adverb> := "slowly" | "noisily" | (empty)
 
 
 ## Q2.2 (5 points)
@@ -99,10 +99,10 @@ Write this grammar using EBNF with common extensions
 ## A2.2
 
 sentence := "the" {<adjective>} <noun> <verb> [<adverb>]
-<adjective> := "lazy" <adjective> | "smelly" <adjective> | "lazy" | "smelly"
-<noun> := "dog" | "cat"
-<verb> := "ate" | "ran"
-<adverb> := "slowly" | "noisily"
+    <adjective> := "lazy" <adjective> | "smelly" <adjective> | "lazy" | "smelly"
+        <noun> := "dog" | "cat"
+            <verb> := "ate" | "ran"
+                <adverb> := "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
