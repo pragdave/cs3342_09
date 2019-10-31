@@ -59,7 +59,7 @@ In one sentence, explain why.
 ## A1.2
 
 O(1)
-
+In each steop, the parser just need to store the first and last digit and compare them.
 
 
 # Q2
