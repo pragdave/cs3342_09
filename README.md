@@ -140,7 +140,7 @@ Current state | Next word | Next state
 ## A2.4
 
 Current state | Next word | Next state
---------------|-----------|-----------
+------------|-------------|-----------
     S0        |     the         |       S1
     S1        |     lazy        |       S1
     S1        |     smelly    |       S1
@@ -190,4 +190,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language is level 3 because no backtracking or stacks are needed to interpret this language (type 2) and the language can be easily represented using a finite state machine.
