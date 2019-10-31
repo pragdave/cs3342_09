@@ -58,7 +58,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(1)
+
 
 
 # Q2
