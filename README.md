@@ -42,10 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-S -> S tile S
-tile -> 'r'
-tile -> 'g'
-tile -> 'b'
+S -> r S r
+S -> g S g
+S -> b S b
+S -> r | g | b
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -55,8 +55,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-The memory requirement for a parser that can validate a particular path
-configuration is O(n) because it needs to check each of the tiles with each of the rules.
+O(n) because to validate a particular path, it checks each of the tiles to see if they match each of the rules to completely validate the entire configuration.
 
 
 # Q2
@@ -172,7 +171,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-This is done in the files: FSM.h and main.cpp (run main.cpp)
+This is done in the files: FSM.h and main.cpp (run main.cpp with c++ compiler) (I wrote using visual c++ but I think gcc should work)
 
 ## Q2.6 (3 points)
 
@@ -222,5 +221,10 @@ explain why.
 
 ## A2.7
 
-The simplest Chomsky grammar level for this language would be level 3. This is because type 3 grammar is the most easily understandable
-and parsable grammar level, as well as being able to be expressed as regular expressions: if we define simplest as easiest to understand for humans
+The simplest Chomsky grammar level for this language would be level 3. 
+
+This is because type 3 grammar is the most easily understandable and parsable grammar level; in addition, 
+when dealing with type 3 grammar, there is less ambiguity and for every production rule, there is only one non-terminal: if we define simplest as easiest to understand for humans
+
+
+^ Also that's technically one sentence because I used ; and :
