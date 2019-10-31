@@ -46,9 +46,9 @@ represent the tiles.
 
 A -> α
 
-S -> r S r | r
-S -> g S g | s
-S -> b S b | b
+S -> r S r | r   
+S -> g S g | s    
+S -> b S b | b    
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -87,15 +87,14 @@ The following are examples of valid sentences:
 Write the BNF (not EBNF) description for this language.
 
 ## A2.1
+    
+< sentence > ::= "The" < adjectives > < noun > < verb > < adverb > "."   
 
-<expr> ::= "the" (adjective)* noun verb (adverb)? 
-<sentence> ::= "The" <adjectives> <noun> <verb> <adverb> "."
-
-<adjectives> ::= <adjective> <adjective>
-<adjective>  ::= "lazy" | "smelly" | <empty>
-<noun>       ::= "dog" | "cat"
-<verb>       ::= "ate" | "ran"
-<adverb>     ::= "slowly" | "noisily" | <empty> 
+< adjectives > ::= < adjective > < adjective >   
+< adjective >  ::= "lazy" | "smelly" | < empty >   
+< noun >       ::= "dog" | "cat"      
+< verb >       ::= "ate" | "ran"   
+< adverb >     ::= "slowly" | "noisily" | < empty >    
 
 ## Q2.2 (5 points)
 
@@ -103,11 +102,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<sentence> ::=  "The" {<adjective>} <noun> <verbs> {<adverb>} "."
-<adjective>  ::=  "lazy" | "smelly"
-<noun>       ::= "dog" | "cat"
-<verb>       ::= "ate" | "ran"
-<adverb>     ::= "slowly" | "noisily"
+< sentence> ::=  "The" {< adjective >} < noun > < verbs> {< adverb >} "."   
+< adjective >  ::=  "lazy" | "smelly"   
+< noun >       ::= "dog" | "cat"   
+< verb >       ::= "ate" | "ran"   
+< adverb >     ::= "slowly" | "noisily"   
 
 
 
@@ -142,18 +141,19 @@ Current state | Next word | Next state
 (hint: my version has 13 entries. Yours _might_ be different)
 
 ## A2.4
+Current state | Next word | Next state
 --------------|-----------|-----------
-S0        |   the         | S1
-S1        |   Lazy        | S1 
-S1        |   Smelly      | S1 
-S1        |   Dog         | S2
-S1        |   Cat         | S2
-S2        |   ran         | S3
-S2        |   ate         | S3
-S3        |   Slowly      | S4
-S3        |   Noisly      | S4
-S3        |   EOI         | END
-S4        |   EOI         | END
+    S0            |   the         | S1
+    S1            |   Lazy        | S1 
+    S1            |   Smelly      | S1 
+    S1            |   Dog         | S2
+    S1            |   Cat         | S2
+    S2            |   ran         | S3
+    S2            |   ate         | S3
+    S3            |   Slowly      | S4
+    S3            |   Noisly      | S4
+    S3            |   EOI         | END
+    S4            |   EOI         | END
 
 ## Q2.5 (12 points)
 
@@ -171,7 +171,7 @@ this file. If I need to do anything more that type a single command to run your
 code, include a script or makefile that will do the job.
 
 ## A2.5
-Below is the command to run the file 
+Below is the command to run the file    
 python3 ./state.py
 
 
