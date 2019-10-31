@@ -42,8 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> S tile S
+tile -> 'r'
+tile -> 'g'
+tile -> 'b'
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +55,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+The memory requirement for a parser that can validate a particular path
+configuration is O(n) because it needs to check each of the tiles with each of the rules.
 
 
 # Q2
@@ -80,9 +83,16 @@ The following are examples of valid sentences:
 
 Write the BNF (not EBNF) description for this language.
 
+
 ## A2.1
 
-«replace this with your answer»
+<the> ::= 'The'|'the'
+<adjective> ::= 'lazy'|'smelly'| <adjective>' '<adjective> 
+<noun> ::= 'dog'|'cat'| <adjective>' '<noun>
+<adverb> ::= 'slowly'|'noisily'
+<verb> ::= 'ate'|'ran'| <verb>' '<adverb>
+
+<sentence> ::= <the>' '<noun>' '<verb>
 
 
 ## Q2.2 (5 points)
@@ -91,7 +101,13 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<the> ::= 'The'|'the'
+<adjective> ::= 'lazy'|'smelly' 
+<noun> ::= 'dog'|'cat'
+<adverb> ::= 'slowly'|'noisily'
+<verb> ::= 'ate'|'ran'
+
+<sentence> ::= <the>' '{<adjective>' '}<noun>' '<verb>' '[<adverb>]
 
 
 ## Q2.3 (6 points)
@@ -109,8 +125,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+A2-3.pdf
 
 ## Q2.4 (6 points)
 
@@ -125,7 +140,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+| Current State | Next Word | Next State |
+|---------------|-----------|------------|
+| S0            | The       | S1         |
+| S1            | lazy      | S1         |
+| S1            | smelly    | S1         |
+| S1            | dog       | S2         |
+| S1            | cat       | S2         |
+| S2            | ate       | S3         |
+| S2            | ran       | S3         |
+| S3            | slowly    | S4         |
+| S3            | noisily   | S4         |
+| S3            | EOI       | END        |
+| S4            | EOI       | END        |
 
 
 ## Q2.5 (12 points)
@@ -145,8 +172,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+This is done in the files: FSM.h and main.cpp (run main.cpp)
 
 ## Q2.6 (3 points)
 
@@ -154,8 +180,39 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+//---------------------THIS IS WORK---------------------
+The dog ate //only nouns and verb: 4 sentences
+The cat ate
+The dog ran
+The cat ran
 
+The dog ate slowly  //no adjectives, one adverb: 8 sentences
+The cat ate slowly
+The dog ate noisily
+The cat ate noisily
+The dog ran slowly
+The cat ran slowly
+The dog ran noisily
+The cat ran noisily
+
+The lazy dog ate //one adjective, no adverb: 8 sentences
+The lazy cat ate
+The smelly dog ate
+The smelly cat ate
+The lazy dog ran
+The lazy cat ran
+The smelly dog ran
+The smelly cat ran
+
+//two adjective, no adverb: 16 sentences
+//two adjective, one adverb: 32 sentences
+//---------------------THIS IS WORK---------------------
+
+
+There are 68 sentences in this language (if we assume that there is a max of 2 adjectives)
+
+Otherwise, there is an infinite amount of sentences because you can keep using the same adjectives over and over:
+ex. "The lazy smelly lazy smelly smelly lazy dog ran." will technically pass since the only rules for adjectives are one or more
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
