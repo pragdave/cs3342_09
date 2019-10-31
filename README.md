@@ -1,3 +1,5 @@
+This is Hayden Donofrio's README for cs3342_09
+
 # Grammars Assignment (50 points)
 
 This file contains two questions. The first has 2 parts, the second has 7.
@@ -42,7 +44,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+A -> α
+
+S -> r S r | r
+S -> g S g | s
+S -> b S b | b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -51,10 +57,10 @@ Using big-O notation, what is the likely memory requirement for a parser that
 can validate a particular path configuration, where `n` is the number of tiles?
 In one sentence, explain why.
 
+
 ## A1.2
 
-«replace this with your answer»
-
+The memory requirement is O(N) because the stack for the grammar parser will only need to store N/2 tiles to check for a valid path before popping. This means the total memory should not surpass O(N)
 
 # Q2
 
@@ -82,8 +88,14 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<expr> ::= "the" (adjective)* noun verb (adverb)? 
+<sentence> ::= "The" <adjectives> <noun> <verb> <adverb> "."
 
+<adjectives> ::= <adjective> <adjective>
+<adjective>  ::= "lazy" | "smelly" | <empty>
+<noun>       ::= "dog" | "cat"
+<verb>       ::= "ate" | "ran"
+<adverb>     ::= "slowly" | "noisily" | <empty> 
 
 ## Q2.2 (5 points)
 
@@ -91,7 +103,13 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::=  "The" {<adjective>} <noun> <verbs> {<adverb>} "."
+<adjective>  ::=  "lazy" | "smelly"
+<noun>       ::= "dog" | "cat"
+<verb>       ::= "ate" | "ran"
+<adverb>     ::= "slowly" | "noisily"
+
+
 
 
 ## Q2.3 (6 points)
@@ -109,7 +127,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+![](./State_diagram.png  "State Diagram")
 
 
 ## Q2.4 (6 points)
@@ -124,9 +142,18 @@ Current state | Next word | Next state
 (hint: my version has 13 entries. Yours _might_ be different)
 
 ## A2.4
-
-«replace this with your answer»
-
+--------------|-----------|-----------
+S0        |   the         | S1
+S1        |   Lazy        | S1 
+S1        |   Smelly      | S1 
+S1        |   Dog         | S2
+S1        |   Cat         | S2
+S2        |   ran         | S3
+S2        |   ate         | S3
+S3        |   Slowly      | S4
+S3        |   Noisly      | S4
+S3        |   EOI         | END
+S4        |   EOI         | END
 
 ## Q2.5 (12 points)
 
@@ -144,8 +171,8 @@ this file. If I need to do anything more that type a single command to run your
 code, include a script or makefile that will do the job.
 
 ## A2.5
-
-«replace this with your answer»
+Below is the command to run the file 
+python3 ./state.py
 
 
 ## Q2.6 (3 points)
@@ -154,7 +181,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+60 valid sentences
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +191,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 grammar. Type 3 grammars are representable through a finite state machine, which we have already written!
