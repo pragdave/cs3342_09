@@ -58,8 +58,9 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(n). The parser would have to store each tile until the first pair of tiles are on the stack and then alternate between pop off pairs and add the next tile until the stack is empty.
-
+O(n). The parser would have to store each tile until the first pair of tiles are
+on the stack and then alternate between pop off pairs and add the next tile until
+the stack is empty.
 
 # Q2
 
@@ -173,7 +174,8 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+GrammarParser.py
+run with: py GrammarParser.py to have tests run
 
 
 ## Q2.6 (3 points)
@@ -182,7 +184,8 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There are an infinite number of sentences in this language as there could be an
+infinite number of adjectives as long as repetition is allowed.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -192,4 +195,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level is a type-2 grammar. The very possibility of having an empty terminal means that grammar cannot be a type-3 grammar and the context doesn't really matter so the similest possible grammar is a type-2 grammar.
