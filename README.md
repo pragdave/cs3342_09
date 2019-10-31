@@ -178,6 +178,7 @@ This is done in the files: FSM.h and main.cpp (run main.cpp)
 
 How many valid sentences are there in this language?
 
+
 ## A2.6
 
 //---------------------THIS IS WORK---------------------
@@ -206,13 +207,13 @@ The smelly cat ran
 
 //two adjective, no adverb: 16 sentences
 //two adjective, one adverb: 32 sentences
-//---------------------THIS IS WORK---------------------
-
+//---------------------THIS IS WORK--------------------- (answer below)
 
 There are 68 sentences in this language (if we assume that there is a max of 2 adjectives)
 
 Otherwise, there is an infinite amount of sentences because you can keep using the same adjectives over and over:
 ex. "The lazy smelly lazy smelly smelly lazy dog ran." will technically pass since the only rules for adjectives are one or more
+
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -221,4 +222,5 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language would be level 3. This is because type 3 grammar is the most easily understandable
+and parsable grammar level, as well as being able to be expressed as regular expressions: if we define simplest as easiest to understand for humans

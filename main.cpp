@@ -4,7 +4,6 @@
 #include "FSM.h";
 using namespace std;
 
-
 int main() {
 	//creates the FSM table
 	vector<string> currentState = { "S0", "S1", "S1", "S1", "S1", "S2", "S2", "S3", "S3", "S3", "S3", "S4" };
