@@ -85,7 +85,7 @@ Write the BNF (not EBNF) description for this language.
 ## A2.1
 
 sentence ::= "The" adjectives noun verb adverb "."
-adjectives ::= "" | "lazy" | "smelly" | adjectives "lazy" | "adjectives "smelly"
+adjectives ::= "" | "lazy" | "smelly" | adjectives "lazy" | adjectives "smelly"
 noun ::= "dog" | "cat"
 verb ::= "ate" | "ran
 adverb ::= "" | "slowly" | "noisily" 
@@ -113,7 +113,7 @@ adverb ::= <adverb>
   You can hand draw it and snap a picture, or use a drawing tool. Either way,
   upload the image, and put the file name in the answer below.
 
-  (Hint: my answer has seven states including the start and end states)
+  (Hint: my answer has six states including the start and end states)
 
 
 ## A2.3
@@ -182,8 +182,11 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+There are 60 different sentences available if each of the adjectives can only be used once; however, if the adjectives can be used infinite times, then there are an infinite amount of ways these sentences can be written using:
+  Adjectives: "lazy" "smelly"
+  Nouns: "dog" "cat"
+  Verbs: "ate" "ran"
+  Adverbs: "slowly" "noisily"
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
