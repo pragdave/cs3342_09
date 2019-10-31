@@ -42,8 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> R | G | B
+S -> R S R | G S G | B S B
+R -> "r"
+G -> "g"
+B -> "b"
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,8 +56,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+The big-O notation to validate a path configuration is O(n/2), but since big-0 notation ignores constants, it is O(n). This is the case because if it starts in the middle of the path the validator will only have to check half of the path with the other half to make sure it is a palindrome. 
 
 # Q2
 
@@ -82,8 +84,11 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
-
+sentence ::= "The" adjectives noun verb adverb "."
+adjectives ::= "" | "lazy" | "smelly" | adjectives "lazy" | "adjectives "smelly"
+noun ::= "dog" | "cat"
+verb ::= "ate" | "ran
+adverb ::= "" | "slowly" | "noisily" 
 
 ## Q2.2 (5 points)
 
@@ -91,7 +96,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+sentence ::= "The" { adjectives } noun verb [ adverb ] "."
+adjectives ::= <adjective> 
+noun ::= <noun>
+verb ::= <verb>
+adverb ::= <adverb>
 
 
 ## Q2.3 (6 points)
@@ -125,7 +134,26 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |  smelly   |     S2
+    S2        |    dog    |     S3
+    S3        |    ran    |     S4
+    S4        |     .     |     S0
+    S0        |    the    |     S1
+    S1        |  smelly   |     S2
+    S2        |    dog    |     S3
+    S3        |    ran    |     S4
+    S4        |  slowly   |     S5
+    S5        |     .     |     S0
+    S0        |    the    |     S1
+    S1        |    cat    |     S3
+    S3        |    ate    |     S4
+    S4        |  noisily  |     S5
+    S5        |     .     |     S0
+    S0        |    ---    |     END
+
 
 
 ## Q2.5 (12 points)
