@@ -120,7 +120,7 @@ sentence := "the" {<adjective>} <noun> <verb> [<adverb>]
 
 ## A2.3
 
-See "2_3.png"
+See "2_3.jpg"
 
 
 ## Q2.4 (6 points)
