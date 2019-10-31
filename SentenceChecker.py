@@ -4,67 +4,51 @@
 """
 
 def checkSentence(wordsArr):
+    #Each state is a tuple of (currentState, nextWord, nextState)
+    states = [('S0', 'the', 'S1'),
+              ('S1', 'lazy', 'S1'),
+              ('S1', 'smelly', 'S1'),
+              ('S1', 'dog', 'S2'),
+              ('S1', 'cat', 'S2'),
+              ('S2', 'ate', 'S3'),
+              ('S2', 'ran', 'S3'),
+              ('S3', 'slowly', 'S4'),
+              ('S3', 'noisily', 'S4'),
+              ('S3', 'EOI', 'END'),
+              ('S4', 'EOI', 'END')]
+    
+    #auto-fail if the sentence doesnt have minimum of three words ('the', <noun>, <verb>)
     if len(wordsArr) < 3:
         return False
     
-    words = []
-    for w in wordsArr:
-        words.append(w.lower())
-        
     state = 'S0'
-    nextW = 0;
+    nextW = 0
     
-    #S0, check for 'the'
-    if words[nextW] == 'the':
-        state = 'S1'
-    else:
-        return False
-    
-    #S1/S2, check for adjectives until there is a noun
-    while (state == 'S1' or state == 'S2'):
-        nextW = nextW + 1
-        if (nextW == len(words)):
-            return False
-        if words[nextW] == 'lazy' or words[nextW] == 'smelly':
-            continue
-        elif words[nextW] == 'cat' or words[nextW] == 'dog':
-            state = 'S3'
-        else:
-            return False
-    
-    #S3, check for a verb
-    nextW = nextW+1
-    if (nextW == len(words)):
-        return False
-    if words[nextW] == 'ate' or words[nextW] == 'ran':
-        state = 'S4'
-    else:
-        return False
-    
-    #S4/S5 check for an adverb or a end of input
-    nextW = nextW+1
-    if (nextW == len(words)):
-        return False
-    if words[nextW] == 'slowly' or words[nextW] == 'noisily':
-        state = 'S5'
-    elif words[nextW] == 'eoi':
-        state = 'END'
-        return True
-    else:
-        return False
+    while(state != 'END'):
         
-    #s5 check for end of input
-    nextW = nextW+1
-    if (nextW == len(words)):
-        return False
-    if words[nextW] == 'eoi':
-        state = 'END'
-        return True
-    else:
-        return False
-    
-    
-
+        #If out of words, return false
+        if nextW >= len(wordsArr):
+            return False
+        
+        found = False
+        #For all possible states, if the current state of a tuple is this state,
+        #Compare the next word to the tuple's next word, and change states if matching
+        for i in states:
+            if i[0] == state:
+                if (wordsArr[nextW].lower() == i[1].lower()):
+                    state = i[2]
+                    found = True
+                    
+        #If a state matching the current state and next word was not found, return false
+        #Otherwise continue to next word
+        if not found:            
+            return False
+        else:
+            nextW = nextW + 1
+            continue
+        
+    #If the function reaches the END state and breaks out of the loop, sentence has passed
+    return True
 
 
 #main function
