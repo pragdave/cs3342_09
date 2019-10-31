@@ -42,8 +42,13 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> <<empty>>
+S -> R S R
+S -> G S G
+S -> B S B
+R -> r
+G -> g
+B -> b
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
