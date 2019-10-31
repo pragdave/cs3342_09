@@ -42,15 +42,13 @@ represent the tiles.
 
 ## A1.1
 
-S -> R
-S -> B
-S -> G
-S -> R S R
-S -> G S G
-S -> B S B
+~~~
+S -> R | B | G
+S -> R S R | G S G | B S B
 R -> "r"
 G -> "g"
 B -> "b"
+~~~
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -60,7 +58,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(1). The parser would only have to store the first and last letter of the inpu each time so only two spaces of memory would be needed.
+O(n). The parser would have to store each tile until the first pair of tiles are on the stack and then alternate between pop off pairs and add the next tile until the stack is empty.
 
 
 # Q2
@@ -89,13 +87,14 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
+~~~ bnf
 <sentence> ::= "the" <adjectives> <noun> <verb> <adverb>
 <adjectives> ::= <adjectives> | <adjective>
 <adjective> ::= "" | "lazy" | "smelly"
 <noun> ::= "dog" | "cat"
 <verb> = "ate" | "ran"
 <adverb> = "" | "slowly" | "noisily"
-
+~~~
 
 ## Q2.2 (5 points)
 
@@ -103,12 +102,13 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
+~~~ bnf
 <sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
 <adjective> ::= "lazy" | "smelly"
 <noun> ::= "dog" | "cat"
 <verb> = "ate" | "ran"
 <adverb> = "slowly" | "noisily"
-
+~~~
 
 ## Q2.3 (6 points)
 
