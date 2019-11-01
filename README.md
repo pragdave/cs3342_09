@@ -103,7 +103,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<adjective >     ::=     [{"lazy"|"smelly"}]  
+< adjective >     ::=     [{"lazy"|"smelly"}]  
 < noun >          ::=     "dog"|"cat"  
 < verb >          ::=     "ate"|"ran"  
 < adverb >        ::=     ["slowly"|"noisily"]  
