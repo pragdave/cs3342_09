@@ -87,8 +87,13 @@ The following are examples of valid sentences:
 Write the BNF (not EBNF) description for this language.
 
 ## A2.1
+<sentence>    ::= "The"|"the" <adjectives> <nouns> <verbs> <adverbs> "."
 
-«replace this with your answer»
+<adjectives>  ::= "lazy"|"smelly"|""
+<nouns>       ::= "dog"|"cat"
+<verbs>       ::= "ate"|"ran"
+<adverbs>     ::= "slowly"|"noisily"|""
+
 
 
 ## Q2.2 (5 points)
@@ -97,7 +102,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence>    ::= "The"|"the" {<adjectives>} <nouns> <verbs> [<adverbs>] "."
+
+<adjectives>  ::= "lazy"|"smelly"
+<nouns>       ::= "dog"|"cat"
+<verbs>       ::= "ate"|"ran"
+<adverbs>     ::= "slowly"|"noisily"
 
 
 ## Q2.3 (6 points)
