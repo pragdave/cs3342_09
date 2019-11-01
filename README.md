@@ -42,9 +42,9 @@ represent the tiles.
 
 ## A1.1
 
-S -> r S r | r  
+`S -> r S r | r  
 S -> g S g | s  
-S -> b S b | b  
+S -> b S b | b  `
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -85,13 +85,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<sentence>    ::= "The" <adjectives> <noun> <verb> <adverb> "."  
+`<sentence>    ::= "The" <adjectives> <noun> <verb> <adverb> "."  
   
 <adjectives>  ::= <adjective> <adjective>  
 <adjective>   ::= <empty> | "lazy" | "smelly"  
 <noun>        ::= "dog" | "cat"  
 <verb>        ::= "ate" | "ran"  
-<adverb>      ::= <empty> | "slowly" | "noisily"  
+<adverb>      ::= <empty> | "slowly" | "noisily"  `
 
 
 ## Q2.2 (5 points)
@@ -100,12 +100,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<sentence>  ::= "The" {<adjective>} <noun> <verb> [<adverb>] "."  
+`<sentence>  ::= "The" {<adjective>} <noun> <verb> [<adverb>] "."  
   
 <adjective> ::= "lazy" | "smelly"  
 <noun>      ::= "dog" | "cat"  
 <verb>      ::= "ate" | "ran"  
-<adverb>    ::= "slowly" | "noisily"  
+<adverb>    ::= "slowly" | "noisily"  `
 
 
 ## Q2.3 (6 points)
