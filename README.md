@@ -61,12 +61,10 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(n/2) --> O(n)
-In order to check if a string is a palindrome (which is what we are creating with this
-syntax) we need to compare the first and last elements and move towards the middle until
-we are looking at the same position, which is n/2 comparisons which equates to O(n)
-(since Big O notation ignores the constant 1/2).
-
+O(n)
+If we parse this, say using a stack, we will push until we get to the middle value,
+from which we will pop all the repeated values when we come across them meaning we only
+have to store n/2 of the elements, which is of O(n) complexity.
 
 
 # Q2
@@ -157,8 +155,8 @@ Current state | Next word | Next state
 |    S1          |     smelly  |     S2      |
 |    S1          |      dog    |     S3      |
 |    S1          |      cat    |     S3      |
-|    *S2         |      lazy   |     S2      |
-|    *S2         |     smelly  |     S2      |
+|    S2          |      lazy   |     S2      |
+|    S2          |     smelly  |     S2      |
 |    S2          |      dog    |     S3      |
 |    S2          |      cat    |     S3      |
 |    S3          |      ate    |     S4      |
@@ -166,7 +164,7 @@ Current state | Next word | Next state
 |    S4          |     slowly  |     S5      |
 |    S4          |    noisily  |     S5      |
 |    S4          |      EOI    |     END     |
-|    S1          |      EOI    |     END     |
+|    S5          |      EOI    |     END     |
 
 
 ## Q2.5 (12 points)
@@ -186,8 +184,9 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-\<  \>
+See Sentence.cpp
+(For some reason when running in the genuse servers at smu the last test case would bug out,
+but running on my machine it always returns false, just FYI).
 
 
 ## Q2.6 (3 points)
@@ -196,7 +195,8 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-48 sentences
+Infinite sentences, since you can have an infinite number of adjectives between "the"
+and the noun so we can have an infinite amount of sentences for each number 0-inf.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
