@@ -88,7 +88,7 @@ bool fsm(vector<string> sentence)
             return false;
         }
     }
-    return true;
+    return false;
 }
 
 
@@ -110,9 +110,9 @@ int main(int argc, const char * argv[])
     //INVALID SENTENCES
     vector<string> s5 = {"smelly", "lazy", "cat", "ate", "EOI"};
     s.push_back(s5);
-    vector<string> s6 = {"the", "lazy", "ate", "EOI"};
+    vector<string> s6 = {"the", "lazy", "ate"};
     s.push_back(s6);
-    vector<string> s7 = {"the", "lazy", "cat", "EOI"};
+    vector<string> s7 = {"the", "smelly", "cat", "EOI"};
     s.push_back(s7);
     vector<string> s8 = {"the", "lazy", "smelly", "dog", "ran", "smelly", "EOI"};
     s.push_back(s8);
