@@ -122,7 +122,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSM.pdf
 
 
 ## Q2.4 (6 points)
@@ -179,7 +179,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-There are infinite valid sentences because 
+There are infinite valid sentences because it can be any combination of words as there is no specification on length, only validity.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -189,4 +189,4 @@ explain why.
 
 ## A2.7
 
-The simplest Chomsky grammar level for this language is level 
+The simplest Chomsky grammar level for this language is level 3 because it can be parsed by a finite state machine because the next symbol is always a terminal symbol. 
