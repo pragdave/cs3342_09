@@ -142,8 +142,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+FSM.png
 
 ## Q2.4 (6 points)
 
@@ -190,7 +189,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-
+Parser.java
 
 ## Q2.6 (3 points)
 
@@ -203,6 +202,8 @@ Because the number of adjectives is not limited and there is no rule against dup
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
-
+Which is the simplest Chomsky grammar level for this language? In one sentence, explain why.
 
 ## A2.7
+
+Chomsky-III. A finite state machine can be used to express the grammar, and it does not require backtracking via a stack.
