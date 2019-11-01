@@ -42,9 +42,9 @@ represent the tiles.
 
 ## A1.1
 
-S -> r S r | r
-S -> g S g | s
-S -> b S b | b
+S -> r S r | r  
+S -> g S g | s  
+S -> b S b | b  
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -85,13 +85,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<sentence>    ::= "The" <adjectives> <noun> <verb> <adverb> "."
-
-<adjectives>  ::= <adjective> <adjective>
-<adjective>   ::= <empty> | "lazy" | "smelly"
-<noun>        ::= "dog" | "cat"
-<verb>        ::= "ate" | "ran"
-<adverb>      ::= <empty> | "slowly" | "noisily"
+<sentence>    ::= "The" <adjectives> <noun> <verb> <adverb> "."  
+  
+<adjectives>  ::= <adjective> <adjective>  
+<adjective>   ::= <empty> | "lazy" | "smelly"  
+<noun>        ::= "dog" | "cat"  
+<verb>        ::= "ate" | "ran"  
+<adverb>      ::= <empty> | "slowly" | "noisily"  
 
 
 ## Q2.2 (5 points)
@@ -100,12 +100,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<sentence>  ::= "The" {<adjective>} <noun> <verb> [<adverb>] "."
-
-<adjective> ::= "lazy" | "smelly"
-<noun>      ::= "dog" | "cat"
-<verb>      ::= "ate" | "ran"
-<adverb>    ::= "slowly" | "noisily"
+<sentence>  ::= "The" {<adjective>} <noun> <verb> [<adverb>] "."  
+  
+<adjective> ::= "lazy" | "smelly"  
+<noun>      ::= "dog" | "cat"  
+<verb>      ::= "ate" | "ran"  
+<adverb>    ::= "slowly" | "noisily"  
 
 
 ## Q2.3 (6 points)
@@ -123,7 +123,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-FSMDiagram.png
+FSMDiagram.png  
 
 
 ## Q2.4 (6 points)
@@ -171,7 +171,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-script.py
+script.py  
 
 
 ## Q2.6 (3 points)
@@ -180,7 +180,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-60
+60  
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -190,6 +190,6 @@ explain why.
 
 ## A2.7
 
-Type-3 Chomsky Grammar is the simplest grammar level for this language. This 
-grammar is representable with a finite state machine, as are type-3 grammars,
-so this grammar is a type-3, the simplest type.
+Type-3 Chomsky Grammar is the simplest grammar level for this language. This  
+grammar is representable with a finite state machine, as are type-3 grammars,  
+so this grammar is a type-3, the simplest type.  
