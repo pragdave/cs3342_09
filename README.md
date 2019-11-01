@@ -48,7 +48,7 @@ T -> 'r'
 T -> 'g'
 T -> 'b'
 
-
+x
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
 Using big-O notation, what is the likely memory requirement for a parser that
@@ -90,7 +90,7 @@ Write the BNF (not EBNF) description for this language.
 <simple-sentence> ::= <the> <opt-adjective> <noun> <verb> <opt-adverb>
 
 <the> ::= "The"
-<opt-adjective> ::= "lazy" | "smelly" | ""
+<opt-adjective> ::= "lazy" | "smelly" | "" | "lazy" <opt-adjective> | "smelly" <opt-adjective>
 <noun> ::= "dog" | "cat"
 <verb> ::= "ate" | "ran"
 <opt-adverb> ::= "slowly" | "noisily" | ""
@@ -102,8 +102,13 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<simple-sentence> ::= <the> {<adjective>} <noun> <verb> [<adverb>]
 
+<the> ::= "The"
+<adjective> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
 
 ## Q2.3 (6 points)
 
@@ -120,7 +125,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSM.jpg
 
 
 ## Q2.4 (6 points)
@@ -143,6 +148,8 @@ Current state | Next word | Next state
     S1        |    smelly |     S2
     S1        |    dog    |     S3
     S1        |    cat    |     S3
+    S2        |    lazy   |     S2
+    S2        |    smelly |     S2
     S2        |    cat    |     S3
     S2        |    dog    |     S3
     S3        |    ran    |     S4
@@ -179,7 +186,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-36
+There are technically an infinite number of valid sentences in this language since there can be an infinite number of adjectives inserted ("zero or more").
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -188,4 +195,6 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language is a Type-3 language. This is because
+it is both possible and easy to represent the language in a Finite State Machine, which is
+representative of a Type-3 language.
