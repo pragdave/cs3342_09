@@ -56,7 +56,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-The big-O notation to validate a path configuration is O(n/2), but since big-0 notation ignores constants, it is O(n). This is the case because if it starts in the middle of the path the validator will only have to check half of the path with the other half to make sure it is a palindrome. 
+The big-O notation to validate a path configuration is O(n/2), but since big-0 notation ignores constants, it is O(n). This is the case because it will only need to compare one half of the word with the other half of the word, so it would work in from each end comparing the two letters to make sure they are the same. 
 
 # Q2
 
@@ -97,10 +97,10 @@ Write this grammar using EBNF with common extensions
 ## A2.2
 
 sentence ::= "The" { adjectives } noun verb [ adverb ] "."
-adjectives ::= <adjective> 
-noun ::= <noun>
-verb ::= <verb>
-adverb ::= <adverb>
+adjectives ::= "lazy" | "smelly"
+noun ::= "dog" | "cat"
+verb ::= "ate" | "ran"
+adverb ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
@@ -138,21 +138,19 @@ Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
     S1        |  smelly   |     S2
-    S2        |    dog    |     S3
-    S3        |    ran    |     S4
-    S4        |     .     |     S0
-    S0        |    the    |     S1
-    S1        |  smelly   |     S2
-    S2        |    dog    |     S3
-    S3        |    ran    |     S4
-    S4        |  slowly   |     S5
-    S5        |     .     |     S0
-    S0        |    the    |     S1
+    S1        |   lazy    |     S2
+    S1        |    dog    |     S3
     S1        |    cat    |     S3
+    S2        |    dog    |     S3
+    S2        |    cat    |     S3
+    S2        |   smelly  |     S2
+    S2        |    lazy   |     S2
     S3        |    ate    |     S4
+    S3        |    ran    |     S4
+    S4        |   slowly  |     S5
     S4        |  noisily  |     S5
-    S5        |     .     |     S0
-    S0        |    ---    |     END
+    S4        |    EOI    |     END
+    S5        |    EOI    |     END
 
 
 
@@ -182,11 +180,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-There are 60 different sentences available if each of the adjectives can only be used once; however, if the adjectives can be used infinite times, then there are an infinite amount of ways these sentences can be written using:
-  Adjectives: "lazy" "smelly"
-  Nouns: "dog" "cat"
-  Verbs: "ate" "ran"
-  Adverbs: "slowly" "noisily"
+Since the adjectives could potentially get stuck in an infinite loop of smelly lazy smelly lazy smelly lazy... which would make the sentences infinitely long, the number of valid sentences is infinity because that's how many different combinations of the adjectives there are and how many different sentences these could make. 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
