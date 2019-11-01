@@ -90,8 +90,8 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<adjective>     ::=     ""|<a>|<adjective> <a>  
-<a>             ::=     "lazy"|"smelly"  
+< adjective>      ::=     ""|<a>|<adjective> <a>  
+< a >             ::=     "lazy"|"smelly"  
 <noun>          ::=     "dog"|"cat"  
 <verb>          ::=     "ate"|"ran"  
 <adverb>        ::=     ""|"slowly"|"noisily"  
