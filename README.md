@@ -58,8 +58,9 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(1)
-In each steop, the parser just need to store the first and last digit and compare them.
+O((n+1)/2) => O(n)
+In the general, the parser needs to store half of the path configuration. Being symmetric, we only need to parse half of the tiles to parse the whole input.
+After the parser "read" the first half plus the middle one, the whole sentence is done.
 
 
 # Q2
@@ -88,7 +89,17 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "The" <Nouns> <Verbs> |
+               "The" <Nouns> <Verbs> <Adverbs> |
+               "The" <Adjectives> <Nouns> <Verbs> |
+               "The" <Adjectives> <Nouns> <Verbs> <Adverbs> |
+               "The" <Adjectives> <Adjectives> <Nouns> <Verbs> |
+               "The" <Adjectives> <Adjectives> <Nouns> <Verbs> <Adverbs>
+<Adjectives> ::= " lazy" | " smelly"
+<Nouns> ::= " dog" | " cat"
+<Verbs> ::= " ate" | " ran"
+<Adverbs> ::= " slowly" | " noisily"
+
 
 
 ## Q2.2 (5 points)
@@ -97,7 +108,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "The" <Adjectives>* <Nouns> <Verbs> <Adverbs>?
 
 
 ## Q2.3 (6 points)
