@@ -42,7 +42,12 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> T
+S -> T S T
+T -> "r"
+T -> "g" 
+T -> "b"
+
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +58,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+The likely memory requirement for this is O(1) because it compares only two tiles at any given time so the memory requirement stays the same regardless of n tiles.
 
 
 # Q2
@@ -82,7 +87,12 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+ ::= "the" | "the" 
+ ::= |
+ ::= "lazy" | "smelly" 
+ ::= "dog" | "cat"
+ ::= "ran" | "ate"
+ ::= "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,8 +101,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
-
+ ::= "the" 
+ ::= { "lazy" | "smelly" } |
+ ::= "dog" | "cat" 
+ ::= "ran" | "ate"
+ ::= [ "slowly" | "noisily" ]
 
 ## Q2.3 (6 points)
 
@@ -125,7 +138,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |   	S1
+    S1	      |   smelly  |     S1
+    S1        |    dog    |     S2
+    S1        |    cat    |     S2
+    S2        |    ran    |     S3
+    S2        |    ate    |     S3
+    S3        |   slowly  |     S4
+    S3        |  noisily  |     S4
+    S3        |    EOI    |    END
+    S4        |    EOI    |    END
 
 
 ## Q2.5 (12 points)
@@ -154,7 +179,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There are infinite valid sentences because 
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +189,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language is level 
