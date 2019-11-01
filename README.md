@@ -182,7 +182,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+48  
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -192,4 +192,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+This is a level 2 language because its context-free and can be passed down a finite state machine.  
