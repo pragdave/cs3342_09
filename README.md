@@ -42,7 +42,9 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r S r | r
+S -> g S g | s
+S -> b S b | b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +55,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+The memory requirement would be O(n) because the stack for the parser will only contain
+at a maximum n/2 tiles before popping, so the memory usage will never surpass n + n/2.
 
 
 # Q2
@@ -82,7 +85,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence>    ::= "The" <adjectives> <noun> <verb> <adverb> "."
+
+<adjectives>  ::= <adjective> <adjective>
+<adjective>   ::= <empty> | "lazy" | "smelly"
+<noun>        ::= "dog" | "cat"
+<verb>        ::= "ate" | "ran"
+<adverb>      ::= <empty> | "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,7 +100,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence>  ::= "The" {<adjective>} <noun> <verb> [<adverb>] "."
+
+<adjective> ::= "lazy" | "smelly"
+<noun>      ::= "dog" | "cat"
+<verb>      ::= "ate" | "ran"
+<adverb>    ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
@@ -109,7 +123,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSMDiagram.png
 
 
 ## Q2.4 (6 points)
@@ -125,7 +139,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |   smelly  |     S1
+    S1        |    lazy   |     S1
+    S1        |    dog    |     S2
+    S1        |    cat    |     S2
+    S2        |    ate    |     S3
+    S2        |    ran    |     S3
+    S3        |    EOI    |     END
+    S3        |  noisily  |     S4
+    S3        |  slowly   |     S4
+    S4        |    EOI    |     END
 
 
 ## Q2.5 (12 points)
@@ -145,7 +171,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+script.py
 
 
 ## Q2.6 (3 points)
@@ -154,7 +180,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+60
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +190,6 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type-3 Chomsky Grammar is the simplest grammar level for this language. This 
+grammar is representable with a finite state machine, as are type-3 grammars,
+so this grammar is a type-3, the simplest type.
