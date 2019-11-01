@@ -42,7 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> A
+S -> ABA
+A->"r"
+A->"b"
+A->"g"
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +57,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+The likely memory requirement for a parser that can validate a particlar path configuration, where `n` is the number of tiles, is O(n) because the parser would load all elements into memory and then loop through comparing the elements overall symmetry making the memory requirment n.
 
 
 # Q2
@@ -82,7 +86,12 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+::= "the"|"the"
+::="" |
+::="lazy" | "smelly"
+::="dog"|"cat"
+::="ate"|"ran"
+::="slowly"|"noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,7 +100,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+::="the" *[]
+::="lazy" | "smelly"
+::="dog"|"cat"
+::="ate"|"ran"
+::="slowly"|"noisily"
 
 
 ## Q2.3 (6 points)
@@ -109,8 +122,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+fsm_DylanWeeks.jpg
 
 ## Q2.4 (6 points)
 
@@ -125,7 +137,20 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+S0      |       the          |       S1
+S1      |       lazy         |       S2
+S1      |       smelly       |       S2
+S1      |       dog          |       S3
+S2      |       dog          |       S3
+S1      |       cat          |       S3
+S2      |       cat          |       S3
+S3      |       ate          |       S4
+S3      |       ran          |       S4
+S4      |       EOI          |       END
+S4      |       noisily      |       S5
+S4      |       slowly       |       S5
+S5      |       EOI          |       END
+
 
 
 ## Q2.5 (12 points)
@@ -145,7 +170,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+main.cpp
 
 
 ## Q2.6 (3 points)
@@ -154,7 +179,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+If you can repeat adjetives all you want, then there are an infinite number of valid sentences. But if you cant repeat the adjectives, then there are only 60 valid setences.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +189,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language is a grammer type 3, because this requries a state machine and not a stack because there is no need for backtracking, so therefore its level 3.
