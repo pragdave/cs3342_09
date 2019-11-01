@@ -90,11 +90,11 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-< adjective>      ::=     ""|<a>|<adjective> <a>  
-< a >             ::=     "lazy"|"smelly"  
-<noun>          ::=     "dog"|"cat"  
-<verb>          ::=     "ate"|"ran"  
-<adverb>        ::=     ""|"slowly"|"noisily"  
+< adjective >   ::=     ""|< a >|< adjective > < a >  
+< a >           ::=     "lazy"|"smelly"  
+< noun >        ::=     "dog"|"cat"  
+< verb >        ::=     "ate"|"ran"  
+< adverb >      ::=     ""|"slowly"|"noisily"  
 
 
 ## Q2.2 (5 points)
@@ -103,10 +103,10 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<adjective>     ::=     [{"lazy"|"smelly"}]  
-<noun>          ::=     "dog"|"cat"  
-<verb>          ::=     "ate"|"ran"  
-<adverb>        ::=     ["slowly"|"noisily"]  
+<adjective >     ::=     [{"lazy"|"smelly"}]  
+< noun >          ::=     "dog"|"cat"  
+< verb >          ::=     "ate"|"ran"  
+< adverb >        ::=     ["slowly"|"noisily"]  
 
 
 ## Q2.3 (6 points)
