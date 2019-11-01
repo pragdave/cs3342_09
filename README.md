@@ -177,7 +177,14 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+python script: grammar.py
+Run using: python grammar (maybe add the .py, I don't know I used an IDE to do everything)
+
+I decided to have my test cases housed in a text file called tests.txt. All sentences in
+this file are run through my state machine representation in sequence when the python
+script is run, just set it to run however you do (I did mine through an IDE). No input
+arguments are needed since the sentences are all housed in the text file, if additional
+tests are desired feel free to edit said text file.
 
 
 ## Q2.6 (3 points)
