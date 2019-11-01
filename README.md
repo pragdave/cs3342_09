@@ -40,9 +40,15 @@ Write a Chomsky type 2 grammar that describes any valid path containing at
 least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
 represent the tiles.
 
+
+
 ## A1.1
 
-«replace this with your answer»
+S -> T
+S -> T S T
+T -> 'r'
+T -> 'g'
+T -> 'b'
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +59,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n) because the parser needs to validate each element with each rule.
 
 
 # Q2
