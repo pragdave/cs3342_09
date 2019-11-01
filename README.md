@@ -90,7 +90,11 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<adjective>     ::=     ""|<a>|<adjective> <a>  
+<a>             ::=     "lazy"|"smelly"  
+<noun>          ::=     "dog"|"cat"  
+<verb>          ::=     "ate"|"ran"  
+<adverb>        ::=     ""|"slowly"|"noisily"  
 
 
 ## Q2.2 (5 points)
@@ -99,7 +103,10 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<adjective>     ::=     [{"lazy"|"smelly"}]  
+<noun>          ::=     "dog"|"cat"  
+<verb>          ::=     "ate"|"ran"  
+<adverb>        ::=     ["slowly"|"noisily"]  
 
 
 ## Q2.3 (6 points)
@@ -117,7 +124,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSMDiagram.jpeg  
 
 
 ## Q2.4 (6 points)
@@ -133,7 +140,20 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1  
+    S1        |           |     S1  
+    S1        |    lazy   |     S1  
+    S1        |   smelly  |     S2  
+    S2        |    dog    |     S2  
+    S2        |    cat    |     S3  
+    S3        |    ate    |     S3  
+    S3        |    ran    |     S4  
+    S4        |           |     S4  
+    S4        |   slowly  |     S4  
+    S4        |  noisily  |     S5  
+    S5        |    EOI    |     END  
 
 
 ## Q2.5 (12 points)
