@@ -43,7 +43,7 @@ represent the tiles.
 ## A1.1
 ```
 S -> r S r | r  
-S -> g S g | s  
+S -> g S g | g  
 S -> b S b | b  
 ```
 
