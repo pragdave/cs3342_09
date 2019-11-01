@@ -41,8 +41,12 @@ least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
 represent the tiles.
 
 ## A1.1
-
-«replace this with your answer»
+S -> r
+S -> g
+S -> b
+S -> r S r
+S -> g S r
+S -> b S r
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -52,8 +56,8 @@ can validate a particular path configuration, where `n` is the number of tiles?
 In one sentence, explain why.
 
 ## A1.2
-
-«replace this with your answer»
+O(n)
+The parser will load the entire path into memory, then check if element i is equal to element n-i, stopping after i = n-i or i = n-i+1, or if element i != n-i thus the memory requirement will be n.
 
 
 # Q2
@@ -81,15 +85,22 @@ The following are examples of valid sentences:
 Write the BNF (not EBNF) description for this language.
 
 ## A2.1
-
-«replace this with your answer»
-
+<sentance>::="the"<adjective><noun><verb>|"the"<adjective><noun><verb><adverb>
+<adjective>::= ""|"lazy"|"smelly"|"lazy"<adjective>|"smelly"<adjective>
+<noun>::="dog"|"cat"
+<verb>::="ate"|"ran"
+<adverb>::="slowly"|"noisily"
 
 ## Q2.2 (5 points)
 
 Write this grammar using EBNF with common extensions
 
 ## A2.2
+<sentance>::="the"*<adjective><noun><verb>?<adverb>
+<adjective>::="lazy"|"smelly"
+<noun>::="dog"|"cat"
+<verb>::="ate"|"ran"
+<adverb>::="slowly"|"noisily"
 
 «replace this with your answer»
 
@@ -109,7 +120,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSM.png
 
 
 ## Q2.4 (6 points)
@@ -125,7 +136,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |     S1
+    S1        |   smelly  |     S1
+    S1        |    dog    |     S2
+    S1        |    cat    |     S2
+    S2        |    ate    |     S3
+    S2        |    ran    |     S3
+    S3        |   slowly  |     S4
+    S3        |   noisily |     S4
+    S3        |   EOI     |    END
+    S4        |   EOI     |    END
 
 
 ## Q2.5 (12 points)
@@ -145,7 +168,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+Command to run my code: ./answer.exe
 
 
 ## Q2.6 (3 points)
@@ -154,7 +177,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There is an infinite number of valid sentances in this language, as there is no limit on the number of adjectives.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +187,5 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+This language is a Chomsky Type-3 language.
+Type-3 because the language can be represented with a finite state machine without a stack.
