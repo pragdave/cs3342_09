@@ -1,0 +1,4 @@
+The smelly dog ran . EOI
+Hi EOI
+The cat ate . EOI
+The smelly cat ran slowly . EOI

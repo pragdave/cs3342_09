@@ -43,6 +43,12 @@ represent the tiles.
 ## A1.1
 
 «replace this with your answer»
+S -> 'r'
+S -> 'b'
+S -> 'g'
+S -> 'r' S 'r'
+S -> 'g' S 'g'
+S -> 'b' S 'b'
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,8 +59,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+The memory requirement for a parser of this problem would be O(n), because the entire path must be put into memory so it can be searched through.  An algorithm, O(n), could possibly start at the head and tail and compare tiles heading towards the other end until they were on the same tile. 
 
 # Q2
 
@@ -80,10 +85,18 @@ The following are examples of valid sentences:
 
 Write the BNF (not EBNF) description for this language.
 
+
+
 ## A2.1
 
 «replace this with your answer»
-
+<sentence> ::= <start> <adj> <noun> <verb_and_adverb> <period>
+<start> ::= "The"
+<adj> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb_and_adverb> ::= "ate" adverb | "ran" adverb | "ate" | "ran"
+<adveb> ::= "slowly" | "noisily" 
+<period> ::= "."
 
 ## Q2.2 (5 points)
 
@@ -92,6 +105,8 @@ Write this grammar using EBNF with common extensions
 ## A2.2
 
 «replace this with your answer»
+<sentence> ::= "the" ["lazy" | "smelly"] {"dog" | "cat"} {"ate" | "ran"} ["slowly" | "noisily"] "."
+
 
 
 ## Q2.3 (6 points)
@@ -105,11 +120,12 @@ Write this grammar using EBNF with common extensions
   upload the image, and put the file name in the answer below.
 
   (Hint: my answer has seven states including the start and end states)
+  You probably want to have six states, he was wrong :O
 
 
 ## A2.3
 
-«replace this with your answer»
+FSMDiagram.png
 
 
 ## Q2.4 (6 points)
@@ -125,7 +141,21 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word       | Next state
+--------------|-----------------|-----------
+    S0        |    the          |     S1
+    S1        |    lazy         |     S2
+    S1        |    smelly       |     S2
+    S2        |    dog          |     S3
+    S2        |    cat          |     S3
+    S3        |    ate          |     S4
+    S3        |    ran          |     S4
+    S4        |    slowly       |     S5
+    S4        |    noisily      |     S5
+    S4        |    .            |     S5
+    S5        |    .            |     S6
+    S5        |    EOI          |     END
+    S6        |    EOI          |     END
 
 
 ## Q2.5 (12 points)
@@ -145,8 +175,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+For the input file, each line must be one sentence. The sentence can be valid or not, and the program will return its validity. Please input the number of lines you wish to test.
 
 ## Q2.6 (3 points)
 
@@ -154,8 +183,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+Because zero or more adjectives are accepted in this language, there are an infinite possible of combinations. Although the adjectives would be repeated and would not make grammatical sense to an English speaker, within this grammar it is correct. The infinite amount of possible adjectives makes for infinite combinations.
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -164,4 +192,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest grammar level would be level three. That is because it requires a FSM and does not require any backtracking.
