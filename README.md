@@ -22,7 +22,7 @@ Please do not edit anything outside the answers sections.
 
 Mr Fussy wants to build a path using a row of large square pavers. His path is
 one paver wide and an odd number of pavers long. Pavers come in three colors:
-red, green, blue.
+red, green, blue. 
 
 Mr Fussy has a rule: the sequence of colors must be symmetrical across the
 length of the path: the last paver must be the same color as the first, the
@@ -42,7 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> A S A  
+S -> A  
+A -> 'r'  
+A -> 'g'  
+A -> 'b'
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +57,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n).  
+Each time a new title added, it added to the top of stack. Thus, the memory requirement is linear.
 
 
 # Q2
@@ -81,9 +86,11 @@ The following are examples of valid sentences:
 Write the BNF (not EBNF) description for this language.
 
 ## A2.1
-
-«replace this with your answer»
-
+<sentence> ::= "the" <adjective> <noun> <verb> <adverb>
+<adjective> ::= "" | "lazy" <adjective> | "smelly" <adjective>  
+<noun> ::= "dog" | "cat"  
+<verb> ::= "ate" | "ran"  
+<adverb> ::= "" | "slowly" | "noisily"  
 
 ## Q2.2 (5 points)
 
@@ -91,7 +98,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>] 
+<adjective> ::= "lazy" | "smelly"   
+<noun> ::= "dog" | "cat"  
+<verb> ::= "ate" | "ran"  
+<adverb> ::= "slowly" | "noisily"  
+
 
 
 ## Q2.3 (6 points)
@@ -108,9 +120,7 @@ Write this grammar using EBNF with common extensions
 
 
 ## A2.3
-
-«replace this with your answer»
-
+![](FSM.png)
 
 ## Q2.4 (6 points)
 
@@ -125,7 +135,21 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |   the     |     S1
+    S1        |   lazy    |     S2  
+    S1        |   smelly  |     S2    
+    S1        |   dog     |     S3    
+    S1        |   cat     |     S3    
+    S2        |   dog     |     S3
+    S2        |   cat     |     S3    
+    S3        |   ate     |     S4
+    S3        |   ran     |     S4
+    S4        |   slowly  |     S5
+    S4        |   noisily |     S5
+    S4        |   EOI     |     END
+    S5        |   EOI     |     END  
 
 
 ## Q2.5 (12 points)
@@ -154,7 +178,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Infinite, because adjective can be infinite
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +188,5 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3.  
+It can be parsed by a FSM.
