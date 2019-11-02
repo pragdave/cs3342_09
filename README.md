@@ -170,7 +170,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+python TSM.py
 
 
 ## Q2.6 (3 points)
