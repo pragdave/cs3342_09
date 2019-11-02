@@ -42,8 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> C
+S -> SCS
+C -> "r"
+C -> "g"
+C -> "b"
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +56,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+the parser would only need O(1) memory because it will always check either one or two values regardless of the number of overall values
 
 
 # Q2
@@ -82,7 +85,12 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+::= "the" | "the" 
+::= | 
+::= "lazy" | "smelly" 
+::= "dog" | "cat" 
+::= "ran" | "ate" 
+::= "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,7 +99,10 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+::= "the" ::= { "lazy" | "smelly" } | 
+::= "dog" | "cat" 
+::= "ran" | "ate" 
+::= { "slowly" | "noisily" }
 
 
 ## Q2.3 (6 points)
@@ -125,7 +136,17 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |   noun    |     s2
+    s1        |  adjective|     s3
+    s3        | adjective |     s3
+    s3        |   noun    |     s2
+    s2        |   verb    |     s4
+    s4        |   EOI     |     s6
+    s4        |   adverb  |     s5
+    s5        |   EOI     |     s6
 
 
 ## Q2.5 (12 points)
@@ -154,7 +175,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+48
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +185,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+level 3 because as we displayed the language can be parsed using a finite state machine thus making it a level 3 chomsky grammar
