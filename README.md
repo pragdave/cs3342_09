@@ -207,4 +207,6 @@ explain why.
 ## A2.7
 
 Type-III Chomsky grammer;
+Type-III grammars can be represented in a finite state machine, as ours is in this example
+and it doesn't have syntax that is context-free so that recursion is needed (as in Type-II).
 
