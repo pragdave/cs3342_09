@@ -59,7 +59,8 @@ In one sentence, explain why.
 ## A1.2
 
 O((n+1)/2) => O(n)
-In the general, the parser needs to store half of the path configuration. Being symmetric, we only need to parse half of the tiles to parse the whole input.
+In the general, the parser needs to store half of the path configuration. 
+Being symmetric, we only need to parse half of the tiles to parse the whole input.
 After the parser "read" the first half plus the middle one, the whole sentence is done.
 
 
@@ -178,7 +179,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+SentenceTesting.cpp
 
 
 ## Q2.6 (3 points)
@@ -187,7 +188,13 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+If all conditions can appear once, 
+which means each adjective can only be used once in each sentence, 
+there will be 60 possible sentences in this language.
+
+But, if we can use adjective more than once, 
+which is allowed by the table and the diagram but banned in the code, 
+then there will be infinitly many sentences in this language.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -197,4 +204,6 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type-3 grammar will be the simplest Chomsky Grammar level.
+To make the sentence sensable and understandable, we need the terminal signal after each word, which as unterminal; 
+beside, we also need to limite that for each unterminal value, it won't repeat infinitly.
