@@ -1,6 +1,8 @@
+#include <string>
+
 int main(int argc, const char * argv[]) {
 
-    string[] column1 = ["S0", "S1", "S1", "S1", "S1", "S2", "S2", "S2", "S2", "S3", "S3", "S4", "S4", "S4", "S5"];
+    column1 string[] = ["S0", "S1", "S1", "S1", "S1", "S2", "S2", "S2", "S2", "S3", "S3", "S4", "S4", "S4", "S5"];
     string[] column2 = ["the", "smelly", "lazy", "dog", "cat", "dog", "cat", "smelly", "lazy", "ate", "ran", "slowly", "noisily", "EOI", "EOI"];
     string[] column3 = ["S1", "S2", "S2", "S3", "S3", "S3", "S3", "S2", "S2", "S4", "S4", "S5", "S5", "END", "END"];
 

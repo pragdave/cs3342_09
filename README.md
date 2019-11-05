@@ -118,7 +118,7 @@ adverb ::= "slowly" | "noisily"
 
 ## A2.3
 
-«replace this with your answer»
+IMG_2409.JPG
 
 
 ## Q2.4 (6 points)
@@ -171,7 +171,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+Question2.5.cpp
 
 
 ## Q2.6 (3 points)
@@ -189,4 +189,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language is Type 3. This is because this problem is strictly defined and can use reguarly generate languages to solve the problem. 
