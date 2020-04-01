@@ -41,9 +41,16 @@ least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
 represent the tiles.
 
 ## A1.1
-
-«replace this with your answer»
-
+S -> <<empty>>
+S -> R S R
+S -> G S G
+S -> B S B
+R -> "r"
+G -> "g"
+B -> "b"
+S -> R
+S -> G
+S -> B
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,8 +60,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+O(n), since esentially it is determining a "palindrome" persay, so the maximum is n/2 because it may be false before then, and since n/2 is still greater than a linear search, it is still O(n). 
 
 # Q2
 
@@ -82,7 +88,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "The"<subject><predicate>"."
+<subject>::=<noun>|<adjective><noun>
+<noun>::="dog"|"cat"
+<adjective>::="smelly"|"lazy"
+<predicate>::=<verb>|<verb><adverb>
+<verb>::="ate"|"ran"
+<adverb>::="slowly"|"noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,8 +103,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
-
+<sentence>::="The"[<adjective>]<noun><verb>[<adverb>]
+<verb>::="ate"|"ran"
+<adverb>::="slowly"|"noisily"
+<noun>::="dog"|"cat"
+<adjective>::="smelly"|"lazy"
 
 ## Q2.3 (6 points)
 
@@ -109,8 +124,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+![If the image will not appear, view cycles.jpg included in this file](/cycles.jpg)
 
 ## Q2.4 (6 points)
 
@@ -125,8 +139,21 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
-
+Line # |  Current state |    Next word   | Next state
+-------|----------------|----------------|-----------
+  1    |      S0        |    The         |    S1
+  2    |      S1        |    dog         |    S3
+  3    |      S1        |    cat         |    S3
+  4    |      S1        |    smelly      |    S2
+  5    |      S1        |    lazy        |    S2
+  6    |      S2        |    dog         |    S3
+  7    |      S2        |    cat         |    S3   
+  8    |      S3        |    ate         |    S4
+  9    |      S3        |    ran         |    S4
+  10   |      S4        |    slowly      |    S5
+  11   |      S4        |    noisily     |    S5
+  12   |      S4        |      .         |    END
+  13   |      S5        |      .         |    END
 
 ## Q2.5 (12 points)
 
@@ -145,17 +172,60 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+run main.cpp with sentences.txt as a command line argument:
+g++ -o main main.cpp
+./main sentences.txt
 
 ## Q2.6 (3 points)
 
 How many valid sentences are there in this language?
 
 ## A2.6
+36 total 
 
-«replace this with your answer»
+visual explanation: 
+The dog ate.
+The dog ran.
+The smelly dog ate.
+The lazy dog ate.
+The smelly dog ran.
+The lazy dog ran.
+The dog ate slowly.
+The dog ate noisily. 
+The dog ran slowly. 
+The dog ran noisily. 
+The smelly dog ran noisily.
+The lazy dog ran noisily.
+The smelly dog ran slowly.
+The lazy dog ran slowly.
+The smelly dog ate noisily.
+The lazy dog ate noisily.
+The smelly dog ate slowly.
+The lazy dog ate slowly.
+The cat ate.
+The cat ran.
+The smelly cat ate.
+The lazy cat ate.
+The smelly cat ran.
+The lazy cat ran.
+The cat ate slowly.
+The cat ate noisily. 
+The cat ran slowly. 
+The cat ran noisily. 
+The smelly cat ran noisily.
+The lazy cat ran noisily.
+The smelly cat ran slowly.
+The lazy cat ran slowly.
+The smelly cat ate noisily.
+The lazy cat ate noisily.
+The smelly cat ate slowly.
+The lazy cat ate slowly.
 
+mathematical explanation:
+1 * 3 * 2 * 2 * 3 * 1=36
+
+1  *       3         *   2   *   2   *     3              *1
+The smelly/lazy/blank dog/cat ate/ran slowly/noisily/blank .
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -164,4 +234,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language is type 2, as it needs to at least accomodate strings which Type 3 cannot do, but it is not context sensitive either and did not need to clarify function and variable. 
