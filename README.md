@@ -89,8 +89,18 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
-
+<sentence> ::= "the" <noun> <verb> "."
+<sentence> ::= "the" <noun> <verb> <adverb> "."
+<sentence> ::= "the" <adjective> <noun> <verb> "."
+<sentence> ::= "the" <adjective> <noun> <verb> <adverb> "."
+<noun> ::= "dog"
+<noun> ::= "cat"
+<verb> ::= "ate"
+<verb> ::= "ran"
+<adverb> ::= "slowly"
+<adverb> ::= "noisily"
+<adjective> ::= "lazy"
+<adjective> ::= "smelly"
 
 ## Q2.2 (5 points)
 
@@ -98,8 +108,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
-
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>] "."
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
+<adjective> ::= "lazy" | "smelly"
 
 ## Q2.3 (6 points)
 
@@ -116,8 +129,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+q2-3.pdf
 
 ## Q2.4 (6 points)
 
@@ -132,8 +144,15 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
-
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |<adjective>|     S2
+    S1        |  <noun>   |     S3
+    S2        |<adjective>|     S2
+    S2        |  <noun>   |     S3
+    S3        |  <verb>   |     S4
+      
 
 ## Q2.5 (12 points)
 
