@@ -103,11 +103,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<sentence>::="The"[<adjective>]<noun><verb>[<adverb>]
-<verb>::="ate"|"ran"
-<adverb>::="slowly"|"noisily"
-<noun>::="dog"|"cat"
-<adjective>::="smelly"|"lazy"
+<<sentence>>::="The"[<adjective>]<noun><verb>[<adverb>]
+<<verb>>::="ate"|"ran"
+<<adverb>>::="slowly"|"noisily"
+<<noun>>::="dog"|"cat"
+<<adjective>>::="smelly"|"lazy"
 
 ## Q2.3 (6 points)
 
