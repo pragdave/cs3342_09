@@ -49,17 +49,16 @@ S -> G S G
 
 S -> B S B
 
+S -> L
+
 R -> "r"
 
 G -> "g"
 
 B -> "b"
 
-S -> R
+L-> "r"|"g"|"b"
 
-S -> G
-
-S -> B
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -118,7 +117,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-< sentence > ::="The"[< adjective >]< noun >< verb >[< adverb >]
+< sentence > ::="The" < adjective >? < noun > < verb > < adverb >?
 
 < verb >::="ate"|"ran"
 
@@ -259,4 +258,4 @@ explain why.
 
 ## A2.7
 
-The simplest Chomsky grammar level for this language is type 2, as it needs to at least accomodate strings which Type 3 cannot do, but it is not context sensitive either and did not need to clarify function and variable. 
+The simplest Chomsky grammar level for this language is type 3, as it can be expressed as a finite state machine, a type 3 trait. 
