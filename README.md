@@ -41,15 +41,24 @@ least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
 represent the tiles.
 
 ## A1.1
-S -> <<empty>>
+S -> < empty >
+
 S -> R S R
+
 S -> G S G
+
 S -> B S B
+
 R -> "r"
+
 G -> "g"
+
 B -> "b"
+
 S -> R
+
 S -> G
+
 S -> B
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -88,13 +97,19 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<sentence> ::= "The"<subject><predicate>"."
-<subject>::=<noun>|<adjective><noun>
-<noun>::="dog"|"cat"
-<adjective>::="smelly"|"lazy"
-<predicate>::=<verb>|<verb><adverb>
-<verb>::="ate"|"ran"
-<adverb>::="slowly"|"noisily"
+< sentence > ::= "The"< subject >< predicate >"."
+
+< subject >::=< noun >|< adjective >< noun >
+
+< noun >::="dog"|"cat"
+
+< adjective >::="smelly"|"lazy"
+
+< predicate >::=< verb >|< verb >< adverb >
+
+< verb >::="ate"|"ran"
+
+< adverb >::="slowly"|"noisily"
 
 
 ## Q2.2 (5 points)
@@ -103,11 +118,15 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<<sentence>>::="The"[<adjective>]<noun><verb>[<adverb>]
-<<verb>>::="ate"|"ran"
-<<adverb>>::="slowly"|"noisily"
-<<noun>>::="dog"|"cat"
-<<adjective>>::="smelly"|"lazy"
+< sentence > ::="The"[< adjective >]< noun >< verb >[< adverb >]
+
+< verb >::="ate"|"ran"
+
+< adverb >::="slowly"|"noisily"
+
+< noun >::="dog"|"cat"
+
+< adjective >::="smelly"|"lazy"
 
 ## Q2.3 (6 points)
 
@@ -124,7 +143,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-![If the image will not appear, view cycles.jpg included in this file](/cycles.jpg)
+![If the image will not appear, view cycles.jpg included in this folder](/cycles.jpg)
 
 ## Q2.4 (6 points)
 
@@ -173,15 +192,18 @@ code, include a script or makefile that will do the job.
 ## A2.5
 
 run main.cpp with sentences.txt as a command line argument:
+
+```
 g++ -o main main.cpp
 ./main sentences.txt
+```
 
 ## Q2.6 (3 points)
 
 How many valid sentences are there in this language?
 
 ## A2.6
-36 total 
+**36 total **
 
 visual explanation: 
 The dog ate.
@@ -222,10 +244,13 @@ The smelly cat ate slowly.
 The lazy cat ate slowly.
 
 mathematical explanation:
+
+The smelly/lazy/blank dog/cat ate/ran slowly/noisily/blank .
+
 1 * 3 * 2 * 2 * 3 * 1=36
 
-1  *       3         *   2   *   2   *     3              *1
-The smelly/lazy/blank dog/cat ate/ran slowly/noisily/blank .
+
+
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
