@@ -58,8 +58,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+o(n), because the path configuration is likely to be parsed in linear time for 
+'n' number of tiles.
 
 # Q2
 
