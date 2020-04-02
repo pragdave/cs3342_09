@@ -42,8 +42,16 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> <empty>
+S -> R
+S -> G
+S -> B
+S -> RSR
+S -> GSG
+S -> BSB
+R -> 'r'
+G -> 'g'
+B -> 'b'
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,8 +61,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+A parser for this grammar would likely be roughly O(nlogn), because the runtime grows in proportion to the number of tiles, but not exactly one-to-one - The parser will sometimes need to parse three nonterminals in place of one, such as in the rule S -> RSR.
 
 # Q2
 
