@@ -4,4 +4,5 @@ The dog cried .
 The smelly dog ran noisily .
 The smelly dog ran slowly .
 The smelly dog ran noisily
+The smelly lazy dog ran noisily .
 The dog .

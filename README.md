@@ -117,7 +117,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-< sentence > ::="The" < adjective >? < noun > < verb > < adverb >?
+< sentence > ::="The" < adjective >* < noun > < verb > < adverb >?
 
 < verb >::="ate"|"ran"
 
@@ -142,7 +142,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-![If the image will not appear, view cycles.jpg included in this folder](/cycles.jpg)
+![If the image will not appear, view fsm.png included in this folder](/fsm.png)
 
 ## Q2.4 (6 points)
 
@@ -160,18 +160,16 @@ Current state | Next word | Next state
 Line # |  Current state |    Next word   | Next state
 -------|----------------|----------------|-----------
   1    |      S0        |    The         |    S1
-  2    |      S1        |    dog         |    S3
-  3    |      S1        |    cat         |    S3
-  4    |      S1        |    smelly      |    S2
-  5    |      S1        |    lazy        |    S2
-  6    |      S2        |    dog         |    S3
-  7    |      S2        |    cat         |    S3   
-  8    |      S3        |    ate         |    S4
-  9    |      S3        |    ran         |    S4
-  10   |      S4        |    slowly      |    S5
-  11   |      S4        |    noisily     |    S5
-  12   |      S4        |      .         |    END
-  13   |      S5        |      .         |    END
+  2    |      S1        |    dog         |    S2
+  3    |      S1        |    cat         |    S2
+  4    |      S1        |    smelly      |    S1
+  5    |      S1        |    lazy        |    S1  
+  6    |      S2        |    ate         |    S3
+  7    |      S2        |    ran         |    S3
+  8    |      S4        |    slowly      |    S5
+  9    |      S4        |    noisily     |    S5
+  10   |      S4        |      .         |    END
+  11   |      S5        |      .         |    END
 
 ## Q2.5 (12 points)
 

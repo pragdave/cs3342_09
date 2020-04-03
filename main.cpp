@@ -9,37 +9,31 @@ int main(int argc, char *argv[]) {
         if(inFile.is_open()){
             std::string word;
             inFile>>word;
-            while(!inFile.eof()) {
-                //inFile>>word;
+            while(inFile.good()) {
                 switch(currentState){
                     case 0:
                         if(word.compare("The")==0){
                             currentState=1;
                             inFile>>word;
                         }
-                        else{break;}
                     case 1:
                         if(word.compare("dog")==0||word.compare("cat")==0){
-                            currentState=3;
-                            inFile>>word;
-                        }
-                        else if(word.compare("smelly")==0||word.compare("lazy")==0){
                             currentState=2;
                             inFile>>word;
                         }
+                        else if(word.compare("smelly")==0||word.compare("lazy")==0){
+                            currentState=1;
+                            inFile>>word;
+                            continue;
+                        }
                     case 2:
-                        if(word.compare("dog")==0||word.compare("cat")==0){
+                        if(word.compare("ate")==0||word.compare("ran")==0){
                             currentState=3;
                             inFile>>word;
                         }
                     case 3:
-                        if(word.compare("ate")==0||word.compare("ran")==0){
-                            currentState=4;
-                            inFile>>word;
-                        }
-                    case 4:
                         if(word.compare("slowly")==0||word.compare("noisily")==0){
-                            currentState=5;
+                            currentState=4;
                             inFile>>word;
                         }
                         else if(word.compare(".")==0){
@@ -47,7 +41,7 @@ int main(int argc, char *argv[]) {
                             currentState=0;
                             break;
                         }
-                    case 5:
+                    case 4:
                         if(word.compare(".")==0){
                             currentState=0;
                             correct=1;
@@ -64,7 +58,8 @@ int main(int argc, char *argv[]) {
                 getline(inFile,word,' ');
                 }//end of else statement
                 }//end of file
+            if(correct){std::cout<<"Valid sentence"<<std::endl;}
+            else{std::cout<<"Invalid sentence"<<std::endl;}
             }//end of is_open
     return 0;
-
 }//end of main
