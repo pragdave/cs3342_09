@@ -92,7 +92,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "The " <subject>  " " <predicate> "."
+<subject> ::= <noun> | <adjective> " " <noun>
+<predicate> ::= <verb> | <verb> " " <adverb>
+<noun> ::= "dog" | "cat"
+<adjective> ::= "lazy" | "smelly"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -101,8 +107,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
-
+<sentence> ::= "The " <adjective>* " "* <subject> " " <verb> " "* <adverb>? "."
+<noun> ::= "dog" | "cat"
+<adjective> ::= "lazy" | "smelly"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
 
 ## Q2.3 (6 points)
 
@@ -116,7 +125,7 @@ Write this grammar using EBNF with common extensions
 
   (Hint: my answer has seven states including the start and end states)
 
-
+   
 ## A2.3
 
 «replace this with your answer»
@@ -135,7 +144,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |   lazy    |     S1
+    S1        |   smelly  |     S1
+    S1        |    cat    |     S2
+    S1        |    dog    |     S2
+    S2        |    ate    |     S3
+    S2        |    ran    |     S3
+    S3        |  slowly   |     S4
+    S3        |  noisily  |     S4
+    S3        |     .     |    End
+    S4        |     .     |    End
 
 
 ## Q2.5 (12 points)
@@ -164,8 +185,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+Since there are zero or more adjectives allowed after the 'the,' there could be an endless amount/combinations of adjectives added afterwards, therefore yielding an infinite amount of valid sentences.
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
