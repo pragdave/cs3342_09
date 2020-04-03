@@ -135,7 +135,6 @@ Convert this diagram into a table of the form:
 Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
---------------|-----------|-----------
     S1        |    ...    |     ...
     
 (hint: my version has 13 entries. Yours _might_ be different)
@@ -146,9 +145,7 @@ Current state | Next word | Next state
 Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
---------------|-----------|-----------
     S1        |    lazy   |     S2
---------------|-----------|-----------
     S1        |    smelly |     S2
     S1        |    dog    |     S3
     S1        |    cat    |     S3
@@ -164,10 +161,7 @@ Current state | Next word | Next state
     S5        |    EOI    |     S6
     
 S0: start, S6: end, EOI: end of input
-   
     
-
-
 ## Q2.5 (12 points)
 
 Translate this table into a programming language of your choice. Then write a
