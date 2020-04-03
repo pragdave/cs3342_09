@@ -142,7 +142,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-![If the image will not appear, view fsm.png included in this folder](/fsm.png)
+![If the image will not appear, view fsm.jpg included in this folder](/fsm.jpg)
 
 ## Q2.4 (6 points)
 
@@ -166,10 +166,10 @@ Line # |  Current state |    Next word   | Next state
   5    |      S1        |    lazy        |    S1  
   6    |      S2        |    ate         |    S3
   7    |      S2        |    ran         |    S3
-  8    |      S4        |    slowly      |    S5
-  9    |      S4        |    noisily     |    S5
-  10   |      S4        |      .         |    END
-  11   |      S5        |      .         |    END
+  8    |      S3        |    slowly      |    S4
+  9    |      S3        |    noisily     |    S4
+  10   |      S3        |      .         |    END
+  11   |      S4        |      .         |    END
 
 ## Q2.5 (12 points)
 
