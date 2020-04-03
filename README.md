@@ -200,51 +200,13 @@ g++ -o main main.cpp
 How many valid sentences are there in this language?
 
 ## A2.6
-**36 total **
-
-visual explanation: 
-The dog ate.
-The dog ran.
-The smelly dog ate.
-The lazy dog ate.
-The smelly dog ran.
-The lazy dog ran.
-The dog ate slowly.
-The dog ate noisily. 
-The dog ran slowly. 
-The dog ran noisily. 
-The smelly dog ran noisily.
-The lazy dog ran noisily.
-The smelly dog ran slowly.
-The lazy dog ran slowly.
-The smelly dog ate noisily.
-The lazy dog ate noisily.
-The smelly dog ate slowly.
-The lazy dog ate slowly.
-The cat ate.
-The cat ran.
-The smelly cat ate.
-The lazy cat ate.
-The smelly cat ran.
-The lazy cat ran.
-The cat ate slowly.
-The cat ate noisily. 
-The cat ran slowly. 
-The cat ran noisily. 
-The smelly cat ran noisily.
-The lazy cat ran noisily.
-The smelly cat ran slowly.
-The lazy cat ran slowly.
-The smelly cat ate noisily.
-The lazy cat ate noisily.
-The smelly cat ate slowly.
-The lazy cat ate slowly.
+There are an __infinite__ amount of solutions
 
 mathematical explanation:
 
-The smelly/lazy/blank dog/cat ate/ran slowly/noisily/blank .
+The smelly/lazy/blank* dog/cat ate/ran slowly/noisily/blank .
 
-1 * 3 * 2 * 2 * 3 * 1=36
+1 * infinity * 2 * 2 * 3 * 1=infinity
 
 
 
