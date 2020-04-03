@@ -42,7 +42,17 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> R S R
+
+S -> G S G
+
+S -> B S B
+
+R -> "r"
+
+G -> "g"
+
+B -> "b"
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +63,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+The time complexity would be O(n) because looking for a palindrome is 0(n/2). This is because only parsing half of the path is necessary to determine if it is a palindrome and O(n/2) is equivalent to O(n) because with a large 'n,' the 1/2 component does not matter.
 
 
 # Q2
