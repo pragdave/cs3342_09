@@ -125,8 +125,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+![](diagram.jpg)
 
 ## Q2.4 (6 points)
 
@@ -175,8 +174,9 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+Command: g++ -std=c++14 sentence.cpp -o sentence && ./sentence
 
+I use C++ to code it. It works in C++14 but I am not sure about older versions.
 
 ## Q2.6 (3 points)
 
