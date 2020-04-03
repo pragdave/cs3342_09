@@ -42,7 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> RSR | GSG | BSB | R | G | B
+R -> "r"
+G -> "g"
+B -> "b"
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +56,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n)
+It has to be able to compare the first and last tiles for symmetry, along with every other set.
 
 
 # Q2
@@ -82,7 +86,11 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence>   ::= "the" <adjective> <noun> <verb> <adverb>"."
+<adverb>     ::= "slowly" | "noisily" | ""
+<noun>       ::= "dog" | "cat"
+<verb>       ::= "ate" | "ran"
+<adjecctive> ::= "lazy" | "smelly" | ""
 
 
 ## Q2.2 (5 points)
@@ -91,7 +99,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence>   ::= "the" {<adjective>} <noun> <verb> [<adverb>]"."
+<adverb>     ::= "slowly" | "noisily"
+<noun>       ::= "dog" | "cat"
+<verb>       ::= "ate" | "ran"
+<adjecctive> ::= "lazy" | "smelly"
 
 
 ## Q2.3 (6 points)
@@ -109,7 +121,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+filename.jpg
 
 
 ## Q2.4 (6 points)
@@ -120,13 +132,27 @@ Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
     S1        |   . . .   |   . . .
+    
 
 (hint: my version has 13 entries. Yours _might_ be different)
 
 ## A2.4
 
-«replace this with your answer»
-
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |     S2
+    S1        |    smelly |     S2
+    S1        |    ""     |     S2
+    S1        |    lazy   |     S1
+    S1        |    smelly |     S1
+    S2        |    cat    |     S3
+    S2        |    dog    |     S3
+    S3        |    ran    |     S4
+    S3        |    ate    |     S4
+    S4        |    slowly |     eoi
+    S4        |    noisily|     eoi
+    S4        |    ""     |     eoi
 
 ## Q2.5 (12 points)
 
@@ -154,7 +180,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+((2*5)*2)*3 -> 60
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +190,5 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 2. It is context-less as no word is dependent on the word before or after it,
+yet is not quite normal as the adjectives and adverbs can be empty. 
