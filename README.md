@@ -42,7 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+    S -> r | g | b
+    S -> r S r
+    S -> b S b
+    S -> g S g
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +56,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n). Because it should check if the configuration is an odd-length palindrome; one way to do it is using one pointer goes from left to right and one from right to left, they should meet at the center so we need n / 2 comparisions, which is O(n). 
 
 
 # Q2
@@ -82,8 +85,15 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
-
+    <sentence> ::= <the> <opt-adjective> <noun> <verb> <opt-adverb>
+    
+    <the> ::= "the"
+    <adjective> ::= "smelly" | "lazy"
+    <opt-adjective> ::= <opt-adjective> <adjective> | ""
+    <noun> ::= "dog" | "cat"
+    <verb> ::= "ate" | "ran"
+    <opt-adverb> ::= "noisily" | "slowly" | ""
+   
 
 ## Q2.2 (5 points)
 
@@ -91,7 +101,13 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+    <sentence> ::= <the> {<adjective>} <noun> <verb> [<adverb>]
+    
+    <the> ::= "the"
+    <adjective> ::= "smelly" | "lazy"
+    <noun> ::= "dog" | "cat"
+    <verb> ::= "ate" | "ran"
+    <adverb> ::= "noisily" | "slowly"
 
 
 ## Q2.3 (6 points)
@@ -119,13 +135,34 @@ Convert this diagram into a table of the form:
 Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
-    S1        |   . . .   |   . . .
-
+    S1        |    ...    |     ...
+    
 (hint: my version has 13 entries. Yours _might_ be different)
 
 ## A2.4
 
-«replace this with your answer»
+
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |     S2
+    S1        |    smelly |     S2
+    S1        |    dog    |     S3
+    S1        |    cat    |     S3
+    S2        |    lazy   |     S2
+    S2        |    smelly |     S2
+    S2        |    dog    |     S3
+    S2        |    cat    |     S3
+    S3        |    ate    |     S4
+    S3        |    ran    |     S4
+    S4        |    slowly |     S5
+    S4        |    noisily|     S5
+    S4        |    EOI    |     S6
+    S5        |    EOI    |     S6
+    
+S0: start, S6: end, EOI: end of input
+   
+    
 
 
 ## Q2.5 (12 points)
@@ -154,7 +191,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Infinite number of sentences because we can have any number of adjectives.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +201,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 because we can display it easily using Finite State Machine, which represents for type 3.
