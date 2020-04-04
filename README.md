@@ -92,7 +92,7 @@ Write the BNF (not EBNF) description for this language.
 
 ## Q2.2 (5 points)
 
-Write this grammar using EBNF with common extensions
+\<sentence> ::= "the" {adjective} "noun" "verb" [adverb]
 
 ## A2.2
 
