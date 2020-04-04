@@ -114,10 +114,15 @@ Write this grammar using EBNF with common extensions
 ## A2.2
 
 \<sentence> ::= "The " \<adjective>* " "* \<subject> " " \<verb> " "* \<adverb>? "."
+
 \<noun> ::= "dog" | "cat"
+
 \<adjective> ::= "lazy" | "smelly"
+
 \<verb> ::= "ate" | "ran"
+
 \<adverb> ::= "slowly" | "noisily"
+
 
 ## Q2.3 (6 points)
 
