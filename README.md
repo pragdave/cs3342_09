@@ -41,16 +41,10 @@ least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
 represent the tiles.
 
 ## A1.1
-S -> R
-S -> G
-S -> B
-S -> R S R
-S -> G S G
-S -> B S B
-R -> "r"
-G -> "g"
-B -> "b"
-
+S -> 'b'
+S -> 'r' S 'r'
+S -> 'g' S 'g'
+S -> 'b' S 'b'
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
