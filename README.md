@@ -92,13 +92,19 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<sentence> ::= "The " <subject>  " " <predicate> "."
-<subject> ::= <noun> | <adjective> " " <noun>
-<predicate> ::= <verb> | <verb> " " <adverb>
-<noun> ::= "dog" | "cat"
-<adjective> ::= "lazy" | "smelly"
-<verb> ::= "ate" | "ran"
-<adverb> ::= "slowly" | "noisily"
+\<sentence> ::= "The " \<subject>  " " \<action> "."
+
+\<subject> ::= \<noun> | \<adjective> " " \<noun>
+
+\<action> ::= \<verb> | \<verb> " " \<adverb>
+
+\<noun> ::= "dog" | "cat"
+
+\<adjective> ::= "lazy" | "smelly"
+
+\<verb> ::= "ate" | "ran"
+
+\<adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
