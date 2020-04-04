@@ -153,7 +153,7 @@ Current state | Next word     | Next state
     S2        |   ran         |     S3
     S3        |    noisily    |     S4
     S3        |    slowly     |     S4
-    S3        |   ""          |   	S4
+    S3        |   <<empty>>   |   	S4
 
 
 
@@ -196,4 +196,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 2 because the langauge can repeat adjectives making it infite therefore it cannot be Type 3.
