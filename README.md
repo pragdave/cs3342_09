@@ -118,8 +118,8 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-```<sentence>::= "the" {"lazy"|"smelly"} ("dog"|"cat") ("ran"|"ate") 
-["slowly"| "noisily]```
+``` <sentence>::= "the" {"lazy"|"smelly"} ("dog"|"cat") ("ran"|"ate") 
+["slowly"| "noisily] ```
 
 
 ## Q2.3 (6 points)
