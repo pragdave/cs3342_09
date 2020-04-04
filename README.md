@@ -83,11 +83,15 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-\<sentence> ::= "the" \<adjective> "noun" "verb" \<adverb>
+\<sentence> ::= "the" + \<adjective> + \<noun> +  \<verb> + \<adverb>
 
-\<adjective> ::= "" | \<adjective> "adjective"
+\<adjective> ::= \<<empty>> | "lazy" | "smelly"
 
-\<adverb> ::= "" | "adverb"
+\<noun> ::= "dog" | "cat"
+
+\<verb> ::= "ate" | "ran"
+
+\<adverb> ::= \<<empty>> | "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -96,7 +100,15 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-\<sentence> ::= "the" {adjective} "noun" "verb" [adverb]
+\<sentence> ::= "the" + {\<adjective>} + \<noun> +  \<verb> + [\<adverb>]
+
+\<adjective> ::= "lazy" | "smelly"
+
+\<noun> ::= "dog" | "cat"
+
+\<verb> ::= "ate" | "ran"
+
+\<adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
@@ -133,10 +145,14 @@ Current state | Next word | Next state
 Current state | Next word     | Next state
 --------------|---------------|-----------
     S0        |    the        |     S1
-    S1        |   adjective   |   	S1
-    S1        |   noun        |     S2
-    S2        |   verb        |     S3
-    S3        |    adverb     |     S4
+    S1        |   lazy	      |   	S1
+    S1        |   smelly      |   	S1
+    S1        |   dog         |     S2
+    S1        |   cat         |     S2
+    S2        |   ate         |    	S3 
+    S2        |   ran         |     S3
+    S3        |    noisily    |     S4
+    S3        |    slowly     |     S4
     S3        |   ""          |   	S4
 
 
