@@ -187,7 +187,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-refer to readme.txt to execute
+refer to [readme.txt](readme.txt) to run properly
 
 
 ## Q2.6 (3 points)
