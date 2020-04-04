@@ -83,9 +83,9 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<sentence> ::= "the" <adjective> "noun" "verb" <adverb>
-<adjective> ::= "" | <adjective> "adjective"
-<adverb> ::= "" | "adverb"
+<\sentence> ::= "the" <\adjective> "noun" "verb" <\adverb>
+<\adjective> ::= "" | <\adjective> "adjective"
+<\adverb> ::= "" | "adverb"
 
 
 ## Q2.2 (5 points)
