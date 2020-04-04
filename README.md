@@ -42,7 +42,7 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r | g | b | rSr | gSg | bSb 
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +53,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+0(1)
+You can compare each character in the first half to its mirror in the second half to check equality and this way you would only ever have two tiles in memory at the same time.
 
 
 # Q2
@@ -82,7 +83,9 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <adjective> "noun" "verb" <adverb>
+<adjective> ::= "" | <adjective> "adjective"
+<adverb> ::= "" | "adverb"
 
 
 ## Q2.2 (5 points)
