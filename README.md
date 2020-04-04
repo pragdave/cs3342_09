@@ -88,7 +88,7 @@ The following are examples of valid sentences:
 Write the BNF (not EBNF) description for this language.
 
 ## A2.1
-
+```
 <sentence>  ::= <subject> <action>
 
  <subject>  ::= "the" <adjective> <noun>|
@@ -109,10 +109,8 @@ Write the BNF (not EBNF) description for this language.
                 "ran"   
 
   <adverb>  ::= "slowly"                |
-                "noisily"
-
-        
-
+                "noisily"       
+```
 
 ## Q2.2 (5 points)
 
