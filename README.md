@@ -130,7 +130,16 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word     | Next state
+--------------|---------------|-----------
+    S0        |    the        |     S1
+    S1        |   adjective   |   	S1
+    S1        |   noun        |     S2
+    S2        |   verb        |     S3
+    S3        |    adverb     |     S4
+    S3        |   ""          |   	S4
+
+
 
 
 ## Q2.5 (12 points)
@@ -150,7 +159,9 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+The file is called sentences.cpp.
+It will print a 1 if a sentence is valid and a ) if it is not.
+To run it just do "./Sentences" in the terminal while in the directory.
 
 
 ## Q2.6 (3 points)
@@ -159,7 +170,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There are an infinite amount of valid sentences because there can be an infinite amount of adjectives and this language doesn't check for duplicates.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
