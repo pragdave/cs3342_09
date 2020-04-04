@@ -42,7 +42,12 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r S r
+S -> g S g
+S -> b S b
+S -> r
+S -> g
+S -> b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +58,9 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n/2 + 1)  (which would simplify to O(n)...just in case)
+Since there is symmetry, we can always assume there are two of the same tile
+and then we must also consider the extra one in the center.
 
 
 # Q2
@@ -82,7 +89,29 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence>  ::= <subject> <action>
+
+ <subject>  ::= "the" <adjective> <noun>|
+                "the" <noun>
+
+    <noun>  ::= "dog"                   |
+                "cat"
+
+<adjective> ::= "lazy"   <adjective>    |
+                "smelly" <adjective>    |
+                "lazy"                  |
+                "smelly"
+
+  <action>  ::= <verb> <adverb>         |
+                <verb>
+
+    <verb>  ::= "ate"                   |
+                "ran"   
+
+  <adverb>  ::= "slowly"                |
+                "noisily"
+
+        
 
 
 ## Q2.2 (5 points)
@@ -91,7 +120,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence>::= "the" {"lazy"|"smelly"} ("dog"|"cat") ("ran"|"ate") ["slowly"| "noisily]
 
 
 ## Q2.3 (6 points)
@@ -109,7 +138,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+myAttemptAtStateMachine.pdf
 
 
 ## Q2.4 (6 points)
@@ -125,7 +154,22 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |   the     |     S1
+    S1        |   lazy    |     S1
+    S1        |   smelly  |     S1
+    S1        |   lazy    |     S2
+    S1        |   smelly  |     S2
+    S2        |   cat     |     S3
+    S2        |   dog     |     S3
+    S3        |   ran     |     S4
+    S3        |   ate     |     S4
+    S4        |   noisily |     S5
+    S4        |   slowly  |     S5
+    S4        |   eoi     |     END
+    S5        |   eoi     |     END
+
 
 
 ## Q2.5 (12 points)
@@ -145,7 +189,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+refer to readme.txt to execute
 
 
 ## Q2.6 (3 points)
@@ -154,7 +198,8 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There is not a definitive answer: since adjectives can range from 0 to many, 
+there aren't a finite amount of valid sentences.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +209,7 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3.
+We start out with the terminal "the" and we can define the nonterminals in 
+terms of terminals; following the type 3 pattern:
+nonterm -> term | nonterm -> term nonterm
