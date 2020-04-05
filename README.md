@@ -153,7 +153,7 @@ Current state | Next word | Next state
 
 Current state | Next word | Next state
 --------------|-----------|-----------
-|:    S0        :|:    the    :|:     S1
+|    S0        |    the    |     S1
 |   S1        |   lazy    |     S1
 |    S1        |   smelly  |     S1
 |    S1        |    cat    |     S2
