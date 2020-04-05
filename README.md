@@ -57,7 +57,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(n)
+O(n) Because the parser will only go through the loop once then fall out.
 
 
 # Q2
@@ -120,7 +120,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-BhathootFSM
+BhathootFSM.jpg
 
 
 ## Q2.4 (6 points)
