@@ -96,7 +96,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+sentence ::= "the", {<adjective>}, <noun>, <verb>, [<adverb>];
 
 
 ## Q2.3 (6 points)
@@ -130,7 +130,17 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        | adjective |     S2
+    S2        | adjective |     S2
+    S2        |    noun   |     S3
+    S1        |    noun   |     S3
+    S3        |    verb   |     S4
+    S4        |   adverb  |     S5
+    S4        |    EOI    |     END
+    S5        |    EOI    |     END
 
 
 ## Q2.5 (12 points)
