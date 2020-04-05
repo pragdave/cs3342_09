@@ -174,8 +174,8 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+Just need usual java commands to run :)
+SentenceChecker.java
 
 ## Q2.6 (3 points)
 
@@ -185,7 +185,6 @@ How many valid sentences are there in this language?
 
 There are an infinite number of sentences since there can be an
 infinite number of adjectives.
-
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
