@@ -123,7 +123,7 @@ start::= "The"
 adjective::= "lazy" | "smelly" 
 noun::= "dog" | "cat"
 verb ::= "ate" | "ran"
-adverb ::= "slowly" | "noisily" | ""
+adverb ::= "slowly" | "noisily"
 //period::= "." 
 
 »
@@ -207,4 +207,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+«The simplest Chomsky grammar level for this language is Type 3, or Regular language. I know this since each terminal goes to a terminal followed by a nonterminal or it goes directly to a terminal, and since this language can be implemented with a finite state automaton.»
