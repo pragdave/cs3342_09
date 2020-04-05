@@ -93,7 +93,7 @@ Write the BNF (not EBNF) description for this language.
 
 «
 
-sentence::= <start>  <adjective>  <noun>  <verb>  <adverb> 
+<sentence>::= <start>  <adjective>  <noun>  <verb>  <adverb> 
 
 
 <start>::="The"
@@ -113,7 +113,7 @@ Write this grammar using EBNF with common extensions
 ## A2.2
 
 «
-sentence::= <start>  {<adjective>}  <noun>  <verb> [<adverb>]
+<sentence>::= <start>  {<adjective>}  <noun>  <verb> [<adverb>]
 
 <start>::= "The" 
 <adjective>::= "lazy" | "smelly" 
