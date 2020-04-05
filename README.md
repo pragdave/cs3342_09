@@ -42,7 +42,12 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r S r
+S -> g S g
+S -> b S b
+S -> r
+S -> g
+S -> b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +58,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n^3 * G) = O(n^3), where G is number of rules. There are 3 tile types, and while the formula calls for a multiplication by a constant G, the constant is simplified out for big O notation. Thus it is O(n^3).
 
 
 # Q2
@@ -82,7 +87,7 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+sentence ::= "the" <adjective>* <noun> <verb> <adverb>?
 
 
 ## Q2.2 (5 points)
