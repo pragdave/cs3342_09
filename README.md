@@ -93,17 +93,17 @@ Write the BNF (not EBNF) description for this language.
 
 «
 
-//ORRRRR     sentence::= <start>  <adjective>  <noun> < <verb>  <adverb> 
-sentence::= <start> <space> <adjective> <space> <noun> <space> <verb> <space> <adverb> <period> |
+sentence::= <start>  <adjective>  <noun>  <verb>  <adverb> 
+//ORRRRR  sentence::= <start> <space> <adjective> <space> <noun> <space> <verb> <space> <adverb> <period> |
             <start> <space> <adjective> <space> <noun> <space> <verb> <period>
 
 start::="The"
-space::= " "
+//space::= " "
 adjective::= "lazy" | "smelly" | "lazy smelly" | "smelly lazy" | ""
 noun::= "dog" | "cat"
-verb ::= "ate" | "noun"
+verb ::= "ate" | "ran"
 adverb ::= "slowly" | "noisily" | ""
-period::= "." 
+//period::= "." 
 
 »
 
@@ -115,15 +115,16 @@ Write this grammar using EBNF with common extensions
 ## A2.2
 
 «
-sentence::= <start> <space> {<adjective>} <space> <noun> <space> <verb> [ <space> <adverb> ] <period>
+sentence::= <start>  {<adjective>}  <noun>  <verb> [<adverb>]
+ORRRRR sentence::= <start> <space> {<adjective>} <space> <noun> <space> <verb> [ <space> <adverb> ] <period>
 
 start::= "The" 
-space::= " "
+//space::= " "
 adjective::= "lazy" | "smelly" 
 noun::= "dog" | "cat"
-verb ::= "ate" | "noun"
+verb ::= "ate" | "ran"
 adverb ::= "slowly" | "noisily" | ""
-period::= "." 
+//period::= "." 
 
 »
 
