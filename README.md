@@ -42,7 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> "r" | "b" | "g"
+S -> R S R | G S G | B S B
+R -> "r"
+G -> "g"
+B -> "b"
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +57,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n)
 
 
 # Q2
