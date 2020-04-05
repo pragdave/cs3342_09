@@ -55,9 +55,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(1). 
-
-To validate a path, you only need memory for 2 pointers traversing from either ends of the path to the path's midpoint regardless of the number of tiles in the path.
+O(1). To validate a path, you only need memory for 2 pointers traversing from either ends of the path to the path's midpoint regardless of the number of tiles in the path.
 
 
 # Q2
@@ -118,7 +116,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-FSM_John_Park.pdf
+Please open FSM_John_Park.pdf
 
 
 ## Q2.4 (6 points)
