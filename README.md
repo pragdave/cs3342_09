@@ -127,8 +127,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+fsm_04.05.2020.pdf
 
 ## Q2.4 (6 points)
 
