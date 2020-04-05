@@ -116,7 +116,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-![fsm diagram](https://github.com/yimingp/cs3342_09/fsm_diagram.png)
+![fsm diagram](https://github.com/yimingp/cs3342_09/fsmDiagram.png)
 
 ## Q2.4 (6 points)
 
