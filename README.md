@@ -188,4 +188,4 @@ explain why.
 ## A2.7
 
 Level 2
-The simplest Chomsky grammar level for this language is level 2, as the grammar generates context-free language and 
+The simplest Chomsky grammar level for this language is level 2, as the grammar generates context-free language and a right-hand side that CANNOT be simplified to a single terminal or single terminal and a single non-terminal (thus not type 3).
