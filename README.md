@@ -42,7 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r | g | b
+
+S -> rSr
+S -> gSg
+S -> bSb
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +57,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n), because it can load up a stack and push and pop all in the same run, with the value in the center being the only one not checked.
 
 
 # Q2
@@ -82,7 +86,11 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <adjective> <noun> <verb> <adverb>
+    <adjective> ::= "smelly" | "lazy" | ""
+    <noun> ::= "dog" | "cat"
+    <verb> ::= "ate" | "ran"
+    <adverb> ::= "slowly" | "noisily" | ""
 
 
 ## Q2.2 (5 points)
@@ -91,7 +99,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
+    <adjective> ::= "smelly" | "lazy" | ""
+    <noun> ::= "dog" | "cat"
+    <verb> ::= "ate" | "ran"
+    <adverb> ::= "slowly" | "noisily" | ""
 
 
 ## Q2.3 (6 points)
@@ -109,8 +121,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+AbrahamFSM.JPG
 
 ## Q2.4 (6 points)
 
@@ -125,7 +136,17 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word   | Next state
+--------------|-----------  |-----------
+    S0        |   the       |     S1
+    S1        |   adjective |     S2
+    S1        |   noun      |     S3
+    S2        |   adjective |     S2
+    S2        |   noun      |     S3
+    S3        |   verb      |     S4
+    S4        |   adverb    |     S5
+    S4        |   EOI       |     END
+    S5        |   EOI       |     END
 
 
 ## Q2.5 (12 points)
@@ -145,7 +166,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+node A25.js
 
 
 ## Q2.6 (3 points)
@@ -154,8 +175,14 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Adjectives: four options (none, lazy, smelly, lazy and smelly)
+Nouns: two options (dog, cat)
+Verbs: two options (run, ate)
+Adverbs: three options (none, noisily, slowly)
 
+4 * 2 * 2 * 3 = 48
+
+48 total sentences.
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -163,5 +190,4 @@ Which is the simplest Chomsky grammar level for this language? In one sentence,
 explain why.
 
 ## A2.7
-
-«replace this with your answer»
+Type-3. It restricts the values that each piece can be, and does not require a stack in order to make the language functional.
