@@ -185,7 +185,7 @@ code, include a script or makefile that will do the job.
 
 To run main.cpp, type these commands:
 
-```javascript
+```
 g++ -o output main.cpp
 ./output
 ```
