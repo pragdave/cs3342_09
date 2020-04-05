@@ -114,7 +114,7 @@ sentence ::= "the", {<adjective>}, <noun>, <verb>, [<adverb>];
 
 ## A2.3
 
-«replace this with your answer»
+see q2.3
 
 
 ## Q2.4 (6 points)
@@ -160,7 +160,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+see main.cpp
 
 
 ## Q2.6 (3 points)
