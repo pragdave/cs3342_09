@@ -34,15 +34,20 @@ So is this: rrr
 This is not: rgb
 This is not: rggr    (it must be an odd length)
 
+
+
 ## Q1.1  (5 points)
 
 Write a Chomsky type 2 grammar that describes any valid path containing at
-least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
-represent the tiles.
+least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S ::= "r" | "g" | "b"
+S ::= "r" S "r"
+S ::= "g" S "g"
+S ::= "b" S "b"
+
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
