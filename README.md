@@ -152,7 +152,7 @@ Current state | Next word | Next state
 ## A2.4
 
 Current state | Next word | Next state
---------------|-----------|-----------
+:--------------:|:-----------:|:-----------:
 |    S0        |    the    |     S1
 |   S1        |   lazy    |     S1
 |    S1        |   smelly  |     S1
