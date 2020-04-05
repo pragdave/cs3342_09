@@ -183,4 +183,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type-3, because it can be represented by a finite state machine.
