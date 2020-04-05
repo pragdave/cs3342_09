@@ -43,10 +43,15 @@ represent the tiles.
 ## A1.1
 
 S->r
+
 S->b
+
 S->g
+
 S->rSr
+
 S->bSb
+
 S->gSg
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -182,4 +187,5 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Level 2
+The simplest Chomsky grammar level for this language is level 2, as the grammar generates context-free language and 
