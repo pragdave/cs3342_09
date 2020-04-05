@@ -35,7 +35,6 @@ This is not: rgb
 This is not: rggr    (it must be an odd length)
 
 
-
 ## Q1.1  (5 points)
 
 Write a Chomsky type 2 grammar that describes any valid path containing at
@@ -43,12 +42,13 @@ least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
 
 ## A1.1
 
-S ::= "r" | "g" | "b"
-S ::= "r" S "r"
-S ::= "g" S "g"
-S ::= "b" S "b"
-
-
+S ::= r | g | b
+S ::= r S r
+S ::= g S g
+S ::= b S b
+r ::= "r"
+g ::= "g"
+b ::= "b"
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -58,8 +58,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+For memory, O(1) is the requirement because we don't need to consider how many tiles are in the path or are traversable. We are only checking two tiles at a time so we only need to consider two tiles in memory at once.
 
 # Q2
 
@@ -87,8 +86,12 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
-
+<sentence> ::= "The" <opt-adjective> <noun> <verb> <adverb>
+<opt-adjective> ::= "" | <adjective>
+<adjective> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "" | "slowly" | "noisily"
 
 ## Q2.2 (5 points)
 
@@ -96,8 +99,9 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
-
+<sentence> ::= "The" {"lazy" | "smelly"} <noun> <verb> ["slowly" | "noisily"]
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
 
 ## Q2.3 (6 points)
 
@@ -114,7 +118,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSM_Diagram.JPG
 
 
 ## Q2.4 (6 points)
@@ -130,7 +134,21 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |   "lazy"  |     S1
+    S1        |  "smelly" |     S1
+    S1        |    ""     |     S2
+    S2        |   "cat"   |     S3
+    S2        |   "dog"   |     S3
+    S3        |   "ate"   |     S4
+    S3        |   "ran"   |     S4
+    S4        | "slowly"  |     S5
+    S4        | "noisily" |     S5
+    S4        |    ""     |     S5
+    S5        |    EOI    |     END
+
 
 
 ## Q2.5 (12 points)
