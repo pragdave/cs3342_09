@@ -42,8 +42,12 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S->r
+S->b
+S->g
+S->rSr
+S->bSb
+S->gSg
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +57,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+Each element will need to be accessed and compared to the corresponding element on the opposite side of the middle tile (if n>1), thus the memory requirement is O(n).
 
 
 # Q2
@@ -109,8 +113,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+See diagram.jpg
 
 ## Q2.4 (6 points)
 
@@ -124,8 +127,23 @@ Current state | Next word | Next state
 (hint: my version has 13 entries. Yours _might_ be different)
 
 ## A2.4
-
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+S0            |    the    |    S1
+S1            |   smelly  |    S2
+S1            |    lazy   |    S2
+S1            |    dog    |    S3
+S1            |    cat    |    S3
+S2            |   smelly  |    S2
+S2            |    lazy   |    S2
+S2            |    dog    |    S3
+S2            |    cat    |    S3
+S3            |    ran    |    S4
+S3            |    ate    |    S4
+S4            |    E01    |    END
+S4            |  noisily  |    S5
+S4            |   slowly  |    S5
+S5            |    E01    |    END
 
 
 ## Q2.5 (12 points)
@@ -154,8 +172,8 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+As adjectives may be repeated any number of times, there is an infinite number of valid sentences in this language.
+NOTE: If adjectives may NOT be repeated any number of times, then there are only 60 valid sentences in this language.
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
