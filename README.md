@@ -55,9 +55,9 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(1)
+O(1). 
 
-To validate a path, you only need memory for 2 pointers traversing from either ends of the path to its midpoint: place pointer (p1) at the path's first element and another pointer (p2) at the path's last element; while p2 - p1 > 1, if *p1 == *p2, increment p1 and decrement p2 and repeat this process over from the while condition; else, since *p1 != *p2, set path as invalid and exit loop; if the end of the loop is reached without setting the path as invalid, the path is valid. 
+To validate a path, you only need memory for 2 pointers traversing from either ends of the path to the path's midpoint regardless of the number of tiles in the path.
 
 
 # Q2

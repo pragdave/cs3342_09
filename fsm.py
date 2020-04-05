@@ -24,7 +24,7 @@ def isValid(sentence):
             if table[(state, word)][0]=='END' and (state==4 or state==5): 
                 return True
             
-            # reached last word without reaching END
+            # reached end of sentence without reaching END
             elif word==words[-1]: 
                 return False
             
@@ -33,7 +33,7 @@ def isValid(sentence):
                 next = table[(state, word)]
                 if len(next)==1: state = next[0]
                 else:
-                    if words[index+1]=='dog' or words[index+1]=='cat': 
+                    if words[index + 1]=='dog' or words[index + 1]=='cat': 
                         state = next[1]
                     else: 
                         state = next[0]
