@@ -182,7 +182,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+This language has an infinite amount of sentences because there is no upper limit on the adjectives, meaning you can repeat "lazy" and "smelly" however many times you want and it will still be a valid sentence. 
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -192,4 +192,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language is a Type 3 because this language can be expressed as a finite state machine, as we saw in Q2.3. 
