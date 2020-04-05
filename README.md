@@ -42,15 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«     S -> "r" 
-      S -> "g"
-      S -> "b"
-      S -> R S R
-      S -> G S G
-      S -> B S B
-      R -> "r"
-      G -> "g"
-      B -> "b" 
+«     S -> r|g|b 
+      S -> rSr
+      S -> gSg
+      S -> bSb
+    
 »
 
 
