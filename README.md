@@ -42,7 +42,16 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+«     S -> "r"
+      S -> "g"
+      S -> "b"
+      S -> R S R
+      S -> G S G
+      S -> B S B
+      R -> "r"
+      G -> "g"
+      B -> "b" 
+»
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -82,7 +91,21 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+«
+
+//ORRRRR     sentence::= <start>  <adjective>  <noun> < <verb>  <adverb> 
+sentence::= <start> <space> <adjective> <space> <noun> <space> <verb> <space> <adverb> <period> |
+            <start> <space> <adjective> <space> <noun> <space> <verb> <period>
+
+start::="The"
+space::= " "
+adjective::= "lazy" | "smelly" | "lazy smelly" | "smelly lazy" | ""
+noun::= "dog" | "cat"
+verb ::= "ate" | "noun"
+adverb ::= "slowly" | "noisily" | ""
+period::= "." 
+
+»
 
 
 ## Q2.2 (5 points)
@@ -91,7 +114,18 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+«
+sentence::= <start> <space> {<adjective>} <space> <noun> <space> <verb> [ <space> <adverb> ] <period>
+
+start::= "The" 
+space::= " "
+adjective::= "lazy" | "smelly" 
+noun::= "dog" | "cat"
+verb ::= "ate" | "noun"
+adverb ::= "slowly" | "noisily" | ""
+period::= "." 
+
+»
 
 
 ## Q2.3 (6 points)
@@ -125,7 +159,15 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+«
+Current state     |  Next Word   | Next state
+````````````````````````````````````````````````
+S0                |  the         | S1
+S1                | smelly       | S2
+S1                | 
+
+
+»
 
 
 ## Q2.5 (12 points)
