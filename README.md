@@ -91,9 +91,9 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<sentence> ::= "the" <adjective> noun verb adverb
+\<sentence\> ::= "the" \<adjective\> noun verb adverb
 
-<adjective> ::= "" | adj | adj <adjective>
+\<adjective\> ::= "" | adj | adj \<adjective\>
 
 adj ::= "lazy" | "smelly"
 
@@ -109,7 +109,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<sentence> ::= "the" {"lazy"|"smelly"} ("dog"|"cat") ("ate"|"ran") ["slowly"|"noisily"]
+\<sentence\> ::= "the" {"lazy"|"smelly"} ("dog"|"cat") ("ate"|"ran") ["slowly"|"noisily"]
 
 ## Q2.3 (6 points)
 
