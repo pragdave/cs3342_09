@@ -42,7 +42,13 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r | g | b
+<br/>
+S -> r S r
+<br/>
+S -> g S g
+<br/>
+S -> b S b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,8 +59,11 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+I believe as far as memory goes, it does not matter how many tiles there are,
+<br/>
+it will always be a constant, O(1) because the memory requirement does not grow
+<br/>
+as the number of tiles grow.
 
 # Q2
 
@@ -82,7 +91,15 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+::= "The" ::= "" | 
+<br/>
+::= "lazy" | "smelly" 
+<br/>
+::= "dog" | "cat" 
+<br/>
+::= "ate" | "ran" 
+<br/>
+::= "" | "slowly." | "noisily."
 
 
 ## Q2.2 (5 points)
@@ -91,7 +108,15 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+::= "The" * ? 
+<br/>
+::= "lazy" | "smelly" 
+<br/>
+::= "dog" | "cat" 
+<br/>
+::= "ate" | "ran" 
+<br/>
+::= "slowly." | "noisily."
 
 
 ## Q2.3 (6 points)
@@ -109,7 +134,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+File: A2-3.pdf
 
 
 ## Q2.4 (6 points)
@@ -125,7 +150,22 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S0        |    the    |     S2
+    S1        |    lazy   |     S1
+    S1        |    lazy   |     S2
+    S1        |   smelly  |     S1
+    S1        |   smelly  |     S2
+    S2        |    dog    |     S3
+    S2        |    cat    |     S3
+    S3        |    ate    |     S4
+    S3        |    ran    |     S4
+    S4        |  slowly   |     S5
+    S4        |  noisily  |     S5
+    S4        |    EOI    |    END
+    S5        |    EOI    |    END
 
 
 ## Q2.5 (12 points)
@@ -145,7 +185,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+node A2-5.js
 
 
 ## Q2.6 (3 points)
@@ -154,7 +194,11 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Lazy and/or smelly create 5 possible combinations. Dog or cat is 2 combinations.
+<br/>
+Ate or run is 2 combinations, and slowly or noisily is 3 combinations because it
+<br/>
+could be absent. So, 5*2*2*3 = 60 different valid sentences.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +208,6 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest would definitely be type 3, because it is easily parseable in a 
+<br/>
+finite state machine.
