@@ -152,7 +152,10 @@ Current state | Next word | Next state
     S2        |<adjective>|     S2
     S2        |  <noun>   |     S3
     S3        |  <verb>   |     S4
-      
+    S4        |    "."    |     S5
+    S4        | <adverb>  |     S6
+    S6        |    "."    |     S5
+    S5        |    EOI    |    END
 
 ## Q2.5 (12 points)
 
@@ -171,7 +174,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+q2-5 the dog ran EOI
 
 
 ## Q2.6 (3 points)
@@ -180,8 +183,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+There are 80 different valid sentences.
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -190,4 +192,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level for this language is Chomsky Type-2 because in Type-3, the right side of a production is always either a terminal, or a nonterminal followed by a terminal, but in this language the definitions of a sentence contain multiple nonterminals.
