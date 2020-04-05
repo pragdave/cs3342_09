@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named GraphBuilder
+# Target rules for targets named runMe
 
 # Build rule for target.
-GraphBuilder: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GraphBuilder
-.PHONY : GraphBuilder
+runMe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runMe
+.PHONY : runMe
 
 # fast build rule for target.
-GraphBuilder/fast:
-	$(MAKE) -f CMakeFiles/GraphBuilder.dir/build.make CMakeFiles/GraphBuilder.dir/build
-.PHONY : GraphBuilder/fast
+runMe/fast:
+	$(MAKE) -f CMakeFiles/runMe.dir/build.make CMakeFiles/runMe.dir/build
+.PHONY : runMe/fast
 
 main.o: main.cpp.o
 
@@ -129,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/GraphBuilder.dir/build.make CMakeFiles/GraphBuilder.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/runMe.dir/build.make CMakeFiles/runMe.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/GraphBuilder.dir/build.make CMakeFiles/GraphBuilder.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/runMe.dir/build.make CMakeFiles/runMe.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/GraphBuilder.dir/build.make CMakeFiles/GraphBuilder.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/runMe.dir/build.make CMakeFiles/runMe.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... GraphBuilder"
+	@echo "... runMe"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

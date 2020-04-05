@@ -162,7 +162,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-"./main" to run
+"./cmake-build-debug/runMe" to run
 
 ## Q2.6 (3 points)
 

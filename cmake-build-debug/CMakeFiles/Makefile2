@@ -53,12 +53,12 @@ CMAKE_BINARY_DIR = /Users/yimingpan/Programming/cs3342_09/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/GraphBuilder.dir/all
+all: CMakeFiles/runMe.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/GraphBuilder.dir/clean
+clean: CMakeFiles/runMe.dir/clean
 
 .PHONY : clean
 
@@ -68,31 +68,31 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/GraphBuilder.dir
+# Target rules for target CMakeFiles/runMe.dir
 
 # All Build rule for target.
-CMakeFiles/GraphBuilder.dir/all:
-	$(MAKE) -f CMakeFiles/GraphBuilder.dir/build.make CMakeFiles/GraphBuilder.dir/depend
-	$(MAKE) -f CMakeFiles/GraphBuilder.dir/build.make CMakeFiles/GraphBuilder.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target GraphBuilder"
-.PHONY : CMakeFiles/GraphBuilder.dir/all
+CMakeFiles/runMe.dir/all:
+	$(MAKE) -f CMakeFiles/runMe.dir/build.make CMakeFiles/runMe.dir/depend
+	$(MAKE) -f CMakeFiles/runMe.dir/build.make CMakeFiles/runMe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target runMe"
+.PHONY : CMakeFiles/runMe.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/GraphBuilder.dir/rule: cmake_check_build_system
+CMakeFiles/runMe.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yimingpan/Programming/cs3342_09/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GraphBuilder.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/runMe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yimingpan/Programming/cs3342_09/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/GraphBuilder.dir/rule
+.PHONY : CMakeFiles/runMe.dir/rule
 
 # Convenience name for target.
-GraphBuilder: CMakeFiles/GraphBuilder.dir/rule
+runMe: CMakeFiles/runMe.dir/rule
 
-.PHONY : GraphBuilder
+.PHONY : runMe
 
 # clean rule for target.
-CMakeFiles/GraphBuilder.dir/clean:
-	$(MAKE) -f CMakeFiles/GraphBuilder.dir/build.make CMakeFiles/GraphBuilder.dir/clean
-.PHONY : CMakeFiles/GraphBuilder.dir/clean
+CMakeFiles/runMe.dir/clean:
+	$(MAKE) -f CMakeFiles/runMe.dir/build.make CMakeFiles/runMe.dir/clean
+.PHONY : CMakeFiles/runMe.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

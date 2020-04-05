@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="GraphBuilder">
-				<Option output="/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/GraphBuilder" prefix_auto="0" extension_auto="0"/>
+			<Target title="runMe">
+				<Option output="/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/runMe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/yimingpan/Programming/cs3342_09/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -58,14 +58,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 GraphBuilder"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 runMe"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="GraphBuilder/fast">
-				<Option output="/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/GraphBuilder" prefix_auto="0" extension_auto="0"/>
+			<Target title="runMe/fast">
+				<Option output="/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/runMe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/yimingpan/Programming/cs3342_09/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -85,7 +85,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 GraphBuilder/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 runMe/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yimingpan/Programming/cs3342_09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -93,7 +93,7 @@
 			</Target>
 		</Build>
 		<Unit filename="/Users/yimingpan/Programming/cs3342_09/main.cpp">
-			<Option target="GraphBuilder"/>
+			<Option target="runMe"/>
 		</Unit>
 		<Unit filename="/Users/yimingpan/Programming/cs3342_09/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
