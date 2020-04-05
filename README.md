@@ -42,7 +42,14 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r | g | b
+S -> r S r
+S -> g S g
+S -> b S b
+
+r -> "r"
+g -> "g"
+b -> "b"
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +60,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n) because essentially this problem is solving for a palindrome, this means we will have to do n/2 comparisons (first compared to last, second compared to second to last), which evaulates to O(n).
 
 
 # Q2
@@ -82,7 +89,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <optional-adjectives> <noun> <verb> <optional-adverb>
+
+<adjective> ::= "lazy" | "smelly"
+<optional-adjectives> ::= <optional-adjectives> <adjective> | ""
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<optional-adverb> ::= "slowly" | "noisily" | ""
 
 
 ## Q2.2 (5 points)
@@ -91,7 +104,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
+
+<adjective> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<optional-adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
@@ -109,8 +127,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+![FSM.jpeg](/FSM.jpeg)
 
 ## Q2.4 (6 points)
 
@@ -125,8 +142,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
-
+Current State       |     Next Word   |     Next State
+--------------------|------------------|----------------
+S0                        |     "the"            |      S1
+S1                        |     "lazy"           |      S1
+S1                        |     "smelly"       |      S1
+S1                        |     "dog"           |      S2
+S1                        |     "cat"            |      S2
+S2                        |     "ate"            |      S3
+S2                        |     "ran"            |      S3
+S3                        |     "slowly"       |      S4
+S3                        |     "noisily"       |      S4
+S3                        |     EOI              |      END
+S4                        |     EOI              |      END
 
 ## Q2.5 (12 points)
 
