@@ -34,7 +34,6 @@ So is this: rrr
 This is not: rgb
 This is not: rggr    (it must be an odd length)
 
-
 ## Q1.1  (5 points)
 
 Write a Chomsky type 2 grammar that describes any valid path containing at
@@ -46,9 +45,6 @@ S ::= r | g | b
 S ::= r S r
 S ::= g S g
 S ::= b S b
-r ::= "r"
-g ::= "g"
-b ::= "b"
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -99,9 +95,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<sentence> ::= "The" {"lazy" | "smelly"} <noun> <verb> ["slowly" | "noisily"]
-<noun> ::= "dog" | "cat"
-<verb> ::= "ate" | "ran"
+<sentence> ::= "The" {"lazy" | "smelly"} ("dog" | "cat") ("ate" | "ran") ["slowly" | "noisily"]
 
 ## Q2.3 (6 points)
 
@@ -136,18 +130,18 @@ Current state | Next word | Next state
 
 |Current state | Next word | Next state|
 |--------------|-----------|-----------|
-|      S0      |   the   |     S1      |
-|      S1      |   lazy  |     S1      |
-|      S1      |  smelly |     S1      |
-|      S1      |""  |     S2      |
-|      S2      |   cat   |     S3      |
-|      S2      |   dog   |     S3      |
-|      S3      |   ate   |     S4      |
-|      S3      |   ran   |     S4      |
-|      S4      | slowly  |     S5      |
-|      S4      | noisily |     S5      |
-|      S4      |    EOI  |    END      |
-|      S5      |    EOI  |    END      |
+|      S0      |   the     |     S1    |
+|      S1      |   lazy    |     S1    |
+|      S1      |  smelly   |     S1    |
+|      S1      |           |     S2    |
+|      S2      |   cat     |     S3    |
+|      S2      |   dog     |     S3    |
+|      S3      |   ate     |     S4    |
+|      S3      |   ran     |     S4    |
+|      S4      | slowly    |     S5    |
+|      S4      | noisily   |     S5    |
+|      S4      |    EOI    |    END    |
+|      S5      |    EOI    |    END    |
 
 
 
@@ -177,7 +171,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Unlimited. Because the adjective can be included 0 or more times, there is a infinite number of adjectives that can be added.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -187,4 +181,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 because we don't need a stack for this language as a simple finite state machine can parse it without the use of a stack.
