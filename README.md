@@ -89,9 +89,13 @@ Write the BNF (not EBNF) description for this language.
 ## A2.1
 
 <adjective> ::= "smelly" | "lazy"
+    
 <noun> ::= "dog" | "cat"
+    
 <verb> ::= "ate" | "ran"
+    
 <adverb> ::= "noisily" | "slowly" | ""  
+    
 <opt-adjective> ::= <opt-adjective> <adjective> | ""
     
 <sentence> ::= "the" <opt-adjective> <noun> <verb> <adverb>
@@ -103,10 +107,13 @@ Write this grammar using EBNF with common extensions
 ## A2.2
     
 <adjective> ::= "smelly" | "lazy"
+    
 <noun> ::= "dog" | "cat"
+    
 <verb> ::= "ate" | "ran"
+    
 <adverb> ::= "noisily" | "slowly"
-
+    
 <sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
 
 
