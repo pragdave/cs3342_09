@@ -98,7 +98,7 @@ Write the BNF (not EBNF) description for this language.
 <verb> ::= "ate" | "ran"
 <adverb> ::= "slowly" | "noisily" | ""
  
-*Note: "" is the empty string 
+Note: "" is the empty string 
 »
 
 
