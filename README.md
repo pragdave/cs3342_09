@@ -169,7 +169,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Infinite, because you can have as many adjectives as you want, and there are many many many different word combinations possible.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -179,4 +179,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type-2, because it's not a list of either nonterminal or terminal, it's a list that's a mix of both.
