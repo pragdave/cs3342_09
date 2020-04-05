@@ -86,8 +86,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
-
+<Sentence> ::= "the" <Adjectives> <Noun> <Verb> <Opt-Adverb>
+<Adjectives>::= "" | <Adjectives><Adjective>
+<Adjective>::= "lazy" | "smelly"
+<Opt-Adverb> ::= "" | <Adverb>
+<Adverd>::= "slowly" | "noisily"
+<Noun>::= "dog" | "cat"
+<Verb>::= "ate" | "ran"
 
 ## Q2.2 (5 points)
 
