@@ -42,8 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> r | g | b
+S -> rSr
+S -> gSg
+S -> bSb
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,21 +55,19 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(1)
+
+To validate a path, you only need memory for 2 pointers traversing from either ends of the path to its midpoint: place pointer (p1) at the path's first element and another pointer (p2) at the path's last element; while p2 - p1 > 1, if *p1 == *p2, increment p1 and decrement p2 and repeat this process over from the while condition; else, since *p1 != *p2, set path as invalid and exit loop; if the end of the loop is reached without setting the path as invalid, the path is valid. 
 
 
 # Q2
 
 A simple sentence structure might be
 
-    "the" (zero or more adjectives) noun verb (optional adverb)
-
+"the" (zero or more adjectives) noun verb (optional adverb)
 Adjectives are "lazy" or "smelly"
-
 Nouns are "dog" or "cat"
-
 Verbs are "ate" and "ran"
-
 Adverbs are "slowly" and "noisily"
 
 The following are examples of valid sentences:
@@ -82,7 +82,12 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::=  "the" <optional_adjective> <noun> <verb> <adverb>
+<adjective> ::= "lazy" | "smelly"
+<optional_adjective> = "" | <adjective> | <adjective> <optional_adjective>
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "" | "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,7 +96,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::=  "the" {<adjective>} <noun> <verb> [<adverb>]
+<adjective> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
@@ -109,7 +118,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSM_John_Park.pdf
 
 
 ## Q2.4 (6 points)
@@ -125,7 +134,22 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current State | Next Word | Next State
+--------------|-----------|--------------
+S0            | the       | S1
+S0            | the       | S2
+S1            | lazy      | S1
+S1            | lazy      | S2
+S1            | smelly    | S1
+S1            | smelly    | S2
+S2            | dog       | S3 
+S2            | cat       | S3
+S3            | ate       | S4
+S3            | ran       | S4
+S4            | slowly    | S5
+S4            | noisily   | S5
+S4            | EOI       | END
+S5            | EOI       | END
 
 
 ## Q2.5 (12 points)
@@ -140,12 +164,12 @@ Then write some unit tests that exercise your function, making sure that it
 recognizes valid sentences and rejects invalid ones.
 
 The answer should appear in one or more source files in the same directory as
-this file. If I need to do anything more that type a single command to run your
+this file. If I need to do anything more than type a single command to run your
 code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+python fsm.py
 
 
 ## Q2.6 (3 points)
@@ -154,7 +178,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Infinite. The adjectives "lazy" and "smelly" can be repeated or appended to one another ad infinitum, allowing there to be infinite number of possible sentences in this language.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +188,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3. The language can be parsed using a finite state machine without the need for a stack.
