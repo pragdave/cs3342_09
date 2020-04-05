@@ -176,7 +176,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-Infinite. The adjectives "lazy" and "smelly" can be repeated or appended to one another ad infinitum, allowing there to be infinite number of possible sentences in this language.
+Infinite. The adjectives "lazy" and "smelly" can be repeated or appended to one another ad infinitum, allowing there to be infinite number of valid sentences in this language.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
