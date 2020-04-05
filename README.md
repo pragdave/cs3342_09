@@ -42,7 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> ASA
+S -> A
+A -> "r"
+A -> "g"
+A -> "b"
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,8 +57,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+The big-O notation for this parser would be O(n) because each element is accessed in order and stored so that they can be compared to ensure the characters are symmetrical by the middle value.
 
 # Q2
 
@@ -82,7 +85,11 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<Simple-Sentence> ::= "the" <Adjective> <Noun> <Verb> <Adverb>
+<Adjective> ::= "smelly" <Adjective> | "lazy" <Adjective> | ""
+<Noun> ::= "dog" | "cat"
+<Verb> ::= "ate" | "ran"
+<Adverb> ::= "slowly" | "nosily" | ""
 
 
 ## Q2.2 (5 points)
@@ -91,7 +98,9 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<Simple-Sentence> ::= "the" ("smelly" | "lazy")* ("dog" | "cat") ("ate" | "ran") ("slowly" | "nosily")?
+
+
 
 
 ## Q2.3 (6 points)
@@ -109,7 +118,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+Simple-Sentence.png
 
 
 ## Q2.4 (6 points)
@@ -125,7 +134,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    dog    |     S2
+    S1        |    cat    |     S2
+    S1        |    lazy   |     S1
+    S1        |   smelly  |     S1
+    S2        |    ate    |     S3
+    S2        |    ran    |     S3
+    S3        |   slowly  |     S4
+    S3        |   nosily  |     S4
+    S3        |    EOI    |     END
+    S4        |    EOI    |     END
 
 
 ## Q2.5 (12 points)
@@ -145,7 +166,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+main.cpp
 
 
 ## Q2.6 (3 points)
@@ -154,7 +175,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There is an infinite amount of valid sentences because the adjectives can be repeated zero or more times including the repeition of the same word (ex: "lazy" "lazy" "lazy").
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +185,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 level grammar because each nonterminal goes to a terminal or a terminal followed by a nonterminal which is the formal definition of a type 3 grammar and resembles regular expressions. 
