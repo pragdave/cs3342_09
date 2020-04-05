@@ -42,7 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r | g | b
+S -> r S r
+S -> g S g
+S -> b S b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +56,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n). Because it should check if the configuration is an odd-length palindrome; one way to do it is using one pointer goes from left to right and one from right to left, they should meet at the center so we need n / 2 comparisions, which is O(n). 
 
 
 # Q2
@@ -82,16 +85,26 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
-
+<adjective> ::= "smelly" | "lazy"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "noisily" | "slowly" | ""  
+<opt-adjective> ::= <opt-adjective> <adjective> | ""
+    
+<sentence> ::= "the" <opt-adjective> <noun> <verb> <adverb>
 
 ## Q2.2 (5 points)
 
 Write this grammar using EBNF with common extensions
 
 ## A2.2
+    
+<adjective> ::= "smelly" | "lazy"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "noisily" | "slowly"
 
-«replace this with your answer»
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
 
 
 ## Q2.3 (6 points)
@@ -109,8 +122,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+StateDiagram.jpeg
 
 ## Q2.4 (6 points)
 
@@ -119,15 +131,26 @@ Convert this diagram into a table of the form:
 Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
-    S1        |   . . .   |   . . .
-
+    S1        |    ...    |     ...
+    
 (hint: my version has 13 entries. Yours _might_ be different)
 
 ## A2.4
 
-«replace this with your answer»
-
-
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the      |     S1
+    S1        |    lazy     |     S1
+    S1        |    smelly |     S1
+    S1        |    dog     |     S2
+    S1        |    cat      |     S2
+    S2        |    ran      |     S3
+    S2        |    ate      |     S3
+    S3        |    slowly |     S4
+    S3        |    noisily |     S4
+    S3        |    EOI     |     END
+    S4        |    EOI     |     END
+    
 ## Q2.5 (12 points)
 
 Translate this table into a programming language of your choice. Then write a
@@ -145,8 +168,9 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+Wrote main.cpp up top. 
+run with :
+g++ main.cpp and then ./a.out
 
 ## Q2.6 (3 points)
 
@@ -154,7 +178,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+One or more adjectives indicates an infinate amount. I could put lazy 10000 times! Really lazy cat/dog.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +188,5 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+A Finite State Machine is a characteristic of type 3 chomsky grammar. 
+Source : https://www.tutorialspoint.com/automata_theory/chomsky_classification_of_grammars.htm
