@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/samwalsh/Desktop/ProgrammingLanguages/cs3342_09/GrammarsCode/Word.h
+iostream
+-
+string
+-
+
+/Users/samwalsh/Desktop/ProgrammingLanguages/cs3342_09/GrammarsCode/main.cpp
+iostream
+-
+string
+-
+vector
+-
+Word.h
+/Users/samwalsh/Desktop/ProgrammingLanguages/cs3342_09/GrammarsCode/Word.h
+
