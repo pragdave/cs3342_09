@@ -42,14 +42,14 @@ represent the tiles.
 
 ## A1.1
 
-S -> r | g | b
-S -> r S r
-S -> g S g
-S -> b S b
+S -> r | g | b <br>
+S -> r S r <br>
+S -> g S g <br>
+S -> b S b <br>
 
-r -> "r"
-g -> "g"
-b -> "b"
+r -> "r" <br>
+g -> "g" <br>
+b -> "b" <br>
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -89,13 +89,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<sentence> ::= "the" <optional-adjectives> <noun> <verb> <optional-adverb>
+< sentence > ::= "the" < optional-adjectives > < noun > < verb > < optional-adverb >
 
-<adjective> ::= "lazy" | "smelly"
-<optional-adjectives> ::= <optional-adjectives> <adjective> | ""
-<noun> ::= "dog" | "cat"
-<verb> ::= "ate" | "ran"
-<optional-adverb> ::= "slowly" | "noisily" | ""
+< adjective > ::= "lazy" | "smelly"
+< optional-adjectives > ::= < optional-adjectives > < adjective > | ""
+< noun > ::= "dog" | "cat"
+< verb > ::= "ate" | "ran"
+< optional-adverb > ::= "slowly" | "noisily" | ""
 
 
 ## Q2.2 (5 points)
@@ -104,12 +104,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
+< sentence > ::= "the" {< adjective >} < noun > < verb > [< adverb >]
 
-<adjective> ::= "lazy" | "smelly"
-<noun> ::= "dog" | "cat"
-<verb> ::= "ate" | "ran"
-<optional-adverb> ::= "slowly" | "noisily"
+< adjective > ::= "lazy" | "smelly"
+< noun > ::= "dog" | "cat"
+< verb > ::= "ate" | "ran"
+< adverb > ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
@@ -173,7 +173,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-Compile using: g++ -std=c++11 -o fsm fsm.cpp
+Compile using: g++ -std=c++11 -o fsm fsm.cpp <br>
 Run using: ./fsm
 
 You can change the sentences in the "tests" function
