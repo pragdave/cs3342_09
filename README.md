@@ -42,17 +42,13 @@ represent the tiles.
 
 ## A1.1
 
-S -> R S R
+S -> r S r
 
-S -> G S G
+S -> g S g
 
-S -> B S B
+S -> b S b
 
-R -> "r"
-
-G -> "g"
-
-B -> "b"
+S -> r | g | b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -166,8 +162,8 @@ Current state | Next word | Next state
     S2        |    ran    |     S3
     S3        |  slowly   |     S4
     S3        |  noisily  |     S4
-    S3        |     .     |    End
-    S4        |     .     |    End
+    S3        |    EOI    |    End
+    S4        |    EOI    |    End
 
 
 ## Q2.5 (12 points)
@@ -187,7 +183,12 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+To run main.cpp, type these commands:
+
+```javascript
+g++ -o output main.cpp
+./output
+```
 
 
 ## Q2.6 (3 points)
