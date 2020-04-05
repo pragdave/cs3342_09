@@ -116,7 +116,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-![fsm diagram](fsm diagram.png "fsm diagram")
+![fsm diagram](https://github.com/yimingp/cs3342_09/fsm diagram.png)
 
 ## Q2.4 (6 points)
 
@@ -179,4 +179,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 becasue you can use finite state machine.
