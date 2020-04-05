@@ -136,18 +136,18 @@ Current state | Next word | Next state
 
 |Current state | Next word | Next state|
 |--------------|-----------|-----------|
-|S0 |    the    |     S1|
-|S1        |   lazy  |     S1|
-|    S1        |  smelly |     S1|
-|    S1        |    ""     |     S2|
-|    S2        |   cat   |     S3|
-|    S2        |   dog   |     S3|
-|    S3        |   ate   |     S4|
-|    S3        |   ran   |     S4|
-|    S4        | slowly  |     S5|
-|    S4        | noisily |     S5|
-|    S4        |    ""     |     S5|
-|    S5        |    EOI    |     END|
+|      S0      |   the   |     S1      |
+|      S1      |   lazy  |     S1      |
+|      S1      |  smelly |     S1      |
+|      S1      |<<empty>>|     S2      |
+|      S2      |   cat   |     S3      |
+|      S2      |   dog   |     S3      |
+|      S3      |   ate   |     S4      |
+|      S3      |   ran   |     S4      |
+|      S4      | slowly  |     S5      |
+|      S4      | noisily |     S5      |
+|      S4      |    EOI  |    END      |
+|      S5      |    EOI  |    END      |
 
 
 
