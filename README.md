@@ -42,7 +42,7 @@ represent the tiles.
 
 ## A1.1
 
-«     S -> "r"
+«     S -> "r" 
       S -> "g"
       S -> "b"
       S -> R S R
@@ -62,7 +62,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+«  O(n). The parser must keep track of all of the tiles in the sequence, so it knows which tile is the "middle" tile and can check if the sequence is symmetrical around the said "middle" tile.»
 
 
 # Q2
@@ -94,17 +94,15 @@ Write the BNF (not EBNF) description for this language.
 «
 
 sentence::= <start>  <adjective>  <noun>  <verb>  <adverb> 
-//ORRRRR  sentence::= <start> <space> <adjective> <space> <noun> <space> <verb> <space> <adverb> <period> |
-            <start> <space> <adjective> <space> <noun> <space> <verb> <period>
 
-start::="The"
-//space::= " "
-adjective::= "lazy" | "smelly" | "lazy smelly" | "smelly lazy" | ""
-noun::= "dog" | "cat"
-verb ::= "ate" | "ran"
-adverb ::= "slowly" | "noisily" | ""
-//period::= "." 
 
+<start>::="The"
+<adjective>::= "smelly"<adjective> | "lazy"<adjective> | ""
+<noun>::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily" | ""
+ 
+*Note: "" is the empty string 
 »
 
 
@@ -116,16 +114,12 @@ Write this grammar using EBNF with common extensions
 
 «
 sentence::= <start>  {<adjective>}  <noun>  <verb> [<adverb>]
-ORRRRR sentence::= <start> <space> {<adjective>} <space> <noun> <space> <verb> [ <space> <adverb> ] <period>
 
-start::= "The" 
-//space::= " "
-adjective::= "lazy" | "smelly" 
-noun::= "dog" | "cat"
-verb ::= "ate" | "ran"
-adverb ::= "slowly" | "noisily"
-//period::= "." 
-
+<start>::= "The" 
+<adjective>::= "lazy" | "smelly" 
+<noun>::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
 »
 
 
@@ -144,7 +138,7 @@ adverb ::= "slowly" | "noisily"
 
 ## A2.3
 
-«replace this with your answer»
+«  FSMDiagram.pdf  »
 
 
 ## Q2.4 (6 points)
@@ -163,10 +157,17 @@ Current state | Next word | Next state
 «
 Current state     |  Next Word   | Next state
 ````````````````````````````````````````````````
-S0                |  the         | S1
-S1                | smelly       | S2
-S1                | 
-
+S0                | the          | S1
+S1                | smelly       | S1
+S1                | lazy         | S1
+S1                | cat          | S2
+S1                | dog          | S2
+S2                | ate          | S3
+S2                | ran          | S3
+S3                | slowly       | S4
+S3                | noisily      | S4
+S3                | EOI          | END
+S4                | EOI          | END 
 
 »
 
@@ -188,7 +189,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+« called sentenceFinder.cpp »
 
 
 ## Q2.6 (3 points)
@@ -197,7 +198,8 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+« There is an infinite number of valid sentences in this language since there is no upper limit on the number of adjectives
+that can be in a sentence. »
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -207,4 +209,4 @@ explain why.
 
 ## A2.7
 
-«The simplest Chomsky grammar level for this language is Type 3, or Regular language. I know this since each terminal goes to a terminal followed by a nonterminal or it goes directly to a terminal, and since this language can be implemented with a finite state automaton.»
+«The simplest Chomsky grammar level for this language is Type 3, or Regular language. This is the case because each nonterminal goes to a terminal followed by a nonterminal or it goes directly to a terminal, and additionally this language can be implemented with a finite state automaton.»
