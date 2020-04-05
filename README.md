@@ -59,7 +59,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(n). Because it should check if the configuration is an odd-length palindrome; one way to do it is using one pointer goes from left to right and one from right to left, they should meet at the center so we need n / 2 comparisions, which is O(n). 
+O(n) because it should know where it is in the list using 2 pointers (start and end). This will tell you if it meets the requirements of the configuration as it iterates thorugh the list in O(n/2) -> O(n). 
 
 
 # Q2
@@ -144,12 +144,12 @@ Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the      |     S1
     S1        |    lazy     |     S1
-    S1        |    smelly |     S1
-    S1        |    dog     |     S2
+    S1        |    smelly   |     S1
+    S1        |    dog      |     S2
     S1        |    cat      |     S2
     S2        |    ran      |     S3
     S2        |    ate      |     S3
-    S3        |    slowly |     S4
+    S3        |    slowly   |     S4
     S3        |    noisily |     S4
     S3        |    EOI     |     END
     S4        |    EOI     |     END
