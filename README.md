@@ -116,7 +116,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-Please open FSM_John_Park.pdf
+Please open FSM.pdf
 
 
 ## Q2.4 (6 points)
