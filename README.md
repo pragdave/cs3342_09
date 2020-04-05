@@ -42,8 +42,13 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
 
+S -> r S r
+S -> g S g
+S -> b S b
+S -> r
+S -> g
+S -> b
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +58,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+According to the CYK algorithm, the big-O notation is O(n^3 * |G|) where G is the number of rules, therefore
+the big-O of the above configuration is O(6n^3) which simplifies to O(n^3).
 
 
 # Q2
@@ -82,7 +88,7 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+sentence ::= "the" <adjective>* <noun> <verb> <adverb>?
 
 
 ## Q2.2 (5 points)
@@ -91,7 +97,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+sentence ::= "the", {<adjective>}, <noun>, <verb>, [<adverb>];
 
 
 ## Q2.3 (6 points)
@@ -109,7 +115,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+*See attached photo
 
 
 ## Q2.4 (6 points)
@@ -125,7 +131,17 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |   S1
+    S1        | Adjective |   S2
+    S1        |    Noun   |   S3
+    S2        | Adjective |   S2
+    S2        |    Noun   |   S3
+    S3        |   Verb    |   S4
+    S4        |  Adverb   |   S5
+    S4        |    EOI    |   END
+    S5        |    EOI    |   END
 
 
 ## Q2.5 (12 points)
@@ -145,7 +161,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+*See attatched program
 
 
 ## Q2.6 (3 points)
@@ -154,7 +170,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Infinite, since you can have as many adjectives as you want added to the sentence
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +180,5 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+This is a type 2 grammar since it has a list of terminals and non terminals after each state and not just a terminal or 
+a non-terminal followed by a terminal.
