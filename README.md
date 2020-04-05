@@ -153,17 +153,17 @@ Current state | Next word | Next state
 
 Current state | Next word | Next state
 --------------|-----------|-----------
-    S0        |    the    |     S1
-    S1        |   lazy    |     S1
-    S1        |   smelly  |     S1
-    S1        |    cat    |     S2
-    S1        |    dog    |     S2
-    S2        |    ate    |     S3
-    S2        |    ran    |     S3
-    S3        |  slowly   |     S4
-    S3        |  noisily  |     S4
-    S3        |    EOI    |    End
-    S4        |    EOI    |    End
+|    S0        |    the    |     S1
+|   S1        |   lazy    |     S1
+|    S1        |   smelly  |     S1
+|    S1        |    cat    |     S2
+|    S1        |    dog    |     S2
+|    S2        |    ate    |     S3
+|    S2        |    ran    |     S3
+|    S3        |  slowly   |     S4
+|    S3        |  noisily  |     S4
+|   S3        |    EOI    |    End
+|   S4        |    EOI    |    End
 
 
 ## Q2.5 (12 points)
