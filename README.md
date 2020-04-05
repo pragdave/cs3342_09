@@ -206,4 +206,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest grammar level is Type 3 because on the left-hand side, we have a single non-terminal (S) and on the right-hand side we have a single terminal (r | g | b) or a single terminal followed by a single non-terminal.
