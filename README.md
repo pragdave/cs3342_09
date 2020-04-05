@@ -86,20 +86,15 @@ Write the BNF (not EBNF) description for this language.
 <sentence> ::= "The" <adjectives> <noun> <verb> <op_adverb> "." |
                "The" <adjectives> <noun> <verb> "."
 
-<adjectives> ::= <adjective> <adjectives> |
-                 ""
+<adjectives> ::= <adjective> <adjectives> | ""
 
-<adjective>  ::= "lazy" | 
-                 "smelly"
+<adjective>  ::= "lazy" | "smelly"
 
-<noun> ::= "dog" |
-           "cat"
+<noun> ::= "dog" | "cat"
 
-<verb> ::= "ate" |
-           "ran"
+<verb> ::= "ate" | "ran"
 
-<op_adverb> ::= "slowly" |
-                "noisily"
+<op_adverb> ::= "slowly" | "noisily" 
 
 ## Q2.2 (5 points)
 
@@ -107,8 +102,15 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "The" {<adjective>} <noun> <verb> [<adverb>] "."
 
+<adjective> ::= "lazy" | "smelly"
+
+<noun> ::= "dog" | "cat"
+
+<verb> ::= "ate" | "ran"
+
+<adverb> ::= "slowly" | "noisily"
 
 ## Q2.3 (6 points)
 
