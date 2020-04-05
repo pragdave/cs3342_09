@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/yimingpan/Programming/cs3342_09/main.cpp
+string
+-
+vector
+-
+utility
+-
+cassert
+-
+iostream
+-
+
