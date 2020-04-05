@@ -86,7 +86,7 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<Sentence> ::= "the" <Adjectives> <Noun> <Verb> <Opt-Adverb>
+<Sentence> ::= "The" <Adjectives> <Noun> <Verb> <Opt-Adverb>
 <Adjectives>::= "" | <Adjectives><Adjective>
 <Adjective>::= "lazy" | "smelly"
 <Opt-Adverb> ::= "" | <Adverb>
@@ -100,8 +100,10 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
-
+<Sentence> ::= "The" {<Adjective>} <Noun><Verb> ["slowly"|"noisily"]
+<Adjective>::= "lazy" | "smelly"
+<Noun>::= "dog" | "cat"
+<Verb>::= "ate" | "ran"
 
 ## Q2.3 (6 points)
 
@@ -118,7 +120,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+BhathootFSM
 
 
 ## Q2.4 (6 points)
@@ -134,7 +136,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current State | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        | Adjective |     S2
+    S1        |    Noun   |     S3
+    S2        | Adjective |     S2
+    S2        |    Noun   |     S3
+    S3        |    Verb   |     S4
+    S4        |   Adverb  |     S5
+    S4        |     EOI   |     S6
+    S5        |     EOI   |     S6
+    S6 
+
 
 
 ## Q2.5 (12 points)
