@@ -42,8 +42,12 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> r
+S -> g
+S -> b
+S -> r S r
+S -> g S g
+S -> b S b
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +57,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n) because it has to perform n/2 comparisons because it has to check if the first and the last time are equal, the second and the second to last, etc.
 
 
 # Q2
@@ -82,16 +86,44 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <adjectives> <noun> <verb> <adverb>
+
+<adjectives> ::= <adj> <adjectives> |
+                 <adj> |
+                 ""
+
+<adj> ::= "lazy" |
+          "smelly
+
+<noun> ::= "dog" |
+           "cat"
+
+<verb> ::= "ate" |
+           "ran"
+
+<adverb> ::= "slowly" |
+             "noisily" |
+             ""
 
 
 ## Q2.2 (5 points)
-
 Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" {<adj>} <noun> <verb> [<adverb>]
+
+<adj> ::= "lazy" |
+          "smelly
+
+<noun> ::= "dog" |
+           "cat"
+
+<verb> ::= "ate" |
+           "ran"
+
+<adverb> ::= "slowly" |
+             "noisily"
 
 
 ## Q2.3 (6 points)
@@ -109,7 +141,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSM.JPG
 
 
 ## Q2.4 (6 points)
