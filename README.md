@@ -88,19 +88,19 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<adjective> ::= "lazy" | "smelly"
+<adjective_word> ::= "lazy" | "smelly"
 
-<opt_adj_group> ::= <opt_adj_group> <adjective> | ""
+<opt_adj_group> ::= <opt_adj_group> <adjective_word> | ""
 
-<noun> ::= "dog" | "cat"
+<noun_word> ::= "dog" | "cat"
 
-<verb> ::= "ate" | "ran"
+<verb_word> ::= "ate" | "ran"
 
-<adverb> ::= "slowly" | "noisily"
+<adverb_word> ::= "slowly" | "noisily"
 
-<opt_adv> ::= <adverb> | ""
+<opt_adv> ::= <adverb_word> | ""
 
-<sentence> ::= "the" <opt_adj_group> <noun> <verb> <opt_adv>
+<sentence_structure> ::= "the" <opt_adj_group> <noun_word> <verb_word> <opt_adv>
 
 
 ## Q2.2 (5 points)
@@ -109,15 +109,15 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<adjective> ::= "lazy" | "smelly"
+<adjective_word> ::= "lazy" | "smelly"
 
-<noun> ::= "dog" | "cat"
+<noun_word> ::= "dog" | "cat"
 
-<verb> ::= "ate" | "ran"
+<verb_word> ::= "ate" | "ran"
 
-<adverb> ::= "slowly" | "noisily"
+<adverb_word> ::= "slowly" | "noisily"
 
-<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
+<sentence_structure> ::= "the" {<adjective_word>} <noun_word> <verb_word> [<adverb_word>]
 
 
 ## Q2.3 (6 points)
