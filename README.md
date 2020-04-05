@@ -42,14 +42,16 @@ represent the tiles.
 
 ## A1.1
 
-S -> r | g | b <br>
-S -> r S r <br>
-S -> g S g <br>
-S -> b S b <br>
+NOTE: the < br > in my code is for page breaks to make the file look better, not actually apart of my solutions
 
-r -> "r" <br>
-g -> "g" <br>
-b -> "b" <br>
+S -> r | g | b                      <br>
+S -> r S r                          <br>
+S -> g S g                         <br>
+S -> b S b                         <br>
+
+r -> "r"                               <br>
+g -> "g"                             <br>
+b -> "b"                             <br>
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -91,11 +93,11 @@ Write the BNF (not EBNF) description for this language.
 
 < sentence > ::= "the" < optional-adjectives > < noun > < verb > < optional-adverb >
 
-< adjective > ::= "lazy" | "smelly"
-< optional-adjectives > ::= < optional-adjectives > < adjective > | ""
-< noun > ::= "dog" | "cat"
-< verb > ::= "ate" | "ran"
-< optional-adverb > ::= "slowly" | "noisily" | ""
+< adjective > ::= "lazy" | "smelly"                                                                                         <br>
+< optional-adjectives > ::= < optional-adjectives > < adjective > | ""                                  <br>
+< noun > ::= "dog" | "cat"                                                                                                     <br>
+< verb > ::= "ate" | "ran"                                                                                                        <br>
+< optional-adverb > ::= "slowly" | "noisily" | ""                                                                      <br>
 
 
 ## Q2.2 (5 points)
@@ -106,10 +108,10 @@ Write this grammar using EBNF with common extensions
 
 < sentence > ::= "the" {< adjective >} < noun > < verb > [< adverb >]
 
-< adjective > ::= "lazy" | "smelly"
-< noun > ::= "dog" | "cat"
-< verb > ::= "ate" | "ran"
-< adverb > ::= "slowly" | "noisily"
+< adjective > ::= "lazy" | "smelly"                                                                     <br>
+< noun > ::= "dog" | "cat"                                                                                <br>
+< verb > ::= "ate" | "ran"                                                                                  <br>
+< adverb > ::= "slowly" | "noisily"                                                                   <br>
 
 
 ## Q2.3 (6 points)
