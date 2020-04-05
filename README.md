@@ -43,8 +43,11 @@ represent the tiles.
 ## A1.1
 
 S -> r | g | b
+
 S -> r S r
+
 S -> g S g
+
 S -> b S b
 
 
@@ -86,11 +89,17 @@ Write the BNF (not EBNF) description for this language.
 ## A2.1
 
 <adjective> ::= "lazy" | "smelly"
+
 <opt_adj_group> ::= <opt_adj_group> <adjective> | ""
+
 <noun> ::= "dog" | "cat"
+
 <verb> ::= "ate" | "ran"
+
 <adverb> ::= "slowly" | "noisily"
+
 <opt_adv> ::= <adverb> | ""
+
 <sentence> ::= "the" <opt_adj_group> <noun> <verb> <opt_adv>
 
 
@@ -101,9 +110,13 @@ Write this grammar using EBNF with common extensions
 ## A2.2
 
 <adjective> ::= "lazy" | "smelly"
+
 <noun> ::= "dog" | "cat"
+
 <verb> ::= "ate" | "ran"
+
 <adverb> ::= "slowly" | "noisily"
+
 <sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
 
 
