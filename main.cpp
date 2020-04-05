@@ -32,6 +32,8 @@ int main() {
     char case9[] = "the cat ate";
     char case10[] = "I am done";
     
+	//all the char*'s that should and should not pass, 
+	//1 = true, should pass and meets state requirements
     bool answers[] = {1, 0, 1, 1, 1, 0, 0, 1, 1, 0};
     
     //add each to vector
@@ -49,7 +51,6 @@ int main() {
         
     //get all cases and assert against answers array
     for (int a = 0; a < allStrings.size(); a++) {
-        cout << allStrings[a] << endl;
         bool ans = checkStates(allStrings[a]);
         assert(ans == answers[a]);
     }
@@ -77,15 +78,6 @@ bool checkStates(char* sentence) {
     int count = 0;
     
     while (count < allWords.size()) {
-        bool equalsAtLeastOne = false;
-        for (int ind = 0; ind < 10; ind++) {
-            if (strcmp(words[ind], allWords[count]) == 0) {
-                equalsAtLeastOne = true;
-            }
-        }
-        if (!equalsAtLeastOne) {
-            return false;
-        }
         switch(state) {
             case 0:
                 if (strcmp(allWords[count], "the") == 0)  {
