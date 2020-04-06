@@ -42,7 +42,12 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S => r
+S => g
+S => b
+S => r S r
+S => b S b
+S => g S g
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +58,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n), it will likely continue to recursively implement until it satifies the base case.
 
 
 # Q2
@@ -82,7 +87,12 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<scent> ::== "the" <possibleadj> <noun> <verb> <possibleadverb>
+<possibleadj> ::== "" | <adjective> | <adjective> <possibleadj>
+<noun> ::== "dog" | "cat"
+<adjective> ::== "lazy" | "smelly"
+<verb> ::== "ate" | "ran"
+<possibleadverb> ::== "" | "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -91,7 +101,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<noun> ::= "dog" | "cat"
+<adjective> ::= "lazy" | "smelly"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
+<sentence_structure> ::= "The" {<adjective>} <noun> <verb> [<adverb>] "."
 
 
 ## Q2.3 (6 points)
@@ -125,7 +139,20 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |     S1
+    S1        |    smelly |     S1
+    S1        |           |     S2
+    S2        |    cat    |     S3
+    S2        |    dog    |     S3
+    S3        |    ran    |     S4
+    S3        |    ate    |     S4
+    S4        |    slowly |     S5
+    S4        |    noisily|     S5
+    S4        |    EOI    |     END
+    S5        |    EOI    |     END
 
 
 ## Q2.5 (12 points)
@@ -154,7 +181,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Unlimited potentially valid senatnaces.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +191,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3. It can be parsed with a finite state machine, it can be expressed using regular expressions, and there is always a terminal symbol.
