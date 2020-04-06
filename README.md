@@ -145,10 +145,10 @@ S2            |    dog    |    S3
 S2            |    cat    |    S3
 S3            |    ran    |    S4
 S3            |    ate    |    S4
-S4            |    E01    |    END
+S4            |    EOI    |    END
 S4            |  noisily  |    S5
 S4            |   slowly  |    S5
-S5            |    E01    |    END
+S5            |    EOI    |    END
 
 
 ## Q2.5 (12 points)
@@ -188,4 +188,4 @@ explain why.
 ## A2.7
 
 Level 2
-The simplest Chomsky grammar level for this language is level 2, as the grammar generates context-free language and a right-hand side that CANNOT be simplified to a single terminal or single terminal and a single non-terminal (thus not type 3).
+The simplest Chomsky grammar level for this language is level 3, as the grammar generates regular language that contains single non-terminal on the left-hand side and a single terminal or single terminal with a single non-terminal on the right-hand side.
