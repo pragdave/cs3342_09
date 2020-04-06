@@ -183,7 +183,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Infinite number of sentences because there are infinite number of adjectives and they can be repeated
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -193,4 +193,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 because finite state machine
