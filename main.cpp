@@ -3,12 +3,7 @@
 #include <vector>
 using namespace std;
 
-/*
-Run this code by...
-The answer should appear in one or more source files in the same directory as
-this file. If I need to do anything more that type a single command to run your
-code, include a script or makefile that will do the job.
- */
+//run this by running main, test results will print to terminal
 
 //function to determine if the word is an adjective and in State 1
 bool isStateOne(string x){
