@@ -42,7 +42,13 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r | g | b
+<br />
+S -> r S r
+<br />
+S -> g S g
+<br />
+S -> b S b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,8 +59,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+O(1), the parser uses the same quantity of memory to keep track of where it is in the path and make comparisons regardless of the length of the path.
 
 # Q2
 
@@ -82,7 +87,17 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+\<adjective> ::= "lazy" | "smelly"
+<br />
+\<adjectives> ::= \<adjectives> \<adjective> | ""
+<br />
+\<noun> ::= "dog" | "cat"
+<br />
+\<verb> ::= "ate" | "ran"
+<br />
+\<adverb> ::= "slowly" | "noisily" | ""
+<br />
+\<sentence_structure> ::= "the" \<adjectives> \<noun> \<verb> \<adverb>
 
 
 ## Q2.2 (5 points)
@@ -91,7 +106,15 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+\<adjective> ::= "lazy" | "smelly"
+<br />
+\<noun> ::= "dog" | "cat"
+<br />
+\<verb> ::= "ate" | "ran"
+<br />
+\<adverb> ::= "slowly" | "noisily"
+<br />
+\<sentence_structure> ::= "the" {\<adjectives>} \<noun> \<verb> [\<adverb>]
 
 
 ## Q2.3 (6 points)
@@ -125,7 +148,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+| Current State | Next Word | Next State |
+|:-------------:|:---------:|:----------:|
+| S0            | the       | S1         |
+| S1            | lazy      | S1         |
+| S1            | smelly    | S1         |
+| S1            | dog       | S2         |
+| S1            | cat       | S2         |
+| S2            | ate       | S3         |
+| S2            | ran       | S3         |
+| S3            | slowly    | S4         |
+| S3            | noisily   | S4         |
+| S3            | EOI       | END        |
+| S4            | EOI       | END        |
 
 
 ## Q2.5 (12 points)
@@ -145,7 +180,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+`g++ FSM.cpp -o FSM && ./FSM`
 
 
 ## Q2.6 (3 points)
@@ -154,7 +189,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Potentially infinite. The two adjectives can be strung together endlessly to create sentences of arbitrary length.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +199,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3, this language is representable by a finite state machine.
