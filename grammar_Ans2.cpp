@@ -1,4 +1,4 @@
-//grammar_Ans.cpp
+//grammar_Ans2.cpp
 #define CATCH_CONFIG_MAIN
 #include <iostream>
 #include <map>
@@ -297,7 +297,7 @@ TEST_CASE( "Sentences fit grammar", "[vector]" ) {
         v35.push_back("cat");
         v35.push_back("ate");
         v35.push_back("slowly");
-        v35.push_back("lazy")
+        v35.push_back("lazy");
         v35.push_back("EOI");
 
     SECTION("Function handles basic sentences with adjectives"){
