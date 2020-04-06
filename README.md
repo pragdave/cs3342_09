@@ -62,8 +62,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+The editor would have an O(n) because it would just have to work its way inwards (n + 1)/2 times and then back outwards n/2 times.
 
 # Q2
 
