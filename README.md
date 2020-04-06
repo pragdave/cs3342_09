@@ -171,7 +171,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+grammer09.cpp
 
 
 ## Q2.6 (3 points)
@@ -180,7 +180,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+An infinite number, becausse you can repeat adjectives and adverbs as many times as you desire.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -190,4 +190,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+The simplest Chomsky grammar level is a level 3 grammar. The language can be demonstrated using a finite state machine.
