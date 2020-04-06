@@ -54,8 +54,8 @@ In one sentence, explain why.
 
 ## A1.2
 
-o(n), because the path configuration is likely to be parsed in linear time for 
-'n' number of tiles.
+O(n), because n/2 of the elements of the path are pushed onto the stacked to be parsed 
+which is simplified to O(n).
 
 # Q2
 
