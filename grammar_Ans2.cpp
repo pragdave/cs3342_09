@@ -203,7 +203,7 @@ TEST_CASE( "Sentences fit grammar", "[vector]" ) {
 
     vector<string> v23;
         v23.push_back("the");
-        v23.push_back("lazy")
+        v23.push_back("lazy");
         v23.push_back("dog");
         v23.push_back("ate");
         v23.push_back("noisily");
