@@ -37,7 +37,8 @@ This is not: rggr    (it must be an odd length)
 ## Q1.1  (5 points)
 
 Write a Chomsky type 2 grammar that describes any valid path containing at
-least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that represent the tiles.
+least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
+represent the tiles.
 
 ## A1.1
 
@@ -54,7 +55,9 @@ In one sentence, explain why.
 
 ## A1.2
 
-For memory, O(1) is the requirement because we don't need to consider how many tiles are in the path or are traversable. We are only checking two tiles at a time so we only need to consider two tiles in memory at once.
+For memory, O(1) is the requirement because we don't need to consider how many
+tiles are in the path or are traversable. We are only checking two tiles at a
+time so we only need to consider two tiles in memory at once.
 
 # Q2
 
@@ -114,7 +117,6 @@ Write this grammar using EBNF with common extensions
 
 FSM_Diagram.JPG
 
-
 ## Q2.4 (6 points)
 
 Convert this diagram into a table of the form:
@@ -130,20 +132,18 @@ Current state | Next word | Next state
 
 |Current state | Next word | Next state|
 |--------------|-----------|-----------|
-|      S0      |   the     |     S1    |
-|      S1      |   lazy    |     S1    |
-|      S1      |  smelly   |     S1    |
+|      S0      |    the    |     S1    |
+|      S1      |    lazy   |     S1    |
+|      S1      |   smelly  |     S1    |
 |      S1      |           |     S2    |
-|      S2      |   cat     |     S3    |
-|      S2      |   dog     |     S3    |
-|      S3      |   ate     |     S4    |
-|      S3      |   ran     |     S4    |
-|      S4      | slowly    |     S5    |
-|      S4      | noisily   |     S5    |
+|      S2      |    cat    |     S3    |
+|      S2      |    dog    |     S3    |
+|      S3      |    ate    |     S4    |
+|      S3      |    ran    |     S4    |
+|      S4      |  slowly   |     S5    |
+|      S4      |  noisily  |     S5    |
 |      S4      |    EOI    |    END    |
 |      S5      |    EOI    |    END    |
-
-
 
 ## Q2.5 (12 points)
 
@@ -162,8 +162,8 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+create executable:  g++ test.cpp
+run executable:     ./a.out
 
 ## Q2.6 (3 points)
 
@@ -171,8 +171,8 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-Unlimited. Because the adjective can be included 0 or more times, there is a infinite number of adjectives that can be added.
-
+Unlimited. The adjective can be included 0 or more times so there is a infinite
+number of adjectives that can be added.
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -181,4 +181,5 @@ explain why.
 
 ## A2.7
 
-Type 3 because we don't need a stack for this language as a simple finite state machine can parse it without the use of a stack.
+Type 3 because a finite state machine can check the validity of the sentences
+which is a characteristic of a type 3 grammar. It does not require a stack.
