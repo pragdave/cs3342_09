@@ -190,4 +190,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+This language is a Type-3 grammar because each nonterminal goes to either a terminal or a terminal and a nonterminal, never a nonterminal before a terminal.
