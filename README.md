@@ -42,10 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-S -> r|g|b
-S -> rSr
-S -> gSg
-S -> bSb
+S -> r|g|b<br/>
+S -> rSr<br/>
+S -> gSg<br/>
+S -> bSb<br/>
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -83,13 +83,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<valid_sentence> ::= "The"<noun_or_adjNoun><verb_verbAdv>
-<noun_or_adjNoun> ::= <noun>|<adj><noun>
-<noun> ::= "dog"|"cat"
-<adj> ::= "smelly"|"lazy"
-<verb_verbAdv> ::= <verb>|<verb><adv>
-<verb> ::= "ran"|"ate"
-<adv> ::= "slowly"|"noisily"
+<valid_sentence> ::= "The"<noun_or_adjNoun><verb_verbAdv> <br/>
+<noun_or_adjNoun> ::= <noun>|<adj><noun> <br/>
+<noun> ::= "dog"|"cat" <br/>
+<adj> ::= "smelly"|"lazy" <br/>
+<verb_verbAdv> ::= <verb>|<verb><adv> <br/>
+<verb> ::= "ran"|"ate" <br/>
+<adv> ::= "slowly"|"noisily" <br/>
 
 ## Q2.2 (5 points)
 
@@ -97,11 +97,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<valid_sentence> ::= "The"<adj>*<noun><verb><adv>?
-<noun> ::= "dog"|"cat"
-<adj> ::= "smelly"|"lazy"
-<verb> ::= "ran"|"ate"
-<adv> ::= "slowly"|"noisily"
+<valid_sentence> ::= "The"<adj>*<noun><verb><adv>? <br/>
+<noun> ::= "dog"|"cat" <br/>
+<adj> ::= "smelly"|"lazy" <br/>
+<verb> ::= "ran"|"ate" <br/>
+<adv> ::= "slowly"|"noisily" <br/>
 
 ## Q2.3 (6 points)
 
