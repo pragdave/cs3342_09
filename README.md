@@ -1,5 +1,7 @@
 # Grammars Assignment (50 points)
 
+# Grammars Assignment (50 points)
+
 This file contains two questions. The first has 2 parts, the second has 7.
 
 For all but questions 2.3 and 2.5 you'll answer questions by editing this file.
@@ -42,8 +44,14 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r| g | b
+S -> r S r
+S-> g S g
+S -> b S b
 
+r -> "r"
+g -> "g"
+b -> "b" 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +61,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+It would be O(n) because the parser has to check every input to determine if it is valid.
 
 
 # Q2
@@ -78,11 +86,20 @@ The following are examples of valid sentences:
 
 ## Q2.1 (7 points)
 
-Write the BNF (not EBNF) description for this language.
+
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <optional_adj> <noun> <verb> <adverb>
+
+<adj> ::= "lazy" | "smelly" 
+<optional_adj> ::= <adJ> | <adj> <optional_adj> | ""
+
+<noun> ::= "dog" | "cat"
+
+<verb> ::= "ate" | "ran"
+
+<adverb> ::= "slowly" | "noisily" | ""
 
 
 ## Q2.2 (5 points)
@@ -91,7 +108,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" {<adj>} <noun> <verb> [<adverb>]
+<adjective> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
@@ -109,7 +130,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+The file is in github. It is called
 
 
 ## Q2.4 (6 points)
@@ -119,13 +140,22 @@ Convert this diagram into a table of the form:
 Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
-    S1        |   . . .   |   . . .
 
 (hint: my version has 13 entries. Yours _might_ be different)
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |   lazy    |     S1
+    S1        |   smelly  |     S1
+    S1        |   dog     |     S2
+    S1        |   cat     |     S2
+    S2        |   ate     |     S3
+    S2        |   ran     |     S3
+    S3        |   slowly  |     S4
+    S3        |   noisily |     S4
 
 
 ## Q2.5 (12 points)
@@ -145,7 +175,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+The files are in the github. It is written in c++, so you just need to run the main.
 
 
 ## Q2.6 (3 points)
@@ -154,7 +184,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There is an infinite amount because the loop for the adjectives can continue forever as long as another adjective gets inputted.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +194,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type three because it can be parsed using a finite state machine.
