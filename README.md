@@ -174,7 +174,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-Just need usual java commands to run :)
+"java -ea SentenceChecker" to run with assertions :)
 SentenceChecker.java
 
 ## Q2.6 (3 points)
