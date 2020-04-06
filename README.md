@@ -42,7 +42,13 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S => r
+S => g
+S => b
+S => r S r
+S => b S b
+S => g S g
+
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +59,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n). One way the parser could work is like checking if a string is a palindrome by setting a pointer at the front and back and incremenet the one at the front and decrement the one at the back until they land on the same character since it needs to have an odd length, checking whether the two are pointing at the same character each time, which would require a checking of n number of tiles. (Also, the parser could first check whether n is even or odd because if it is even, then it would know that it is not valid.)
 
 
 # Q2
@@ -82,7 +88,11 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<adjective> ::= "lazy" | "smelly" | ""
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily" | ""
+<sentence_structure> ::= "The" <adjective> <noun> <verb> <adverb> "."
 
 
 ## Q2.2 (5 points)
@@ -91,7 +101,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<adjective> ::= "lazy" | "smelly"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "slowly" | "noisily"
+<sentence_structure> ::= "The" {<adjective>} <noun> <verb> [<adverb>] "."
 
 
 ## Q2.3 (6 points)
@@ -109,7 +123,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+ProgLangFSM.pdf
 
 
 ## Q2.4 (6 points)
@@ -125,7 +139,26 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S0        |    the    |     S2
+    S1        |   lazy    |     S2
+    S1        |   lazy    |     S1
+    S1        |  smelly   |     S2
+    S1        |  smelly   |     S1
+    S2        |    dog    |     S3
+    S2        |    cat    |     S3
+    S3        |    ate    |     S4
+    S3        |    ate    |     S5
+    S3        |    ran    |     S4
+    S3        |    ran    |     S5
+    S4        |  slowly   |     S5
+    S4        |  noisily  |     S5
+    S5        |     .     |     S6
+    S6        |    EOI    |     DONE
+
+    
 
 
 ## Q2.5 (12 points)
@@ -145,8 +178,9 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
 
+Wrote and added a file called "main.cpp"
+Includes test sentences in it, just hit run and it will print out which sentences are valid/invalid
 
 ## Q2.6 (3 points)
 
@@ -154,7 +188,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There are an infinite amount since there can be as many or as little (even zero) adjectives as you want.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +198,7 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type-3 because...
+1) It can be parsed by a finite state machine
+2) The next symbol is always a terminal symbol
+3) Can be expressed as regular expressions
