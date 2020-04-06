@@ -174,7 +174,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+Sorry I can't do this right now.
 
 
 ## Q2.6 (3 points)
