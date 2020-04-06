@@ -199,4 +199,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+This would be a level 1 Chomsky. This is because certain non-terminals on either side of terminals are not required but the terminals are required, making this a context-sensitive grammar.
