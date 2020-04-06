@@ -56,7 +56,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n), because parser checks the beg and end together which is n/2 which simplifies to n
 
 
 # Q2
@@ -85,8 +85,16 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <adjectives> <noun> <verb> <adverb>
 
+<adjectives> ::= "" | <adjective> | <adjective> <adjective>
+<adjective> ::= "lazy" | "smelly"
+
+<noun> ::= "dog" | "cat"
+
+<verb> ::= "ate" | "ran"
+
+<adverb> ::= "slowly" | "noisily" | ""
 
 ## Q2.2 (5 points)
 
@@ -94,7 +102,15 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
+
+<adjective> ::= "lazy" | "smelly"
+
+<noun> ::= "dog" | "cat"
+
+<verb> ::= "ate" | "ran"
+
+<adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
