@@ -1,7 +1,5 @@
 # Grammars Assignment (50 points)
 
-# Grammars Assignment (50 points)
-
 This file contains two questions. The first has 2 parts, the second has 7.
 
 For all but questions 2.3 and 2.5 you'll answer questions by editing this file.
@@ -148,14 +146,17 @@ Current state | Next word | Next state
 Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
-    S1        |   lazy    |     S1
-    S1        |   smelly  |     S1
-    S1        |   dog     |     S2
-    S1        |   cat     |     S2
-    S2        |   ate     |     S3
-    S2        |   ran     |     S3
-    S3        |   slowly  |     S4
-    S3        |   noisily |     S4
+    S1        |   lazy    |     S2
+    S1        |   smelly  |     S2
+    S1        |   dog     |     S3
+    S1        |   cat     |     S3
+    S2        |   lazy    |     S1
+    S2        |   smelly  |     S1
+    S2        |   ""      |     S1
+    S3        |   ate     |     S4
+    S3        |   ran     |     S4
+    S4        |   slowly  |     S5
+    S4        |   noisily |     S5
 
 
 ## Q2.5 (12 points)
