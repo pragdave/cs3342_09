@@ -189,7 +189,10 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+sentence.cpp
+To run in terminal: 
+g++ -std=c++11 sentence.cpp
+./a.out
 
 
 ## Q2.6 (3 points)
@@ -198,7 +201,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There are an infinite amount of valid sentences in this language because the number of adjectives is arbitrary.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -208,4 +211,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 Chomsky grammar because the language can be parsed by a finite state machine but it does not need a stack to track state.
