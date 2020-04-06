@@ -150,17 +150,38 @@ Current state | Next word | Next state
 
 ## A2.4
 
+This was a difficult question and took a lot of time so ill describe the differences here.
+The first one uses the keywords used in the FSM diagram and accounts for 2+ usages of adjectives.
+The second one uses the literal words and DOES NOT account for in there are 2+ usages of adjectives but it produces the 13 entries said in the hint.
+I'm including both out of curiosity more than anything as they both seem valid answers to me.
+
 Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
-    S1        |           |     S2
-    S1        | adjective |     S1
     S1        | adjective |     S2
+    S1        |    noun   |     S3
+    S2        | adjective |     S2
     S2        |    noun   |     S3
     S3        |    verb   |     S4
-    S4        |           |     S5
+    S4        |    EOI    |     END
     S4        |   adverb  |     S5
-    S5        |    EOI    |	S6
+    S5        |    EOI    |	END
+
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |   smelly  |     S2
+    S1        |   lazy    |     S2
+    S1        |    dog    |     S3
+    S1        |    cat    |     S3
+    S2        |    dog    |     S3
+    S2        |    cat    |     S3
+    S3        |    ran    |     S4
+    S3        |    ate    |     S4
+    S4        |    EOI    |     END
+    S4        |   slowly  |     S5
+    S4        |   noisly  |     S5
+    S5        |    EOI    |	END
 
 
 ## Q2.5 (12 points)
