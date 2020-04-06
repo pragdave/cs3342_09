@@ -91,7 +91,11 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= <"the"> {<adjective>} {<adjective>} <noun> <verb> {<adverb>} "EOI"
+<adjective> ::= "" | "smelly" | "lazy"
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
+<adverb> ::= "quickly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -100,7 +104,9 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" {"smelly" | "lazy"} <noun> <verb> ["quickly" | "noisily"]
+<noun> ::= "dog" | "cat"
+<verb> ::= "ate" | "ran"
 
 
 ## Q2.3 (6 points)
@@ -167,8 +173,7 @@ this file. If I need to do anything more that type a single command to run your
 code, include a script or makefile that will do the job.
 
 ## A2.5
-
-«replace this with your answer»
+grammar_Ans.cpp
 
 
 ## Q2.6 (3 points)
@@ -187,5 +192,5 @@ explain why.
 
 ## A2.7
 
-Level 2
+Level 3
 The simplest Chomsky grammar level for this language is level 3, as the grammar generates regular language that contains single non-terminal on the left-hand side and a single terminal or single terminal with a single non-terminal on the right-hand side.
