@@ -42,7 +42,11 @@ represent the tiles.
 
 ## A1.1
 
-S->gbrgbrbgrbg
+S-> A
+S-> A S A
+A-> r
+A-> g
+A-> b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +57,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(1) We dont need any stored memory because we can check without using any extra space than the path itself. There is no need for an extra data structure to verify the path configuration.
+O(n/2) The stack to parse this must be able to hold half the total number elements as it needs to hold the first half then check it with the second half.
 
 
 # Q2
@@ -82,8 +86,11 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
-
+<sentance> ::= "the" [digit{<adjective>}] <noun> <verb> [<adverb>]
+<adjective> ::=  "lazy"|"smelly"
+<noun> ::= "dog"|"cat"
+<verb> ::= "ate"|"ran"
+<adverb> ::= "slowly"|"noisily"
 
 ## Q2.2 (5 points)
 
@@ -91,8 +98,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
-
+sentance ::= "the" adjective* noun verb adverb?
+adjective ::=  "lazy"|"smelly"
+noun ::= "dog"|"cat"
+verb ::= "ate"|"ran"
+adverb ::= "slowly"|"noisily"
 
 ## Q2.3 (6 points)
 
