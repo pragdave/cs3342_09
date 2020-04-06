@@ -128,8 +128,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+IMG_20200405_222723.jpg
 
 ## Q2.4 (6 points)
 
