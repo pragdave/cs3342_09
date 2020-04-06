@@ -95,7 +95,7 @@ Write the BNF (not EBNF) description for this language.
 <adjective> ::= "" | "smelly" | "lazy"
 <noun> ::= "dog" | "cat"
 <verb> ::= "ate" | "ran"
-<adverb> ::= "quickly" | "noisily"
+<adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.2 (5 points)
@@ -104,7 +104,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-<sentence> ::= "the" {"smelly" | "lazy"} <noun> <verb> ["quickly" | "noisily"]
+<sentence> ::= "the" {"smelly" | "lazy"} <noun> <verb> ["slowly" | "noisily"] "EOI"
 <noun> ::= "dog" | "cat"
 <verb> ::= "ate" | "ran"
 
@@ -173,8 +173,9 @@ this file. If I need to do anything more that type a single command to run your
 code, include a script or makefile that will do the job.
 
 ## A2.5
-grammar_Ans.cpp
+See grammar_Ans2.cpp
 
+NOTE: When I ran my file for one last check tonight, it began failing at the first "true" test for each section. I tried making them test cases instead, but I had the same problem. This wasn't happening earlier, so I'm not sure what changed! I think the function is properly functioning, but there is a syntax issue or something with my testing.
 
 ## Q2.6 (3 points)
 
@@ -193,4 +194,4 @@ explain why.
 ## A2.7
 
 Level 3
-The simplest Chomsky grammar level for this language is level 3, as the grammar generates regular language that contains single non-terminal on the left-hand side and a single terminal or single terminal with a single non-terminal on the right-hand side.
+The simplest Chomsky grammar level for this language is level 3, as the grammar generates regular language that contains single non-terminal on the left-hand side and a single terminal or single terminal with a single non-terminal on the right-hand side, and the grammar does not perform recursion or backtracking as there are specific states rather than a pattern (like in level 2).
