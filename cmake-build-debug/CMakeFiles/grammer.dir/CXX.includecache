@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/wyatt/OneDrive/Desktop/School/Spring 2020/Programming Languages/cs3342_09/grammer09.cpp
+string
+-
+iostream
+-
+vector
+-
+

@@ -1,0 +1,4 @@
+C:\Users\wyatt\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6015.37\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=C:/MinGW/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" "C:\Users\wyatt\OneDrive\Desktop\School\Spring 2020\Programming Languages\cs3342_09"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/wyatt/OneDrive/Desktop/School/Spring 2020/Programming Languages/cs3342_09/cmake-build-debug
