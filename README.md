@@ -57,7 +57,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-O(n) Because the parser will only go through the loop once then fall out.
+O(n) because the parser can pull and pop to the stack in the same call
 
 
 # Q2
@@ -168,7 +168,6 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
 
 
 ## Q2.6 (3 points)
@@ -177,7 +176,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Infinate, since there is no limit to the number of adjectives in a given sentance
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -187,4 +186,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+This would be a type 2 grammar
