@@ -128,7 +128,6 @@ Write this grammar using EBNF with common extensions
 
 https://github.com/CeeCeeLemons/cs3342_09/blob/master/Prolang%20Diagram.png
 
-
 ## Q2.4 (6 points)
 
 Convert this diagram into a table of the form:
@@ -157,7 +156,6 @@ Current state | Next word | Next state
     S4        | <<empty>> |    END
     S5        | <<empty>> |    END
 
-
 ## Q2.5 (12 points)
 
 Translate this table into a programming language of your choice. Then write a
@@ -184,8 +182,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+Infinitely many valid sentences can be made, because infinitely many adjectives can be used before moving to the next state.
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
