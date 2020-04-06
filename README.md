@@ -42,8 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> r|g|b
+S -> r S r
+S -> g S g
+S -> b S b
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,8 +55,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
-
+O(n) because it parses from the beginning and n so it does n/2 comparisons but O(n/2) is the same as O(n)
 
 # Q2
 
@@ -82,7 +83,12 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+::= "the"
+::= "smelly" | "lazy"
+::= "dog" | "cat"
+::= "ate" | "ran"
+::= "slowly" | "noisily" | ""
+::= | ""
 
 
 ## Q2.2 (5 points)
@@ -91,8 +97,12 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
 
+::= "the" {} []
+::= "smelly" | "lazy"
+::= "dog" | "cat"
+::= "ate" | "ran"
+::= "slowly" | "noisily" | ""
 
 ## Q2.3 (6 points)
 
@@ -109,8 +119,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+fsm.pdf
 
 ## Q2.4 (6 points)
 
@@ -125,8 +134,22 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
 
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |     S1
+    S1        |    smelly |     S1
+    S1        |    ""     |     S2
+    S1        |    lazy   |     S2
+    S1        |    smelly |     S2
+    S2        |    cat    |     S3
+    S2        |    dog    |     S3
+    S3        |    ran    |     S4
+    S3        |    ate    |     S4
+    S3        |    ""     |     END
+    S4        |    slowly |     END
+    S4        |    noisily|     END
 
 ## Q2.5 (12 points)
 
@@ -145,8 +168,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+fsm.js
 
 ## Q2.6 (3 points)
 
@@ -154,8 +176,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+An infinite amount. There is no limit to the adjectives!
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -164,4 +185,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 because it can be expressed in a finite state machine.
