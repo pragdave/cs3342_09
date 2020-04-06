@@ -121,7 +121,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+FSM.png
 
 
 ## Q2.4 (6 points)
@@ -168,7 +168,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+main.cpp
 
 
 ## Q2.6 (3 points)
