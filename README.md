@@ -91,15 +91,15 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-<sentance> ::= "the" [digit{<adjective>}] <noun> <verb> [<adverb>]
+<sentance> ::= "the" [digit{< adjective >}] < noun > < verb > [< adverb >]
     
-<adjective> ::=  "lazy"|"smelly"
+< adjective > ::=  "lazy"|"smelly"
     
-<noun> ::= "dog"|"cat"
+< noun > ::= "dog"|"cat"
     
-<verb> ::= "ate"|"ran"
+< verb > ::= "ate"|"ran"
     
-<adverb> ::= "slowly"|"noisily"
+< adverb > ::= "slowly"|"noisily"
     
 
 ## Q2.2 (5 points)
@@ -117,7 +117,7 @@ noun ::= "dog"|"cat"
 verb ::= "ate"|"ran"
 
 adverb ::= "slowly"|"noisily"
-]
+
 
 ## Q2.3 (6 points)
 
