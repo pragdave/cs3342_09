@@ -150,7 +150,17 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |           |     S2
+    S1        | adjective |     S1
+    S1        | adjective |     S2
+    S2        |    noun   |     S3
+    S3        |    verb   |     S4
+    S4        |           |     S5
+    S4        |   adverb  |     S5
+    S5        |    EOI    |	S6
 
 
 ## Q2.5 (12 points)
