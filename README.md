@@ -152,8 +152,9 @@ Current state | Next word | Next state
 
 This was a difficult question and took a lot of time so ill describe the differences here.
 The first one uses the keywords used in the FSM diagram and accounts for 2+ usages of adjectives.
-The second one uses the literal words and DOES NOT account for in there are 2+ usages of adjectives but it produces the 13 entries said in the hint.
-I'm including both out of curiosity more than anything as they both seem valid answers to me.
+The second one uses the literal words and DOES NOT account for the chance of 2+ usages of adjectives
+but it produces the 13 entries said in the hint.
+I'm including both out of curiosity more than anything as they both seem valid answers/possibilities to me.
 
 Current state | Next word | Next state
 --------------|-----------|-----------
