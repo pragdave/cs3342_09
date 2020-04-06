@@ -143,7 +143,7 @@ Current state | Next word | Next state
 
 ## A2.4
 
-Current state | Next word | Next state
+Current state | Next  word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
     S1        |   lazy    |     S2
