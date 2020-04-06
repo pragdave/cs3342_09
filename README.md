@@ -155,8 +155,7 @@ Current state | Next word | Next state
     S3        |    ran    |     S5
     S4        |  slowly   |     S5
     S4        |  noisily  |     S5
-    S5        |     .     |     S6
-    S6        |    EOI    |     DONE
+    S5        |    EOI    |     DONE
 
     
 
