@@ -42,7 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S -> r | g | b
+S -> r S r
+S -> g S g
+S -> b S b
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
