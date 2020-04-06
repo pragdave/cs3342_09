@@ -157,7 +157,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |     S1
+    S1        |   smelly  |     S1
+    S1        |    dog    |     S2
+    S1        |    cat    |     S2
+    S2        |    ran    |     S3
+    S2        |    ate    |     S3
+    S3        |  slowly   |     S4
+    S3        |  noisily  |     S4
+    S3        |    EOI    |     END
+    S4        |    EOI    |     END
 
 
 ## Q2.5 (12 points)
