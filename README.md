@@ -134,7 +134,7 @@ adverb ::= "slowly"|"noisily"
 
 ## A2.3
 
-«replace this with your answer»
+fsm.png
 
 
 ## Q2.4 (6 points)
