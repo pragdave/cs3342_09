@@ -1,0 +1,24 @@
+the dog ran
+1
+the cat sang
+0
+the dog ran slowly
+1
+the smelly dog ran slowly
+1
+the cat
+0
+the playful cat ate
+0
+the
+0
+the lazy
+0
+the smelly lazy cat
+0
+the smelly lazy cat ate
+1
+the lazy cat ran smelly
+0
+the lazy cat ran slowly
+1
