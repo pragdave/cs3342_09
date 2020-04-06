@@ -126,7 +126,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+https://github.com/CeeCeeLemons/cs3342_09/blob/master/Prolang%20Diagram.png
 
 
 ## Q2.4 (6 points)
