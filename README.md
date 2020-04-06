@@ -41,10 +41,11 @@ least one paver. Use `S` as the start state, and `r`, `g`, `b` as terminals that
 represent the tiles.
 
 ## A1.1
+```
+S -> r | g | b
 
-«replace this with your answer»
-
-
+S -> r S r | g S g | b S b
+```
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
 Using big-O notation, what is the likely memory requirement for a parser that
@@ -52,9 +53,9 @@ can validate a particular path configuration, where `n` is the number of tiles?
 In one sentence, explain why.
 
 ## A1.2
-
-«replace this with your answer»
-
+```
+The parser should require O(n) memory. The recursive case, (S -> r S r | g S g | b S b), will store a tile at each level of the stack. A total of n/2 tiles would be stored in the stack. So O(n/2) -> O(n).
+```
 
 # Q2
 
@@ -82,8 +83,22 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+```
+<sentence> ::= "the" <adjective> <noun> <verb> <adverb>
 
+<adjective> ::= "lazy" | "lazy" <adjective> |
+
+                "smelly" | "smelly" <adjective> |
+
+                ""
+
+<noun> :: = "dog" | "cat"
+
+<verb> ::= "ate" | "ran"
+
+<adverb> ::= "slowly" | "noisily" | ""
+
+```
 
 ## Q2.2 (5 points)
 
@@ -91,7 +106,18 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+```
+<sentence> ::= "the" {<adjective>} <noun> <verb> [<adverb>]
+
+<adjective> ::= "lazy" | "smelly"
+
+<noun> :: = "dog" | "cat"
+
+<verb> ::= "ate" | "ran"
+
+<adverb> ::= "slowly" | "noisily"
+
+```
 
 
 ## Q2.3 (6 points)
@@ -109,8 +135,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
-
+fsm.png
 
 ## Q2.4 (6 points)
 
@@ -125,7 +150,20 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+| Current state | Next Word | Next State |
+|---------------|-----------|------------|
+| S0            | "The"     | S1         |
+| S1            | "lazy"    | S1         |
+| S1            | "smelly"  | S1         |
+| S1            | ""        | S2         |
+| S2            | "dog"     | S3         |
+| S2            | "cat"     | S3         |
+| S3            | "ate"     | S4         |
+| S3            | "ran"     | S4         |
+| S4            | "slowly"  | S5         |
+| S4            | "noisily" | S5         |
+| S4            | ""        | S5         |
+| S5            | EOI       | END        |
 
 
 ## Q2.5 (12 points)
@@ -145,8 +183,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+node sentence.js
 
 ## Q2.6 (3 points)
 
@@ -154,8 +191,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
-
+Infinite, because there can be any number of adjectives.
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
 
@@ -164,4 +200,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+This is a type 3 level grammar. This validator is a simple finite state machine, following the constaints of Nonterminal -> terminal.
