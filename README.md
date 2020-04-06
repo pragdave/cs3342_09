@@ -142,7 +142,18 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
+S0	|	the		    |	S1
+S1	|	smelly		|	S1
+S1	|	lazy		|	S1
+S1	|	<<empty>>	|	S2
+S2	|	cat		    |	S3
+S2	|	dog		    |	S3
+S3	|	ate		    |	S4
+S3	|	ran		    |	S4
+S4	|	slowly		|	S5
+S4	|	noislily	|	S5
+S4	|	<<empty>>	|	END
+S5	|	<<empty>>	|	END
 
 
 ## Q2.5 (12 points)
