@@ -42,7 +42,15 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+«S -> A B C S C B A
+s -> <<empty>>
+ A -> "r"
+ A -> <<empty>>
+ B -> "g"
+ b -> <<empty>>
+ c -> "b"
+ c -> <<empty>>
+ »
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +61,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+«big O(n), it is a simply loop to parse every tiles. There is n number of tiles, so it's bigO(n)»
 
 
 # Q2
@@ -82,7 +90,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+«<sentence>::= <the><adjectives><noun><verb><adverb>
+<the>::= "the"
+<adjectives>::= ""|"lazy"|"smelly"
+<noun>::= "dog"|"cat"
+<verb>::= "ate"|"ran"
+<adverb>::= ""|"slowly"|"noisily"
+»
 
 
 ## Q2.2 (5 points)
@@ -91,7 +105,9 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+«
+<sentence>::= "the"[""|"lazy"|"smelly"]["dog"|"cat"]["ate"|"ran"][ ""|"slowly"|"noisily"]
+»
 
 
 ## Q2.3 (6 points)
@@ -109,7 +125,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+«2.3.jpg»
 
 
 ## Q2.4 (6 points)
@@ -120,13 +136,28 @@ Current state | Next word | Next state
 --------------|-----------|-----------
     S0        |    the    |     S1
     S1        |   . . .   |   . . .
-
+:
 (hint: my version has 13 entries. Yours _might_ be different)
 
 ## A2.4
 
-«replace this with your answer»
+«
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |           |     S2
+    S1        |   smelly  |     S2
+    S1        |   lazy    |     S2
+    S2        |    dog    |     S3
+    S2        |    cat    |     S3
+    S3        |    ran    |     S4
+    S3        |    ate    |     S4
+    S4        |  noisily  |     S5
+    S4        |           |     S5
+    S4        |   slowly  |     S5
+    S5        |    EOI    |     END
 
+»
 
 ## Q2.5 (12 points)
 
@@ -145,7 +176,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+«TwoPointFive.cpp»
 
 
 ## Q2.6 (3 points)
@@ -154,7 +185,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+«73 valid sentences in TwoPointFive.cpp»
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +195,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+«level three, if string A = a, a = "T" ,A = "T"  and if A = a + a, a = "T" , A ="TT", it acts like Chomsky grammar level 3.»
