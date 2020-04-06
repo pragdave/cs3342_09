@@ -42,7 +42,7 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
+S->gbrgbrbgrbg
 
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
@@ -53,7 +53,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(1) We dont need any stored memory because we can check without using any extra space than the path itself. There is no need for an extra data structure to verify the path configuration.
 
 
 # Q2
