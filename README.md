@@ -173,8 +173,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+https://github.com/CeeCeeLemons/cs3342_09/blob/master/state_machine_tests.pl
 
 ## Q2.6 (3 points)
 
