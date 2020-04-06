@@ -130,7 +130,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-The file is in github. It is called State Machine.png
+The file is in github. It is called State Machine.jpg
 
 
 ## Q2.4 (6 points)
