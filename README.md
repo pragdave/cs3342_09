@@ -180,7 +180,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
+I wrote mine in java. As long as JVM is intalled, all that required is that while in this directory, in a terminal type 'java Sentance' and it shall run perfectly with 3 correct and 3 incorrect test cases.
 
 
 ## Q2.6 (3 points)
@@ -189,7 +189,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+Technically an infinite amount as there can be as many adjectives as wanted, but if only using one or none adjectives there are 36 possibilities.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
