@@ -95,7 +95,11 @@ Write this grammar using EBNF with common extensions
 
 A2.2
 
+<<<<<<< HEAD
 sentence ::= "the", {<adjective>}, <noun>, <verb>, [<adverb>];
+=======
+sentence ::= "the", {}, , , [];
+>>>>>>> 07f1444fe496e18ef7278164002acd9890749777
 
 Q2.3 (6 points)
 
@@ -113,14 +117,22 @@ Q2.4 (6 points)
 
 Convert this diagram into a table of the form:
 
+<<<<<<< HEAD
 Current state Next word Next state
+=======
+Current state	Next word	Next state
+>>>>>>> 07f1444fe496e18ef7278164002acd9890749777
 S0        |    the    |     S1
 S1        |   . . .   |   . . .
 (hint: my version has 13 entries. Yours might be different)
 
 A2.4
 
+<<<<<<< HEAD
 Current    Next (word)  Next (state)
+=======
+Current    Next (word)	Next (state)
+>>>>>>> 07f1444fe496e18ef7278164002acd9890749777
 S0        |    the    |   S1
 S1        | Adjective |   S2
 S1        |    Noun   |   S3
@@ -144,7 +156,10 @@ A2.5
 
 *See attatched program
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 07f1444fe496e18ef7278164002acd9890749777
 Q2.6 (3 points)
 
 How many valid sentences are there in this language?
