@@ -121,7 +121,7 @@ Write this grammar using EBNF with common extensions
 
 ## A2.3
 
-«replace this with your answer»
+2.3 answer
 
 
 ## Q2.4 (6 points)
