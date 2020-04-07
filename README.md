@@ -42,8 +42,10 @@ represent the tiles.
 
 ## A1.1
 
-«replace this with your answer»
-
+S -> r | g | b
+S -> r S r
+S -> b S b
+S -> g S g
 
 ## Q1.2  (1 point for the O() answer, 2 for the sentence)
 
@@ -53,7 +55,7 @@ In one sentence, explain why.
 
 ## A1.2
 
-«replace this with your answer»
+O(n). I chose this because it should check starting from the start AND the end of the sentence and meet in the middle.
 
 
 # Q2
@@ -82,7 +84,13 @@ Write the BNF (not EBNF) description for this language.
 
 ## A2.1
 
-«replace this with your answer»
+<sentence> ::= "the" <opt-adjective> <noun> <verb> <adverb>
+    <opt-adjective> ::= <opt-adjective> <adjective> | <adjective>
+    <adjective> ::= "smelly" | "lazy" | ""
+    <noun> ::= "dog" | "cat"
+    <verb> ::= "ate" | "ran"
+    <adverb> ::= "slowly" | "noisily" | ""
+        
 
 
 ## Q2.2 (5 points)
@@ -91,7 +99,11 @@ Write this grammar using EBNF with common extensions
 
 ## A2.2
 
-«replace this with your answer»
+<sentence> ::= "the" <adjective>*<noun> <verb> [<adverb>]
+    <adjective> ::= "lazy" | "smelly"
+    <noun> ::= "dog" | "cat"
+    <verb> ::= "ate" | "ran"
+    <adverb> ::= "slowly" | "noisily"
 
 
 ## Q2.3 (6 points)
@@ -125,8 +137,19 @@ Current state | Next word | Next state
 
 ## A2.4
 
-«replace this with your answer»
-
+Current state | Next word | Next state
+--------------|-----------|-----------
+    S0        |    the    |     S1
+    S1        |    lazy   |     S1
+    S1        |   smelly  |     S1
+    S1        |    dog    |     S2
+    S1        |    cat    |     S2
+    S2        |    ate    |     S3
+    S2        |    ran    |     S3
+    S3        |   slowly  |     S4
+    S3        |   noisily |     S4
+    S3        |     EOI   |     finish
+    S4        |     EOI   |     finish
 
 ## Q2.5 (12 points)
 
@@ -145,8 +168,7 @@ code, include a script or makefile that will do the job.
 
 ## A2.5
 
-«replace this with your answer»
-
+main.cpp
 
 ## Q2.6 (3 points)
 
@@ -154,7 +176,7 @@ How many valid sentences are there in this language?
 
 ## A2.6
 
-«replace this with your answer»
+There are infinite number of sentences possible in this language since there are infinite number of adjectives that can be used and repeated.
 
 
 ## Q2.7 (1 point for the level, 2 for the sentence)
@@ -164,4 +186,4 @@ explain why.
 
 ## A2.7
 
-«replace this with your answer»
+Type 3 because it can be parsed by a finite state machine.
